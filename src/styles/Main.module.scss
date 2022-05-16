@@ -1,0 +1,37 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #000000;
+}
+
+.navbarContainer {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	background-color: transparent;
+
+	.helperIcons {
+		p {
+			font-size: 1.5rem;
+			color: white;
+		}
+	}
+
+	.navLogoBox {
+		display: flex;
+		align-items: center;
+		margin-left: 2rem;
+		padding: 0.7rem;
+		
+		.navLogo {
+			width: 8rem;
+		}
+	}
+	
+}
