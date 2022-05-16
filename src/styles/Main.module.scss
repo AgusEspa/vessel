@@ -15,11 +15,45 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	background-color: transparent;
+	width: 100%;
+	padding: 1rem 2rem 1rem 2rem;
 
 	.helperIcons {
 		p {
 			font-size: 1.5rem;
 			color: white;
+		}
+
+		.hamburger {
+			display: block;
+			cursor: pointer;
+			position: absolute;
+			right: 1rem;
+			top: 1.2rem;
+			margin: 0rem 1rem 0rem 0rem;
+			padding: 0;
+		
+			.bar {
+				display: block;
+				width: 1.2rem;
+				height: 1px;
+				margin: 0.3rem;
+				background-color: #ffffff;
+				border-radius: 1px;
+				transition: all 0.2s ease-out;
+			}
+						
+			.hamburgerActive .bar:nth-child(2) {
+				opacity: 0;
+			}
+			
+			.hamburgerActive .bar:nth-child(1) {
+				transform: rotate(45deg) translate(4px, 4px);
+			}
+			
+			.hamburgerActive .bar:nth-child(3) {
+				transform: rotate(-45deg) translate(4px, -4px);
+			}
 		}
 	}
 

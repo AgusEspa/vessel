@@ -1,5 +1,5 @@
-import Navbar from "./components/navbar";
-import Stage from "./components/stage";
+import Navbar from "./components/Navbar";
+import Stage from "./components/Stage";
 
 function App() {
 	return (
