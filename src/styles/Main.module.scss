@@ -9,6 +9,11 @@ body {
 	background-color: #000000;
 }
 
+p {
+	margin: 0;
+	padding: 0;
+}
+
 .navbarContainer {
 	display: flex;
 	position: relative;
@@ -19,20 +24,25 @@ body {
 	padding: 1rem 2rem 1rem 2rem;
 
 	.helperIcons {
+		margin: 0;
+		padding: 0;
+
 		p {
 			font-size: 1.5rem;
+			font-weight: 800;
 			color: white;
+			font-family:'Courier New', Courier, monospace;
+		}
+
+		button {
+			cursor: pointer;
+			background-color: transparent;
+			border: none;
 		}
 
 		.hamburger {
 			display: block;
-			cursor: pointer;
-			position: absolute;
-			right: 1rem;
-			top: 1.2rem;
-			margin: 0rem 1rem 0rem 0rem;
-			padding: 0;
-		
+
 			.bar {
 				display: block;
 				width: 1.2rem;
@@ -42,16 +52,19 @@ body {
 				border-radius: 1px;
 				transition: all 0.2s ease-out;
 			}
-						
-			.hamburgerActive .bar:nth-child(2) {
+		}
+		.hamburgerActive {
+			display: block;
+
+			.bar:nth-child(2) {
 				opacity: 0;
 			}
-			
-			.hamburgerActive .bar:nth-child(1) {
+		
+			.bar:nth-child(1) {
 				transform: rotate(45deg) translate(4px, 4px);
 			}
-			
-			.hamburgerActive .bar:nth-child(3) {
+		
+			.bar:nth-child(3) {
 				transform: rotate(-45deg) translate(4px, -4px);
 			}
 		}
@@ -60,11 +73,11 @@ body {
 	.navLogoBox {
 		display: flex;
 		align-items: center;
-		margin-left: 2rem;
-		padding: 0.7rem;
+		margin-left: 0;
+		padding: 0;
 		
 		.navLogo {
-			width: 8rem;
+			width: 10rem;
 		}
 	}
 	
