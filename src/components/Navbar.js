@@ -12,9 +12,9 @@ const Navbar = () => {
 	return (
 		<nav className={styles.navbarContainer}>
 			<div className={styles.helperIcons}>
-				<button>
-					<p>?</p>
-				</button>
+				<div>
+					<audio src="mystique-16608.mp3" autoPlay controls />
+				</div>
 			</div>
 			<div className={styles.navLogoBox}>
 				<img
