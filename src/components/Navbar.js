@@ -34,7 +34,7 @@ const Navbar = (props) => {
 					<img
 						className={styles.navLogo}
 						src="logo-reduced.png"
-						alt="logo"
+						alt="reduced Vessel logo"
 					/>
 				</div>
 				<div className={styles.helperIcons}>

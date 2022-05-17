@@ -17,4 +17,32 @@ p {
 .landingContainer {
 	background-image: url("../../public/landing.jpg");
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 1rem 1rem 1rem;
+
+	.logoBox{
+		margin-left: 0;
+		padding: 0;
+	
+		.bigLogo {
+			width: 15rem;
+		}
+	}
+
+	.welcomeContainer {
+		max-width: 25rem;
+		border: none;
+		border-radius: 0.5rem;
+		background-color: rgba(0, 0, 0, 0.3);
+		padding: 0.5rem;
+		margin-top: 11rem;
+
+		p {
+			color: white;
+			text-align: center;
+		}
+	}
 }

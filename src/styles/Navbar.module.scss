@@ -102,5 +102,7 @@ audio {
 }
 .audioContainerActive {
 	display: block;
+	position: absolute;
+	z-index: 9;
 	margin-left: 1rem;
 }
