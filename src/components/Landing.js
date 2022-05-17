@@ -1,6 +1,20 @@
+import { useState } from "react";
 import styles from "../styles/Main.module.scss";
 
 const Landing = (props) => {
+	const [formData, setFormData] = useState("");
+
+	const handleFormChange = (event) => {
+		event.preventDefault();
+		setFormData(event.target.value);
+	};
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		props.setUserAlias(event.target.value);
+		window.localStorage.setItem("alias", event.target.value);
+	};
+
 	return (
 		<div className={styles.landingContainer}>
 			<div className={styles.logoBox}>
@@ -29,7 +43,18 @@ const Landing = (props) => {
 						layouts and visual mockups.
 					</p>
 				</div>
-				<form>Who will you be? Alias</form>
+				<form onSubmit={handleSubmit}>
+					<label>Who are you?</label>
+					<input
+						className={styles.validationError}
+						type="text"
+						name="formData"
+						placeholder="alias"
+						value={formData}
+						onChange={handleFormChange}
+					/>
+					<button>Start!</button>
+				</form>
 			</div>
 		</div>
 	);

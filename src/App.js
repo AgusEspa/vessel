@@ -9,7 +9,7 @@ function App() {
 	const [lastStage, setLastStage] = useState("");
 
 	useEffect(() => {
-		const fetchedUserAlias = window.localStorage.getItem("name");
+		const fetchedUserAlias = window.localStorage.getItem("alias");
 		if (fetchedUserAlias != null || fetchedUserAlias != undefined) {
 			setUserAlias(fetchedUserAlias);
 			setActiveStage("ReturnLanding");
@@ -25,7 +25,7 @@ function App() {
 	return (
 		<>
 			<Navbar activeStage={activeStage} setActiveStage={activeStage} />
-			<Landing activeStage={activeStage} setActiveStage={activeStage} />
+			<Landing setUserAlias={setUserAlias} />
 		</>
 	);
 }
