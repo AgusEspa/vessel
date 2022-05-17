@@ -10,7 +10,7 @@ function App() {
 
 	useEffect(() => {
 		const fetchedUserAlias = window.localStorage.getItem("alias");
-		if (fetchedUserAlias != null || fetchedUserAlias != undefined) {
+		if (fetchedUserAlias != null) {
 			setUserAlias(fetchedUserAlias);
 			setActiveStage("ReturnLanding");
 		}
