@@ -1,0 +1,99 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #000000;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+audio {
+	border: none;
+	outline: 0;
+	margin: 0;
+}
+
+.navbarContainer {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	background-color: transparent;
+	width: 100%;
+	padding: 1rem 2rem 1rem 2rem;
+
+	.helperIcons {
+		margin: 0;
+		padding: 0;
+
+		p {
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: white;
+			font-family:'Courier New', Courier, monospace;
+		}
+
+		button {
+			cursor: pointer;
+			background-color: transparent;
+			border: none;
+		}
+
+		.hamburger {
+			display: block;
+
+			.bar {
+				display: block;
+				width: 1.2rem;
+				height: 1px;
+				margin: 0.3rem;
+				background-color: #ffffff;
+				border-radius: 1px;
+				transition: all 0.2s ease-out;
+			}
+		}
+		.hamburgerActive {
+			display: block;
+
+			.bar:nth-child(2) {
+				opacity: 0;
+			}
+		
+			.bar:nth-child(1) {
+				transform: rotate(45deg) translate(4px, 4px);
+			}
+		
+			.bar:nth-child(3) {
+				transform: rotate(-45deg) translate(4px, -4px);
+			}
+		}
+	}
+
+	.navLogoBox {
+		display: flex;
+		align-items: center;
+		margin-left: 0;
+		padding: 0;
+		
+		.navLogo {
+			width: 10rem;
+		}
+	}
+	
+}
+
+.audioContainer {
+	display: none;
+
+}
+.audioContainerActive {
+	display: block;
+	margin-left: 1rem;
+}
