@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { BsVolumeUp } from "react-icons/bs";
 import styles from "../styles/Navbar.module.scss";
 
-const Navbar = () => {
+const Navbar = (props) => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [toggleAudio, setToggleAudio] = useState(false);
 
@@ -20,10 +21,16 @@ const Navbar = () => {
 			<nav className={styles.navbarContainer}>
 				<div className={styles.helperIcons}>
 					<button onClick={handleToggleAudio}>
-						<p>A</p>
+						<BsVolumeUp />
 					</button>
 				</div>
-				<div className={styles.navLogoBox}>
+				<div
+					className={
+						props.activeStage === "FreshLanding"
+							? styles.navLogoBoxOff
+							: styles.navLogoBox
+					}
+				>
 					<img
 						className={styles.navLogo}
 						src="logo-reduced.png"

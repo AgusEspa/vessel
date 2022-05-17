@@ -46,6 +46,11 @@ audio {
 			border: none;
 		}
 
+		svg {
+			fill: white;
+			font-size: 1.4rem;
+		}
+
 		.hamburger {
 			display: block;
 
@@ -76,6 +81,9 @@ audio {
 		}
 	}
 
+	.navLogoBoxOff {
+		display: none;
+	}
 	.navLogoBox {
 		display: flex;
 		align-items: center;
@@ -91,7 +99,6 @@ audio {
 
 .audioContainer {
 	display: none;
-
 }
 .audioContainerActive {
 	display: block;
