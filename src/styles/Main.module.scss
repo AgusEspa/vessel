@@ -10,7 +10,7 @@ body {
 }
 
 p {
-	margin: 0;
+	margin: 0.4rem 0 0 0;
 	padding: 0;
 	font-family: monospace;
 	font-size: 1rem;
@@ -19,12 +19,19 @@ p {
 
 .landingContainer {
 	background-image: url("../../public/landing.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;	
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 3rem 1rem 1rem 1rem;
+
+	@media screen and (max-width: 600px) {
+		background-image: url("../../public/landing-small.jpg");
+		background-position-y: 5rem;
+	}
 
 	.logoBox{
 		margin-left: 0;
@@ -33,6 +40,12 @@ p {
 		.bigLogo {
 			width: 15rem;
 		}
+
+		@media screen and (max-width: 600px) {
+			.bigLogo {
+				width: 13rem;
+			}
+		}
 	}
 
 	.welcomeContainer {
@@ -40,7 +53,7 @@ p {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		max-width: 25rem;
+		max-width: 45rem;
 		border: none;
 		border-radius: 0.5rem;
 		background-color: rgba(0, 0, 0, 0.3);
@@ -67,10 +80,10 @@ p {
 				}
 			
 				input {
-					width: 12rem;
-					height: 1.5rem;
+					width: 14rem;
+					height: 2rem;
 					border: 0;
-					margin: 0.5rem 1rem 1rem 1rem;
+					margin: 1.5rem 1rem 1rem 1rem;
 					font-size: 1rem;
 					color: white;
 					font-family: monospace;
@@ -79,9 +92,12 @@ p {
 					background-color: transparent;
 					border: 1px solid pink;
 					border-radius: 0.5rem;
-			
+					&:focus {
+						outline: none;
+						box-shadow: 0 0 15px  rgb(255, 192, 231);
+					}
 					&::placeholder {
-						color: rgb(220, 220, 220);
+						color: rgb(255, 205, 214);
 						text-align: center;
 					}
 				}
@@ -93,11 +109,11 @@ p {
 					margin: 0.5rem 1rem 3rem 1rem;
 					border-radius: 1.2rem;
 					text-align: center;
-					padding: 0.5rem 1rem;
+					padding: 0.3rem 1rem;
 					background-color: pink;
 					font-family: monospace;
 					color: black;
-					font-size: 1rem;
+					font-size: 1.2rem;
 					border: none;
 					outline: 0;
 					transition: all 0.1s ease-out;
