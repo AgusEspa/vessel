@@ -9,11 +9,13 @@ const Navbar = (props) => {
 	const handleToggleMenu = (event) => {
 		event.preventDefault();
 		setToggleMenu((prevState) => !prevState);
+		setToggleAudio(false);
 	};
 
 	const handleToggleAudio = (event) => {
 		event.preventDefault();
 		setToggleAudio((prevState) => !prevState);
+		setToggleMenu(false);
 	};
 
 	return (
@@ -40,9 +42,7 @@ const Navbar = (props) => {
 				<div className={styles.helperIcons}>
 					<button
 						className={
-							!toggleMenu
-								? styles.hamburger
-								: styles.hamburgerActive
+							!toggleMenu ? styles.hamburger : styles.hamburger
 						}
 						onClick={handleToggleMenu}
 					>
@@ -61,6 +61,26 @@ const Navbar = (props) => {
 				}
 			>
 				<audio src="mystique-16608.mp3" autoPlay controls />
+			</div>
+
+			<div
+				className={
+					!toggleMenu
+						? styles.menuContainer
+						: styles.menuContainerActive
+				}
+			>
+				<ul className={styles.menuLinks}>
+					<li>
+						<a href="/">Read me</a>
+						<h4>Chapters</h4>
+						<ul>
+							<li>
+								<h5>Matter</h5>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</>
 	);

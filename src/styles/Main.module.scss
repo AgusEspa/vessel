@@ -26,7 +26,7 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 3rem 1rem 1rem 1rem;
+	padding: 3rem 0.5rem 2rem 0.5rem;
 
 	@media screen and (max-width: 600px) {
 		background-image: url("../../public/landing-small.jpg");
@@ -43,7 +43,7 @@ p {
 
 		@media screen and (max-width: 600px) {
 			.bigLogo {
-				width: 13rem;
+				width: 12rem;
 			}
 		}
 	}
@@ -53,12 +53,12 @@ p {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		max-width: 45rem;
+		max-width: 40rem;
 		border: none;
 		border-radius: 0.5rem;
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: rgba(0, 0, 0, 0.4);
 		padding: 0.5rem;
-		margin-top: 12rem;
+		margin-top: 16rem;
 
 		p {
 			color: white;
@@ -71,58 +71,79 @@ p {
 			justify-content: center;
 
 			label {
-					display: block;
-					font-family: monospace;
-					font-size: 1.1rem;
-					text-align: center;
-					color: pink;
-					margin: 2rem 1rem 0.5rem 1rem;
-				}
+				display: block;
+				font-family: monospace;
+				font-size: 1.1rem;
+				text-align: center;
+				color: pink;
+				margin: 2rem 1rem 0.5rem 1rem;
+			}
 			
-				input {
-					width: 14rem;
-					height: 2rem;
-					border: 0;
-					margin: 1.5rem 1rem 1rem 1rem;
-					font-size: 1rem;
-					color: white;
-					font-family: monospace;
-					text-align: center;
-					padding: 0.5rem;
-					background-color: transparent;
-					border: 1px solid pink;
-					border-radius: 0.5rem;
-					&:focus {
-						outline: none;
-						box-shadow: 0 0 15px  rgb(255, 192, 231);
-					}
-					&::placeholder {
-						color: rgb(255, 205, 214);
-						text-align: center;
-					}
+			input {
+				width: 14rem;
+				height: 2.3rem;
+				border: 0;
+				margin: 1.5rem 1rem 1rem 1rem;
+				font-size: 1rem;
+				color: white;
+				font-family: monospace;
+				text-align: center;
+				padding: 0.5rem;
+				background-color: transparent;
+				border: 1px solid pink;
+				border-radius: 0.5rem;
+				&:focus {
+					outline: none;
+					box-shadow: 0 0 15px  rgb(255, 192, 231);
 				}
-			
-				button {
-					align-self: center;
-					width: 10rem;
-					height: 2rem;
-					margin: 0.5rem 1rem 3rem 1rem;
-					border-radius: 1.2rem;
+				&::placeholder {
+					color: rgb(255, 205, 214);
 					text-align: center;
-					padding: 0.3rem 1rem;
+				}
+			}
+			
+			button {
+				align-self: center;
+				width: 10rem;
+				height: 2rem;
+				margin: 0.5rem 1rem 3rem 1rem;
+				border-radius: 1.2rem;
+				text-align: center;
+				padding: 0.3rem 1rem;
+				background-color: rgb(224, 156, 168);
+				font-family: monospace;
+				color: black;
+				font-size: 1.2rem;
+				border: none;
+				outline: 0;
+				transition: all 0.1s ease-out;
+				cursor: pointer;
+				&:hover {
 					background-color: pink;
-					font-family: monospace;
-					color: black;
-					font-size: 1.2rem;
-					border: none;
-					outline: 0;
-					transition: all 0.1s ease-out;
-					cursor: pointer;
-					&:hover {
-						background-color: rgb(224, 156, 168);
+				}
+			}
+		}
+		
+		.readMe {
+			h4 {
+				font-size: 1rem;
+				font-family: monospace;
+				text-align: center;
+				color: rgb(68, 68, 255);
+				margin: 0;
+				padding: 0;
+
+				a {
+					text-decoration: underline;
+					&:visited {
+						color: rgb(68, 68, 255);
 					}
 				}
 
-		}		
+			}
+			p {
+				font-size: 0.9rem;
+			}
+		}
 	}
 }

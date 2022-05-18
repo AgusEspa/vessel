@@ -61,6 +61,12 @@ const Landing = (props) => {
 					/>
 					<button>Join</button>
 				</form>
+				<div className={styles.readMe}>
+					<h4>
+						<a href="/">What am I even doing here?</a>
+					</h4>
+					<p>(Read or procede at your own peril.)</p>
+				</div>
 			</div>
 		</div>
 	);
