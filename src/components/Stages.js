@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import Navbar from "./Navbar";
-import Stage101 from "./stages/Stage101";
+import Stage90101746 from "./stages/Stage90101746";
 import styles from "../styles/Main.module.scss";
 
 const Stages = (props) => {
@@ -11,7 +11,7 @@ const Stages = (props) => {
 		<>
 			<Navbar userExists={true} />
 
-			{props.id === 101 && <Stage101 />}
+			{props.id === 90101746 && <Stage90101746 />}
 		</>
 	);
 };

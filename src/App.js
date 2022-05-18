@@ -21,10 +21,10 @@ function App() {
 						}
 					/>
 					<Route
-						path="/stage/101"
+						path="/stage/90101746"
 						element={
 							<ProtectedStageRoute>
-								<Stages id={101} />
+								<Stages id={90101746} />
 							</ProtectedStageRoute>
 						}
 					/>
