@@ -5,26 +5,24 @@ import Stage from "./components/Stage";
 
 function App() {
 	const [userAlias, setUserAlias] = useState("");
-	const [activeStage, setActiveStage] = useState("FreshLanding");
-	const [lastStage, setLastStage] = useState("");
+	const [stages, setStages] = useState({ active: "", last: "" });
 
 	useEffect(() => {
 		const fetchedUserAlias = window.localStorage.getItem("alias");
+		console.log(fetchedUserAlias);
 		if (fetchedUserAlias != null) {
 			setUserAlias(fetchedUserAlias);
-			setActiveStage("ReturnLanding");
 		}
 	}, []);
 
 	useEffect(() => {
 		const lastStage = window.localStorage.getItem("last_stage");
-		if (lastStage !== null || lastStage !== undefined)
-			setLastStage(lastStage);
+		if (lastStage !== null || lastStage !== undefined) setStages(lastStage);
 	}, []);
 
 	return (
 		<>
-			<Navbar activeStage={activeStage} setActiveStage={activeStage} />
+			<Navbar activeStage={userAlias} />
 			<Landing setUserAlias={setUserAlias} />
 		</>
 	);
