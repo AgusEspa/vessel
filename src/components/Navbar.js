@@ -18,7 +18,6 @@ const Navbar = (props) => {
 		setToggleMenu(false);
 	};
 
-	console.log(props.userAlias);
 	return (
 		<>
 			<nav className={styles.navbarContainer}>
@@ -29,11 +28,9 @@ const Navbar = (props) => {
 				</div>
 				<div
 					className={
-						props.userAlias === "" ||
-						props.userAlias === undefined ||
-						props.userAlias === null
-							? styles.navLogoBoxOff
-							: styles.navLogoBox
+						props.userExists
+							? styles.navLogoBox
+							: styles.navLogoBoxOff
 					}
 				>
 					<img

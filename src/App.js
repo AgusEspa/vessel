@@ -1,30 +1,35 @@
-import { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Landing from "./components/Landing";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import FreshLanding from "./components/FreshLanding";
+import ReturnLanding from "./components/ReturnLanding";
 import Stage from "./components/Stage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
-	const [userAlias, setUserAlias] = useState("");
-	const [stages, setStages] = useState({ active: "", last: "" });
-
-	useEffect(() => {
-		const fetchedUserAlias = window.localStorage.getItem("alias");
-		console.log(fetchedUserAlias);
-		if (fetchedUserAlias != null) {
-			setUserAlias(fetchedUserAlias);
-		}
-	}, []);
-
-	useEffect(() => {
-		const lastStage = window.localStorage.getItem("last_stage");
-		if (lastStage !== null || lastStage !== undefined) setStages(lastStage);
-	}, []);
-
 	return (
-		<>
-			<Navbar activeStage={userAlias} />
-			<Landing setUserAlias={setUserAlias} />
-		</>
+		<HashRouter>
+			<AuthProvider>
+				<Routes>
+					<Route path="/land" element={<FreshLanding />} />
+					<Route
+						path="/"
+						element={
+							<ProtectedRoute>
+								<ReturnLanding />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						path="/stage/*"
+						element={
+							<ProtectedRoute>
+								<Stage />
+							</ProtectedRoute>
+						}
+					/>
+				</Routes>
+			</AuthProvider>
+		</HashRouter>
 	);
 }
 
