@@ -1,8 +1,9 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import FreshLanding from "./components/FreshLanding";
 import ReturnLanding from "./components/ReturnLanding";
-import Stage from "./components/Stage";
+import Stages from "./components/Stages";
 import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedStageRoute from "./components/ProtectedStageRoute";
 import { AuthProvider } from "./context/AuthContext";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 		<HashRouter>
 			<AuthProvider>
 				<Routes>
-					<Route path="/land" element={<FreshLanding />} />
+					<Route path="/start" element={<FreshLanding />} />
 					<Route
 						path="/"
 						element={
@@ -20,11 +21,11 @@ function App() {
 						}
 					/>
 					<Route
-						path="/stage/*"
+						path="/stage/101"
 						element={
-							<ProtectedRoute>
-								<Stage />
-							</ProtectedRoute>
+							<ProtectedStageRoute>
+								<Stages id={101} />
+							</ProtectedStageRoute>
 						}
 					/>
 				</Routes>

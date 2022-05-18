@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import styles from "../styles/Main.module.scss";
 
@@ -8,6 +9,8 @@ const FreshLanding = (props) => {
 
 	const { setUserAuth } = useContext(AuthContext);
 
+	const navigate = useNavigate();
+
 	const handleFormChange = (event) => {
 		event.preventDefault();
 		setFormData(event.target.value);
@@ -15,8 +18,13 @@ const FreshLanding = (props) => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		setUserAuth(event.target.value);
-		window.localStorage.setItem("alias", event.target.value);
+		window.localStorage.setItem("alias", formData);
+		window.localStorage.setItem("last_stage", "101");
+		setUserAuth({
+			userAlias: formData,
+			lastStage: "101",
+		});
+		navigate("/stage/101");
 	};
 
 	return (
