@@ -42,29 +42,26 @@ const FreshLanding = (props) => {
 
 				<div className={styles.welcomeContainer}>
 					<div>
+						<h1>…is never what it might seem…</h1>
+						<div className={styles.bigIconBox}>
+							<img src="headset.png" alt="headset icon" />
+						</div>
 						<p>
-							Vessel exists as a layered construct only
-							temporarily through the virtual world. It’s a
-							remnant of an obscure programming technique to
-							provide random access to an individual’s identity
-							graph, a processing network not too distant from a
-							human brain, albeit less complex. And like a brain,
-							it has a conditioned stability: elements change
-							their size, their interoperability, even their
-							references.
+							…but you are going to try to make sense out of it
+							regardless.
 						</p>
+						<p>Is this a game?</p>
 						<p>
-							We know nothing about you, just one thing, one thing
-							that you don’t know about yourself. You could put
-							down your headset and start over —it could be just a
-							malfunction after all— or it could be the most
-							singular occurrence of digital consciousness.
+							Isn't everything? This is also the opposite. Try to
+							quantify your brain’s ability to change and you will
+							understand.
 						</p>
+
 						<p>
-							If you think you can handle the convolution of your
-							reality, the emulsification of your mental
-							constructs, the dismemberment of your perceptions,
-							enter the stream:
+							If then you feel prepared to handle the convolution
+							of reality, the dismemberment of your perceptions,
+							the dissolution of your mental patterns, enter the
+							stream:
 						</p>
 					</div>
 					<form onSubmit={handleSubmit}>

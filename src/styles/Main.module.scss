@@ -26,7 +26,6 @@ p {
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	padding: 3rem 0.5rem 2rem 0.5rem;
 
@@ -60,11 +59,41 @@ p {
 		border-radius: 0.5rem;
 		background-color: rgba(0, 0, 0, 0.4);
 		padding: 0.5rem;
-		margin-top: 16rem;
+		margin: 10rem 0 0 0;
+
+		@media screen and (max-width: 600px) {
+			margin: 13rem 0 0 0;
+		}
+
+		h1 {
+			color: white;
+			text-align: center;
+			font-family: variables.$fonts;
+			font-size: 1.1rem;
+			margin: 1rem 0 0 0;
+		}
+
+		.bigIconBox {
+			margin: 3rem 0 2rem 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+		
+			img {
+				width: 14rem;
+			}
+		
+			@media screen and (max-width: 600px) {
+				img {
+					width: 12rem;
+				}
+			}
+		}
 
 		p {
 			color: white;
 			text-align: center;
+			font-family: variables.$fonts;
 		}
 
 		form {
@@ -159,7 +188,7 @@ p {
 	padding: 2rem 0.7rem 2rem 0.7rem;
 
 	.iconBox {
-		margin: 0 0 1rem 0;
+		margin: 2rem 0 1rem 0;
 		padding: 0;
 	
 		img {
@@ -186,16 +215,19 @@ p {
 		
 		h1 {
 			font-family: variables.$fonts;
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 			font-weight: 300;
 			text-align: center;
 			color: variables.$lightGray;
-			margin: 2rem 0 1.5rem 0;
+			margin: 1rem 0 1.5rem 0;
+		}
 
-			span {
-				font-weight: 900;
-				font-style: italic;
-			}
+		.alias {
+			font-weight: 500;
+			font-style: italic;
+			margin: 0rem 0 0rem 0;
+			color: rgb(192, 0, 192);
+			font-size: 1.4rem;
 		}
 
 		.contButton {

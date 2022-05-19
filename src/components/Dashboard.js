@@ -12,19 +12,16 @@ const Dashboard = (props) => {
 			<Navbar userExists={true} song={"mystique-16608.mp3"} />
 
 			<main className={styles.stageContainer}>
-				<div className={styles.iconBox}>
-					<img src="headset.png" alt="headset icon" />
-				</div>
-
 				<div className={styles.dashboardContainer}>
-					<h1>
-						<span>{userAuth.userAlias}</span>, you are still here...
-					</h1>
+					<div className={styles.iconBox}>
+						<img src="headset.png" alt="headset icon" />
+					</div>
+					<h1 className={styles.alias}>{userAuth.userAlias},</h1>
+					<h1>you are still here...</h1>
 					<button className={styles.contButton}>
 						Continue the quest
 					</button>
 					<p>or choose a chapter</p>
-
 					<div className={styles.indexBox}>
 						<Link to="/stage/90000631">0. Prologue</Link>
 
@@ -43,7 +40,6 @@ const Dashboard = (props) => {
 							<Link to="/stage/">2. To be continued...</Link>
 						)}
 					</div>
-
 					<div className={styles.abandonBox}>
 						<button className={styles.deleteButton}>
 							Abandon the quest
