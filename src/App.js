@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import FreshLanding from "./components/FreshLanding";
-import ReturnLanding from "./components/ReturnLanding";
+import Dashboard from "./components/Dashboard";
 import Stages from "./components/Stages";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ProtectedStageRoute from "./components/ProtectedStageRoute";
@@ -16,10 +16,22 @@ function App() {
 						path="/"
 						element={
 							<ProtectedRoute>
-								<ReturnLanding />
+								<Dashboard />
 							</ProtectedRoute>
 						}
 					/>
+
+					{/* Prologue */}
+					<Route
+						path="/stage/90000631"
+						element={
+							<ProtectedStageRoute>
+								<Stages id={90000631} />
+							</ProtectedStageRoute>
+						}
+					/>
+
+					{/* Part I - Chapter 1 */}
 					<Route
 						path="/stage/90101746"
 						element={

@@ -1,3 +1,5 @@
+@use "./variables";
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -6,13 +8,13 @@
 
 body {
 	margin: 0;
-	background-color: #000000;
+	background-color: variables.$background;
 }
 
 p {
 	margin: 0.4rem 0 0 0;
 	padding: 0;
-	font-family: monospace;
+	font-family: variables.$fonts;
 	font-size: 1rem;
 	line-height: 1.5rem;
 }
@@ -72,10 +74,10 @@ p {
 
 			label {
 				display: block;
-				font-family: monospace;
+				font-family: variables.$fonts;
 				font-size: 1.1rem;
 				text-align: center;
-				color: pink;
+				color: variables.$pink;
 				margin: 2rem 1rem 0.5rem 1rem;
 			}
 			
@@ -86,7 +88,7 @@ p {
 				margin: 1.5rem 1rem 1rem 1rem;
 				font-size: 1rem;
 				color: white;
-				font-family: monospace;
+				font-family: variables.$fonts;
 				text-align: center;
 				padding: 0.5rem;
 				background-color: transparent;
@@ -109,9 +111,9 @@ p {
 				margin: 0.5rem 1rem 3rem 1rem;
 				border-radius: 1.2rem;
 				text-align: center;
-				padding: 0.3rem 1rem;
-				background-color: rgb(224, 156, 168);
-				font-family: monospace;
+				padding: 0rem;
+				background-color: variables.$darkerPink;
+				font-family: variables.$fonts;
 				color: black;
 				font-size: 1.2rem;
 				border: none;
@@ -119,7 +121,7 @@ p {
 				transition: all 0.1s ease-out;
 				cursor: pointer;
 				&:hover {
-					background-color: pink;
+					background-color: variables.$pink;
 				}
 			}
 		}
@@ -127,23 +129,178 @@ p {
 		.readMe {
 			h4 {
 				font-size: 1rem;
-				font-family: monospace;
+				font-family: variables.$fonts;
 				text-align: center;
-				color: rgb(68, 68, 255);
+				color: rgb(80, 80, 255);
 				margin: 0;
 				padding: 0;
 
 				a {
 					text-decoration: underline;
 					&:visited {
-						color: rgb(68, 68, 255);
+						color: rgb(80, 80, 255);
 					}
 				}
 
 			}
 			p {
 				font-size: 0.9rem;
+				color: variables.$lightGray;
 			}
 		}
 	}
+}
+
+.stageContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 0.5rem 2rem 0.5rem;
+
+	.iconBox {
+		margin: 0 0 1rem 0;
+		padding: 0;
+	
+		img {
+			width: 10rem;
+		}
+	
+		@media screen and (max-width: 600px) {
+			img {
+				width: 8rem;
+			}
+		}
+	}
+
+	.dashboardContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 40rem;
+		border: 1px solid violet;
+		border-radius: 0.7rem;
+		padding: 1rem;
+		
+		h1 {
+			font-family: variables.$fonts;
+			font-size: 1.4rem;
+			font-weight: 300;
+			text-align: center;
+			color: variables.$lightGray;
+
+			span {
+				font-weight: 900;
+				font-style: italic;
+			}
+		}
+
+		.contButton {
+			align-self: center;
+			width: 9rem;
+			margin: 0.5rem 1rem 0.5rem 1rem;
+			border-radius: 1.2rem;
+			text-align: center;
+			padding: 0.5rem 1rem 0.5rem 1rem;
+			background-color: violet;
+			font-family: variables.$fonts;
+			color: black;
+			font-size: 1.1rem;
+			line-height: 1.1rem;
+			border: none;
+			outline: 0;
+			transition: all 0.1s ease-out;
+			cursor: pointer;
+			&:hover {
+				background-color: rgb(236, 153, 236);
+			}
+		}
+
+		p {
+			font-size: 0.9rem;
+			color: variables.$lightGray;
+			margin: 0;
+		}
+
+		.indexBox {
+			padding: 1rem;
+			margin: 1rem 0 0.5rem 0;
+			max-width: 39rem;
+			border-radius: 0.5rem;
+			border: 1px solid purple;
+
+			h2 {
+				font-family: variables.$fonts;
+				font-size: 1.2rem;
+				font-weight: 300;
+				text-align: left;
+				color: variables.$lightGray;
+				margin: 0.5rem 0 0 0;
+			}
+
+			h3 {
+				font-family: variables.$fonts;
+				font-size: 1.1rem;
+				font-weight: 300;
+				text-align: left;
+				color: variables.$lightGray;
+				margin: 1.3rem 0 0.5rem 0;
+			}
+
+			h4 {
+				font-family: variables.$fonts;
+				color: variables.$darkGray;
+				font-size: 1.05rem;
+				font-weight: 300;
+				text-align: left;
+				margin: 0.5rem 0 0 0.4rem;
+			}
+
+			a {
+				text-decoration: underline;
+				font-family: variables.$fonts;
+				color: variables.$lightGray;
+				font-size: 1.05rem;
+				font-weight: 300;
+				text-align: left;
+				margin: 0.5rem 0 0 0.4rem;
+			}
+		}
+
+		.abandonBox {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			background-color: black;
+			padding: 1rem;
+			border-radius: 0.5rem;
+			border: 1px dotted red;
+			margin: 2rem 0rem 0rem 0rem;
+			max-width: 39rem;
+			text-align: center;
+
+			.deleteButton {
+					align-self: center;
+					width: 9rem;
+					margin: 0.5rem 1rem 0.5rem 1rem;
+					border-radius: 1.2rem;
+					text-align: center;
+					padding: 0.5rem 1rem 0.5rem 1rem;
+					background-color: rgb(185, 3, 3);
+					font-family: variables.$fonts;
+					color: white;
+					font-size: 1.1rem;
+					line-height: 1.1rem;
+					border: none;
+					outline: 0;
+					transition: all 0.1s ease-out;
+					cursor: pointer;
+			
+					&:hover {
+						background-color: rgb(210, 0, 0);
+					}
+				}
+		}
+	}	
 }

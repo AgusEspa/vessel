@@ -19,19 +19,19 @@ const FreshLanding = (props) => {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		window.localStorage.setItem("alias", formData);
-		window.localStorage.setItem("last_stage", "101");
+		window.localStorage.setItem("last_stage", 90000631);
 		setUserAuth({
 			userAlias: formData,
-			lastStage: "101",
+			lastStage: 90000631,
 		});
-		navigate("/stage/101");
+		navigate("/stage/90000631");
 	};
 
 	return (
 		<>
 			<Navbar userExists={false} />
 
-			<div className={styles.landingContainer}>
+			<main className={styles.landingContainer}>
 				<div className={styles.logoBox}>
 					<img
 						className={styles.bigLogo}
@@ -85,7 +85,7 @@ const FreshLanding = (props) => {
 						<p>(Read or procede at your own peril.)</p>
 					</div>
 				</div>
-			</div>
+			</main>
 		</>
 	);
 };

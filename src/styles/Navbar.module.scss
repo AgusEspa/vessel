@@ -1,13 +1,4 @@
-* {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-body {
-	margin: 0;
-	background-color: #000000;
-}
+@use "./variables";
 
 p {
 	margin: 0;
@@ -39,7 +30,7 @@ audio {
 			font-size: 1.5rem;
 			font-weight: 800;
 			color: white;
-			font-family:'Courier New', Courier, monospace;
+			font-family: variables.$fonts;
 		}
 
 		button {
