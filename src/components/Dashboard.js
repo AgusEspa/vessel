@@ -9,7 +9,7 @@ const Dashboard = (props) => {
 
 	return (
 		<>
-			<Navbar userExists={true} />
+			<Navbar userExists={true} song={"mystique-16608.mp3"} />
 
 			<main className={styles.stageContainer}>
 				<div className={styles.iconBox}>
@@ -26,7 +26,7 @@ const Dashboard = (props) => {
 					<p>or choose a chapter</p>
 
 					<div className={styles.indexBox}>
-						<Link to="/stage/90000631">Prologue</Link>
+						<Link to="/stage/90000631">0. Prologue</Link>
 
 						<h3>PART I - The Construct</h3>
 						{false ? (
@@ -37,7 +37,11 @@ const Dashboard = (props) => {
 							</Link>
 						)}
 
-						<h4>2. To be continued...</h4>
+						{true ? (
+							<h4>2. To be continued...</h4>
+						) : (
+							<Link to="/stage/">2. To be continued...</Link>
+						)}
 					</div>
 
 					<div className={styles.abandonBox}>

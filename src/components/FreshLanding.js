@@ -29,7 +29,7 @@ const FreshLanding = (props) => {
 
 	return (
 		<>
-			<Navbar userExists={false} />
+			<Navbar userExists={false} song={"mystique-16608.mp3"} />
 
 			<main className={styles.landingContainer}>
 				<div className={styles.logoBox}>

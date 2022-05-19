@@ -60,7 +60,7 @@ const Navbar = (props) => {
 						: styles.audioContainerActive
 				}
 			>
-				<audio src="mystique-16608.mp3" autoPlay controls />
+				<audio src={props.song} autoPlay controls />
 			</div>
 
 			<div
