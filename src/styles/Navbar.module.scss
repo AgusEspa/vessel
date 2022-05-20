@@ -106,8 +106,25 @@ audio {
 	text-align: right;
 	background-color: rgba(0, 0, 0, 0.7);
 	.menuLinks {
+		margin: 0;
+		padding: 0;
+		
 		ul {
 			margin: 0;
+			padding: 0;
+			display: block;
+		}
+		
+		li, a {
+			cursor: pointer;
+			list-style-type: none;
+			color: white;
+			font-family: variables.$fonts;
+			text-decoration: none;
+			font-size: 1.1rem;
+			padding: 0;
+			margin: 0 0 1rem 0;
+			border-radius: 0;
 		}
 	}
 }

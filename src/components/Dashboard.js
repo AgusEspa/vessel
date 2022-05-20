@@ -5,7 +5,12 @@ import Navbar from "./Navbar";
 import styles from "../styles/Main.module.scss";
 
 const Dashboard = (props) => {
-	const { userAuth } = useContext(AuthContext);
+	const { userAuth, logout } = useContext(AuthContext);
+
+	const handleDelete = (event) => {
+		event.preventDefault();
+		logout();
+	};
 
 	return (
 		<>
@@ -26,7 +31,7 @@ const Dashboard = (props) => {
 						<Link to="/stage/90000631">0. Prologue</Link>
 
 						<h3>PART I - The Construct</h3>
-						{false ? (
+						{userAuth.lastStage < 90101746 ? (
 							<h4>1. Matter of Thought</h4>
 						) : (
 							<Link to="/stage/90101746">
@@ -41,7 +46,10 @@ const Dashboard = (props) => {
 						)}
 					</div>
 					<div className={styles.abandonBox}>
-						<button className={styles.deleteButton}>
+						<button
+							className={styles.deleteButton}
+							onClick={handleDelete}
+						>
 							Abandon the quest
 						</button>
 						<p>

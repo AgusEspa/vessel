@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import styles from "../styles/Main.module.scss";
 
@@ -77,7 +77,7 @@ const FreshLanding = (props) => {
 					</form>
 					<div className={styles.readMe}>
 						<h4>
-							<a href="/">What am I even doing here?</a>
+							<Link to="/help">What am I even doing here?</Link>
 						</h4>
 						<p>(Read or procede at your own peril.)</p>
 					</div>

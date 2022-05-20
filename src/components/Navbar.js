@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { BsVolumeUp } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { BsVolumeUp, BsVolumeMute } from "react-icons/bs";
 import styles from "../styles/Navbar.module.scss";
 
 const Navbar = (props) => {
@@ -23,7 +24,7 @@ const Navbar = (props) => {
 			<nav className={styles.navbarContainer}>
 				<div className={styles.helperIcons}>
 					<button onClick={handleToggleAudio}>
-						<BsVolumeUp />
+						{props.song !== "" ? <BsVolumeUp /> : <BsVolumeMute />}
 					</button>
 				</div>
 				<div
@@ -53,15 +54,17 @@ const Navbar = (props) => {
 				</div>
 			</nav>
 
-			<div
-				className={
-					!toggleAudio
-						? styles.audioContainer
-						: styles.audioContainerActive
-				}
-			>
-				<audio src={props.song} autoPlay controls />
-			</div>
+			{props.song !== "" && (
+				<div
+					className={
+						!toggleAudio
+							? styles.audioContainer
+							: styles.audioContainerActive
+					}
+				>
+					<audio src={props.song} autoPlay controls />
+				</div>
+			)}
 
 			<div
 				className={
@@ -72,13 +75,19 @@ const Navbar = (props) => {
 			>
 				<ul className={styles.menuLinks}>
 					<li>
-						<a href="/">Read me</a>
-						<h4>Chapters</h4>
-						<ul>
-							<li>
-								<h5>Matter</h5>
-							</li>
-						</ul>
+						<Link to="/help">Help</Link>
+					</li>
+					<li>
+						<Link to="/">Dashboard</Link>
+					</li>
+					<li>
+						<a
+							href="https://www.buymeacoffee.com/agusespa"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Support my work
+						</a>
 					</li>
 				</ul>
 			</div>

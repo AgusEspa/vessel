@@ -5,6 +5,7 @@ import Stages from "./components/Stages";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ProtectedStageRoute from "./components/ProtectedStageRoute";
 import { AuthProvider } from "./context/AuthContext";
+import Help from "./components/Help";
 
 function App() {
 	return (
@@ -12,6 +13,8 @@ function App() {
 			<AuthProvider>
 				<Routes>
 					<Route path="/start" element={<FreshLanding />} />
+					<Route path="/help" element={<Help />} />
+
 					<Route
 						path="/"
 						element={
