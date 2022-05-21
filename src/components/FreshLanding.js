@@ -90,7 +90,13 @@ const FreshLanding = (props) => {
 						{loadingEnv && (
 							<div className={styles.loadingEnv}>
 								<p>loading environment</p>
-								<div className={styles.loadingDots}></div>
+								<div className={styles.loadingDots}>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
 							</div>
 						)}
 					</form>

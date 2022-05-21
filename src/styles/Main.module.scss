@@ -1,5 +1,18 @@
 @use "./variables";
 
+@mixin fadeInAnimation {
+	animation: fadeIn 1s ease-in;
+		@keyframes fadeIn {
+			0% {
+				opacity: 0%;
+			}
+	
+			100% {
+				opacity: 100%;
+			}
+		}
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -24,10 +37,12 @@ p {
 	background-repeat: no-repeat;
 	background-position: center top;	
 	background-size: cover;
+	background-position-y: 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 3rem 0.5rem 2rem 0.5rem;
+	@include fadeInAnimation();
 
 	@media screen and (max-width: 600px) {
 		background-image: url("../../public/landing-small.jpg");
@@ -59,7 +74,7 @@ p {
 		border-radius: 0.5rem;
 		background-color: rgba(0, 0, 0, 0.4);
 		padding: 0.5rem;
-		margin: 8rem 0 0 0;
+		margin: 9rem 0 0 0;
 
 		@media screen and (max-width: 600px) {
 			margin: 11rem 0 0 0;
@@ -75,7 +90,7 @@ p {
 				width: 0.6rem;
 				height: 0.6rem;
 				border: 2px solid rgb(187, 19, 182);
-				border-radius: 1rem;
+				border-radius: 50%;
 				margin: 0.5rem 0.2rem 0.2rem 0.2rem;
 			}
 		}
@@ -174,14 +189,58 @@ p {
 				}
 			}
 
-						.loadingEnv {
-							display: block;
+			.loadingEnv {
+				display: block;
 			
-							p {
-								font-size: 0.9rem;
-								color: variables.$lightGray;
-							}
+				p {
+					font-size: 0.9rem;
+					color: variables.$lightGray;
+				}
+				
+				.loadingDots {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+			
+					span {
+						width: 2px;
+						height: 0.8rem;
+						margin: 0.5rem 0.2rem 0.2rem 0.2rem;
+						transform: rotate(27deg);
+						background-color: variables.$lightGray;
+						animation: blinking 1s infinite;
+					}
+
+					@keyframes blinking {
+						0% {
+							background-color: variables.$lightGray;
 						}
+						50% {
+							background-color: rgb(187, 19, 182);
+						}
+						100% {
+							background-color: variables.$lightGray;
+						}
+					}
+					span:nth-child(1) {
+						animation-delay: 0.1s;
+					}
+					span:nth-child(2) {
+						animation-delay: 0.2s;
+					}
+					span:nth-child(3) {
+						animation-delay: 0.3s;
+					}
+					span:nth-child(4) {
+						animation-delay: 0.4s;
+					}
+					span:nth-child(5) {
+						animation-delay: 0.5s;
+					}
+				}
+				
+			}
 		}
 		
 		.readMe {
@@ -215,6 +274,7 @@ p {
 	justify-content: center;
 	align-items: center;
 	padding: 2rem 0.7rem 2rem 0.7rem;
+	@include fadeInAnimation();
 
 	.headImgContainer {
 			margin: 0 0 1rem 0;
