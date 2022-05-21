@@ -59,10 +59,25 @@ p {
 		border-radius: 0.5rem;
 		background-color: rgba(0, 0, 0, 0.4);
 		padding: 0.5rem;
-		margin: 10rem 0 0 0;
+		margin: 8rem 0 0 0;
 
 		@media screen and (max-width: 600px) {
-			margin: 13rem 0 0 0;
+			margin: 11rem 0 0 0;
+		}
+
+		.dots {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		
+			span {
+				width: 0.6rem;
+				height: 0.6rem;
+				border: 2px solid rgb(187, 19, 182);
+				border-radius: 1rem;
+				margin: 0.5rem 0.2rem 0.2rem 0.2rem;
+			}
 		}
 
 		h1 {
@@ -70,7 +85,11 @@ p {
 			text-align: center;
 			font-family: variables.$fonts;
 			font-size: 1.1rem;
-			margin: 1rem 0 0 0;
+			margin: 0.6rem 0 0.4rem 0;
+
+			.colored {
+				color: rgb(187, 19, 182);
+			}
 		}
 
 		.bigIconBox {
@@ -100,6 +119,7 @@ p {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			margin-bottom: 3rem;
 
 			label {
 				display: block;
@@ -137,7 +157,7 @@ p {
 				align-self: center;
 				width: 10rem;
 				height: 2rem;
-				margin: 0.5rem 1rem 3rem 1rem;
+				margin: 0.5rem 1rem 0.5rem 1rem;
 				border-radius: 1.2rem;
 				text-align: center;
 				padding: 0rem;
@@ -153,6 +173,15 @@ p {
 					background-color: variables.$pink;
 				}
 			}
+
+						.loadingEnv {
+							display: block;
+			
+							p {
+								font-size: 0.9rem;
+								color: variables.$lightGray;
+							}
+						}
 		}
 		
 		.readMe {
@@ -187,6 +216,21 @@ p {
 	align-items: center;
 	padding: 2rem 0.7rem 2rem 0.7rem;
 
+	.headImgContainer {
+			margin: 0 0 1rem 0;
+			padding: 0;
+	
+			img {
+				width: 10rem;
+			}
+	
+			@media screen and (max-width: 600px) {
+				img {
+					width: 8rem;
+				}
+			}
+		}
+
 	.iconBox {
 		margin: 2rem 0 1rem 0;
 		padding: 0;
@@ -199,6 +243,32 @@ p {
 			img {
 				width: 8rem;
 			}
+		}
+	}
+
+	.helpContainer {
+		display: flex;
+		flex-direction: column;
+		max-width: 40rem;
+		border: none;
+		border-radius: 0.7rem;
+		background-color: rgb(27, 27, 27);
+		padding: 1rem;
+
+		h1 {
+			font-family: variables.$fonts;
+			font-size: 1.15rem;
+			font-weight: 300;
+			text-align: left;
+			color: variables.$lightGray;
+			margin: 1rem 0 1rem 0;
+		}
+
+		p {
+			font-size: 1rem;
+			color: variables.$lightGray;
+			margin: 0;
+			text-align: left;
 		}
 	}
 

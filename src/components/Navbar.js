@@ -80,7 +80,7 @@ const Navbar = (props) => {
 					<li>
 						<Link to="/">Dashboard</Link>
 					</li>
-					<li>
+					{/* <li>
 						<a
 							href="https://www.buymeacoffee.com/agusespa"
 							target="_blank"
@@ -88,7 +88,7 @@ const Navbar = (props) => {
 						>
 							Support my work
 						</a>
-					</li>
+					</li> */}
 				</ul>
 			</div>
 		</>

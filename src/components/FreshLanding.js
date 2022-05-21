@@ -6,6 +6,7 @@ import styles from "../styles/Main.module.scss";
 
 const FreshLanding = (props) => {
 	const [formData, setFormData] = useState("");
+	const [loadingEnv, setLoadingEnv] = useState(false);
 
 	const { setUserAuth } = useContext(AuthContext);
 
@@ -16,7 +17,7 @@ const FreshLanding = (props) => {
 		setFormData(event.target.value);
 	};
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault();
 		window.localStorage.setItem("alias", formData);
 		window.localStorage.setItem("last_stage", 90000631);
@@ -24,6 +25,8 @@ const FreshLanding = (props) => {
 			userAlias: formData,
 			lastStage: 90000631,
 		});
+		setLoadingEnv(true);
+		await new Promise((resolve) => setTimeout(resolve, 3500));
 		navigate("/stage/90000631");
 	};
 
@@ -42,15 +45,25 @@ const FreshLanding = (props) => {
 
 				<div className={styles.welcomeContainer}>
 					<div>
-						<h1>…is never what it might seem…</h1>
-						<div className={styles.bigIconBox}>
-							<img src="headset.png" alt="headset icon" />
+						<div className={styles.dots}>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<h1>is never what it might seem</h1>
+						<div className={styles.dots}>
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
 						<p>
-							…but you are going to try to make sense out of it
-							regardless.
+							but you will try to make sense out of it regardless.
 						</p>
-						<p>Is this a game?</p>
+						<h1>
+							<span className={styles.colored}>
+								Is this a game?
+							</span>
+						</h1>
 						<p>
 							Isn't everything? This is also the opposite. Try to
 							quantify your brain’s ability to change and you will
@@ -74,7 +87,14 @@ const FreshLanding = (props) => {
 							onChange={handleFormChange}
 						/>
 						<button>Join</button>
+						{loadingEnv && (
+							<div className={styles.loadingEnv}>
+								<p>loading environment</p>
+								<div className={styles.loadingDots}></div>
+							</div>
+						)}
 					</form>
+
 					<div className={styles.readMe}>
 						<h4>
 							<Link to="/help">What am I even doing here?</Link>
