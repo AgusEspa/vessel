@@ -27,23 +27,46 @@ const Dashboard = (props) => {
 						Continue the quest
 					</button>
 					<p>or choose a chapter</p>
-					<div className={styles.indexBox}>
-						<Link to="/stage/90000631">0. Prologue</Link>
+					<div className={styles.indexContainer}>
+						<div className={styles.chapter}>
+							<div className={styles.chapterIconBox}>
+								<img
+									src="headset-small.png"
+									alt="headset icon"
+								/>
+							</div>
+							<Link to="/stage/90000631">Prologue</Link>
+						</div>
 
 						<h3>PART I - The Construct</h3>
-						{userAuth.lastStage < 90101746 ? (
-							<h4>1. Matter of Thought</h4>
-						) : (
-							<Link to="/stage/90101746">
-								1. Matter of Thought
-							</Link>
-						)}
-
-						{true ? (
-							<h4>2. To be continued...</h4>
-						) : (
-							<Link to="/stage/">2. To be continued...</Link>
-						)}
+						<div className={styles.chapter}>
+							<div className={styles.chapterIconBox}>
+								<img
+									src="headset-small.png"
+									alt="headset icon"
+								/>
+							</div>
+							{userAuth.lastStage < 90101746 ? (
+								<h4>Matter of Thought</h4>
+							) : (
+								<Link to="/stage/90101746">
+									Matter of Thought
+								</Link>
+							)}
+						</div>
+						<div className={styles.chapter}>
+							<div className={styles.chapterIconBox}>
+								<img
+									src="headset-small.png"
+									alt="headset icon"
+								/>
+							</div>
+							{true ? (
+								<h4>Broken Graphs</h4>
+							) : (
+								<Link to="/stage/*">Broken Graphs</Link>
+							)}
+						</div>
 					</div>
 					<div className={styles.abandonBox}>
 						<button
@@ -52,10 +75,7 @@ const Dashboard = (props) => {
 						>
 							Abandon the quest
 						</button>
-						<p>
-							and all your progress will be lost in binary
-							forever...
-						</p>
+						<p>and all your progress will be lost forever...</p>
 					</div>
 				</div>
 			</main>
