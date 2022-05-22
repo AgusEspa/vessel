@@ -88,18 +88,19 @@ const FreshLanding = (props) => {
 							value={formData}
 							onChange={handleFormChange}
 						/>
-						<button>Join</button>
-						{loadingEnv && (
-							<div className={styles.loadingEnv}>
-								<p>loading environment</p>
-								<div className={styles.loadingDots}>
-									<span></span>
-									<span></span>
-									<span></span>
-									<span></span>
-									<span></span>
+						{!loadingEnv ? (
+							<button>Join</button>
+						) : (
+							<button disabled>
+								<div className={styles.loadingEnv}>
+									<p>loading</p>
+									<div className={styles.loadingDots}>
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
 								</div>
-							</div>
+							</button>
 						)}
 					</form>
 

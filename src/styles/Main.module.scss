@@ -74,7 +74,7 @@ p {
 		border-radius: 0.5rem;
 		background-color: rgba(0, 0, 0, 0.4);
 		padding: 0.5rem;
-		margin: 9rem 0 0 0;
+		margin: 10rem 0 0 0;
 
 		@media screen and (max-width: 600px) {
 			margin: 11rem 0 0 0;
@@ -191,14 +191,16 @@ p {
 			}
 
 			.loadingEnv {
-				display: block;
-				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: baseline;
 				align-self: center;
-				bottom: -2.5rem;
+				bottom: -1.5rem;
 			
 				p {
 					font-size: 0.9rem;
-					color: variables.$lightGray;
+					margin: 0 0.1rem 0 0;
+					color: black;
 				}
 				
 				.loadingDots {
@@ -209,22 +211,22 @@ p {
 			
 					span {
 						width: 2px;
-						height: 0.8rem;
-						margin: 0.4rem 0.3rem 0.3rem 0.3rem;
-						transform: rotate(27deg);
-						background-color: variables.$lightGray;
+						height: 2px;
+						margin: 0rem 0.3rem 0rem 0.3rem;
+						// transform: rotate(27deg);
+						background-color: variables.$darkerPink;
 						animation: blinking 1s infinite;
 					}
 
 					@keyframes blinking {
 						0% {
-							background-color: variables.$lightGray;
+							background-color: black;
 						}
 						50% {
-							background-color: rgb(187, 19, 182);
+							background-color: variables.$darkerPink;
 						}
 						100% {
-							background-color: variables.$lightGray;
+							background-color: black;
 						}
 					}
 					span:nth-child(1) {
@@ -236,12 +238,12 @@ p {
 					span:nth-child(3) {
 						animation-delay: 0.3s;
 					}
-					span:nth-child(4) {
-						animation-delay: 0.4s;
-					}
-					span:nth-child(5) {
-						animation-delay: 0.5s;
-					}
+					// span:nth-child(4) {
+					// 	animation-delay: 0.4s;
+					// }
+					// span:nth-child(5) {
+					// 	animation-delay: 0.5s;
+					// }
 				}
 				
 			}
