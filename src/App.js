@@ -34,20 +34,20 @@ function App() {
 
 					{/* Prologue */}
 					<Route
-						path="/stage/90000631"
+						path="/stage/90063"
 						element={
 							<ProtectedStageRoute>
-								<Stages id={90000631} />
+								<Stages id={90063} />
 							</ProtectedStageRoute>
 						}
 					/>
 
 					{/* Part I - Chapter 1 */}
 					<Route
-						path="/stage/90101746"
+						path="/stage/90146"
 						element={
 							<ProtectedStageRoute>
-								<Stages id={90101746} />
+								<Stages id={90146} />
 							</ProtectedStageRoute>
 						}
 					/>

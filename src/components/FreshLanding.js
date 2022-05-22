@@ -21,15 +21,18 @@ const FreshLanding = (props) => {
 		event.preventDefault();
 		window.localStorage.setItem("alias", formData);
 		window.localStorage.setItem("confirmed", false);
-		window.localStorage.setItem("last_stage", 90000631);
+		window.localStorage.setItem("last_stage", 90063);
+		window.localStorage.setItem("last_section", 1);
+
 		setUserAuth({
 			userAlias: formData,
 			userIsConfirmed: false,
-			lastStage: 90000631,
+			lastStage: 90063,
+			lastSection: 1,
 		});
 		setLoadingEnv(true);
 		await new Promise((resolve) => setTimeout(resolve, 3500));
-		navigate("/stage/90000631");
+		navigate("/stage/90063");
 	};
 
 	return (
@@ -81,17 +84,19 @@ const FreshLanding = (props) => {
 					</div>
 					<form onSubmit={handleSubmit}>
 						<input
-							className={styles.validationError}
 							type="text"
 							name="formData"
 							placeholder="your alias"
 							value={formData}
 							onChange={handleFormChange}
+							required
+							maxLength={13}
+							minLength={2}
 						/>
 						{!loadingEnv ? (
 							<button>Join</button>
 						) : (
-							<button disabled>
+							<button className={styles.disabled} disabled>
 								<div className={styles.loadingEnv}>
 									<p>loading</p>
 									<div className={styles.loadingDots}>
@@ -112,6 +117,11 @@ const FreshLanding = (props) => {
 					</div>
 				</div>
 			</main>
+			<footer>
+				<div className={styles.footerBox}>
+					<p>Agustin Espana &copy;2022 Stockholm, Sweden</p>
+				</div>
+			</footer>
 		</>
 	);
 };

@@ -1,7 +1,8 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import styles from "../../styles/Main.module.scss";
 
-const Stage90000631 = () => {
+const Stage90063 = () => {
 	const { setUserAuth } = useContext(AuthContext);
 
 	useEffect(() => {
@@ -11,7 +12,11 @@ const Stage90000631 = () => {
 		}));
 	}, []);
 
-	return <div>Welcome Stage101</div>;
+	return (
+		<main>
+			<div className={styles.sectionBox}>title</div>
+		</main>
+	);
 };
 
-export default Stage90000631;
+export default Stage90063;

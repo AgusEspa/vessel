@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import DeleteModal from "./DeleteModal";
 import styles from "../styles/Main.module.scss";
@@ -10,9 +10,17 @@ const Dashboard = (props) => {
 
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 
+	const navigate = useNavigate();
+
 	const handleDelete = (event) => {
 		event.preventDefault();
 		setModalIsOpen(true);
+	};
+
+	const handleContinue = (event) => {
+		event.preventDefault();
+		const lastLink = `/stage/${userAuth.lastStage}`;
+		navigate(lastLink);
 	};
 
 	return (
@@ -26,7 +34,10 @@ const Dashboard = (props) => {
 					</div>
 					<h1 className={styles.alias}>{userAuth.userAlias},</h1>
 					<h1>you are still here...</h1>
-					<button className={styles.contButton}>
+					<button
+						className={styles.contButton}
+						onClick={handleContinue}
+					>
 						Continue the quest
 					</button>
 					<p>or choose a chapter</p>
@@ -86,6 +97,12 @@ const Dashboard = (props) => {
 					</div>
 				</div>
 			</main>
+
+			<footer>
+				<div className={styles.footerBox}>
+					<p>Agustin Espana &copy;2022 Stockholm, Sweden</p>
+				</div>
+			</footer>
 		</>
 	);
 };

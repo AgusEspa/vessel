@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
 		userAlias: window.localStorage.getItem("alias"),
 		userIsConfirmed: window.localStorage.getItem("confirmed"),
 		lastStage: window.localStorage.getItem("last_stage"),
+		lastSection: window.localStorage.getItem("last_section"),
 	});
 
 	const logout = () => {

@@ -21,6 +21,7 @@
 
 body {
 	margin: 0;
+	padding: 0;
 	background-color: variables.$background;
 }
 
@@ -189,6 +190,12 @@ p {
 					background-color: variables.$pink;
 				}
 			}
+			.disabled {
+				cursor: default;
+				&:hover {
+					background-color: variables.$darkerPink;
+				}
+			}
 
 			.loadingEnv {
 				display: flex;
@@ -280,26 +287,11 @@ p {
 	justify-content: center;
 	align-items: center;
 	padding: 2rem 0.7rem 2rem 0.7rem;
-	@include fadeInAnimation();
 
 	.headImgContainer {
-			margin: 0 0 1rem 0;
-			padding: 0;
-	
-			img {
-				width: 10rem;
-			}
-	
-			@media screen and (max-width: 600px) {
-				img {
-					width: 8rem;
-				}
-			}
-		}
-
-	.iconBox {
-		margin: 2rem 0 1rem 0;
+		margin: 0 0 1rem 0;
 		padding: 0;
+		@include fadeInAnimation();
 	
 		img {
 			width: 10rem;
@@ -311,6 +303,12 @@ p {
 			}
 		}
 	}
+
+	.sectionBox {
+		@include fadeInAnimation();
+	}
+
+	
 
 	.helpContainer {
 		display: flex;
@@ -348,6 +346,21 @@ p {
 		border-radius: 0.7rem;
 		padding: 1rem;
 		box-shadow: 0 0 15px rgb(255, 192, 231);
+
+		.iconBox {
+			margin: 2rem 0 1rem 0;
+			padding: 0;
+	
+			img {
+				width: 10rem;
+			}
+		
+			@media screen and (max-width: 600px) {
+				img {
+					width: 8rem;
+				}
+			}
+		}
 		
 		h1 {
 			font-family: variables.$fonts;
@@ -557,4 +570,23 @@ p {
 			}
 		}
 	}	
+}
+
+footer {
+	min-height: 100%;
+	padding: 0.5rem 0 0 0;
+	margin: 3rem 0 0 0;
+
+	.footerBox {
+		width: 100%;
+		height: 1.5rem;
+		padding: 0;
+		p {
+			font-family: variables.$fonts;
+			color: #8b8b8b;
+			text-align: center;
+			font-size: 0.7rem;
+			line-height: 1rem;
+		}
+	}
 }
