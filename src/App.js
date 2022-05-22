@@ -3,6 +3,7 @@ import FreshLanding from "./components/FreshLanding";
 import Dashboard from "./components/Dashboard";
 import Stages from "./components/Stages";
 import ProtectedRoute from "./components/ProtectedRoute";
+import PublicRoute from "./components/PublicRoute";
 import ProtectedStageRoute from "./components/ProtectedStageRoute";
 import { AuthProvider } from "./context/AuthContext";
 import Help from "./components/Help";
@@ -12,7 +13,14 @@ function App() {
 		<HashRouter>
 			<AuthProvider>
 				<Routes>
-					<Route path="/start" element={<FreshLanding />} />
+					<Route
+						path="/start"
+						element={
+							<PublicRoute>
+								<FreshLanding />
+							</PublicRoute>
+						}
+					/>
 					<Route path="/help" element={<Help />} />
 
 					<Route

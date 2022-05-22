@@ -8,6 +8,7 @@ export const AuthProvider = ({ children }) => {
 
 	const [userAuth, setUserAuth] = useState({
 		userAlias: window.localStorage.getItem("alias"),
+		userIsConfirmed: window.localStorage.getItem("confirmed"),
 		lastStage: window.localStorage.getItem("last_stage"),
 	});
 

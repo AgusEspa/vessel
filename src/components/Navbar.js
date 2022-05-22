@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { BsVolumeUp, BsVolumeMute } from "react-icons/bs";
+import { BsVolumeUp, BsVolumeMute, BsQuestionCircle } from "react-icons/bs";
 import styles from "../styles/Navbar.module.scss";
 
 const Navbar = (props) => {
@@ -41,16 +41,24 @@ const Navbar = (props) => {
 					/>
 				</div>
 				<div className={styles.helperIcons}>
-					<button
-						className={
-							!toggleMenu ? styles.hamburger : styles.hamburger
-						}
-						onClick={handleToggleMenu}
-					>
-						<span className={styles.bar}></span>
-						<span className={styles.bar}></span>
-						<span className={styles.bar}></span>
-					</button>
+					{props.userExists ? (
+						<button
+							className={
+								!toggleMenu
+									? styles.hamburger
+									: styles.hamburger
+							}
+							onClick={handleToggleMenu}
+						>
+							<span className={styles.bar}></span>
+							<span className={styles.bar}></span>
+							<span className={styles.bar}></span>
+						</button>
+					) : (
+						<button onClick={handleToggleMenu}>
+							<BsQuestionCircle />
+						</button>
+					)}
 				</div>
 			</nav>
 
@@ -77,9 +85,11 @@ const Navbar = (props) => {
 					<li>
 						<Link to="/help">Help</Link>
 					</li>
-					<li>
-						<Link to="/">Dashboard</Link>
-					</li>
+					{props.userExists && (
+						<li>
+							<Link to="/">Dashboard</Link>
+						</li>
+					)}
 					{/* <li>
 						<a
 							href="https://www.buymeacoffee.com/agusespa"

@@ -20,9 +20,11 @@ const FreshLanding = (props) => {
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		window.localStorage.setItem("alias", formData);
+		window.localStorage.setItem("confirmed", false);
 		window.localStorage.setItem("last_stage", 90000631);
 		setUserAuth({
 			userAlias: formData,
+			userIsConfirmed: false,
 			lastStage: 90000631,
 		});
 		setLoadingEnv(true);
