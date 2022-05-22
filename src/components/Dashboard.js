@@ -1,15 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import DeleteModal from "./DeleteModal";
 import styles from "../styles/Main.module.scss";
 
 const Dashboard = (props) => {
-	const { userAuth, logout } = useContext(AuthContext);
+	const { userAuth } = useContext(AuthContext);
+
+	const [modalIsOpen, setModalIsOpen] = useState(false);
 
 	const handleDelete = (event) => {
 		event.preventDefault();
-		logout();
+		setModalIsOpen(true);
 	};
 
 	return (
@@ -70,12 +73,16 @@ const Dashboard = (props) => {
 					</div>
 					<div className={styles.abandonBox}>
 						<button
+							type="button"
 							className={styles.deleteButton}
 							onClick={handleDelete}
 						>
 							Abandon the quest
 						</button>
 						<p>and all your progress will be lost forever...</p>
+						{modalIsOpen && (
+							<DeleteModal setModalIsOpen={setModalIsOpen} />
+						)}
 					</div>
 				</div>
 			</main>

@@ -472,26 +472,87 @@ p {
 			text-align: center;
 
 			.deleteButton {
-					align-self: center;
-					width: 9rem;
-					margin: 0.5rem 1rem 0.5rem 1rem;
-					border-radius: 1.2rem;
-					text-align: center;
-					padding: 0.5rem 1rem 0.5rem 1rem;
-					background-color: rgb(185, 3, 3);
-					font-family: variables.$fonts;
-					color: white;
-					font-size: 1.1rem;
-					line-height: 1.1rem;
-					border: none;
-					outline: 0;
-					transition: all 0.1s ease-out;
-					cursor: pointer;
+				align-self: center;
+				width: 9rem;
+				margin: 0.5rem 1rem 0.5rem 1rem;
+				border-radius: 1.2rem;
+				text-align: center;
+				padding: 0.5rem 1rem 0.5rem 1rem;
+				background-color: rgb(185, 3, 3);
+				font-family: variables.$fonts;
+				color: white;
+				font-size: 1.1rem;
+				line-height: 1.1rem;
+				border: none;
+				outline: 0;
+				transition: all 0.1s ease-out;
+				cursor: pointer;
+				&:hover {
+					background-color: rgb(210, 0, 0);
+				}
+			}
+
+			.deleteModalBox {
+				background-color: black;
+				border-radius: 0.5rem;
+				padding: 1rem;
+				margin: 0;
 			
-					&:hover {
-						background-color: rgb(210, 0, 0);
+				p {
+					font-family: variables.$fonts;
+					font-size: 1.2rem;
+					margin: 0;
+					padding: 0.5rem;
+					color: variables.$lightGray;
+					text-align: center;
+				}
+			
+				.buttonsContainer {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+		
+					.cancelButton {
+						margin: 1.5rem 1rem 1rem 1rem;
+						width: 7rem;
+						border-radius: 1.2rem;
+						text-align: center;
+						padding: 0.6rem 1rem;
+						background-color: rgb(0, 0, 213);
+						color: white;
+						font-family: variables.$fonts;
+						font-size: 1.1rem;
+						line-height: 1.1rem;
+						border: none;
+						outline: 0;
+						cursor: pointer;
+						transition: all 0.1s ease-out;
+						&:hover {
+							background-color: rgb(0, 0, 255);
+						}
+					}
+			
+					.confirmDeleteButton {
+						margin: 1.5rem 1rem 1rem 1rem;
+						width: 7rem;
+						border-radius: 1.2rem;
+						text-align: center;
+						padding: 0.6rem 1rem;
+						background-color: rgb(185, 3, 3);
+						color: white;
+						font-family: variables.$fonts;
+						font-size: 1.1rem;
+						line-height: 1.1rem;
+						border: none;
+						outline: 0;
+						cursor: pointer;
+						transition: all 0.1s ease-out;
+						&:hover {
+							background-color: rgb(210, 0, 0);
+						}
 					}
 				}
+			}
 		}
 	}	
 }

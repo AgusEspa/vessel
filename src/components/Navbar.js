@@ -89,6 +89,15 @@ const Navbar = (props) => {
 							Support my work
 						</a>
 					</li> */}
+					<li>
+						<a
+							href="https://github.com/AgusEspa"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							©Agustin Espana
+						</a>
+					</li>
 				</ul>
 			</div>
 		</>
