@@ -129,6 +129,7 @@ p {
 			color: white;
 			text-align: center;
 			font-family: variables.$fonts;
+			line-height: 2rem;
 		}
 
 		form {
@@ -288,27 +289,63 @@ p {
 	align-items: center;
 	padding: 2rem 0.7rem 2rem 0.7rem;
 
-	.headImgContainer {
-		margin: 0 0 1rem 0;
-		padding: 0;
+	.sectionBox {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 40rem;
+		border-radius: 0.7rem;
+		padding: 0.5rem;
 		@include fadeInAnimation();
-	
-		img {
-			width: 10rem;
-		}
-	
-		@media screen and (max-width: 600px) {
+
+		.headIconBox {
+			margin: 2rem 0 1rem 0;
+			padding: 0;
+		
 			img {
-				width: 8rem;
+				width: 10rem;
+			}
+		
+			@media screen and (max-width: 600px) {
+				img {
+					width: 8rem;
+				}
 			}
 		}
-	}
 
-	.sectionBox {
-		@include fadeInAnimation();
-	}
+		h1 {
+			color: rgb(162, 0, 162);
+			text-align: center;
+			font-family: variables.$fonts;
+			font-size: 1.5rem;
+			margin: 1rem;
+		}
 
-	
+		h2 {
+			color: rgba(255, 0, 255, 0.797);
+			text-align: center;
+			font-family: variables.$fonts;
+			font-size: 1.4rem;
+			margin: 1rem 1rem 1.5rem 1rem;
+		}
+		
+		@media screen and (max-width: 600px) {
+			h1 {
+				font-size: 1.4rem;
+			}
+			h2 {
+				font-size: 1.3rem;
+			}
+		}
+
+		p {
+			color: white;
+			text-align: left;
+			font-family: variables.$fonts;
+			line-height: 2rem;
+		}
+	}
 
 	.helpContainer {
 		display: flex;
@@ -574,19 +611,19 @@ p {
 
 footer {
 	min-height: 100%;
-	padding: 0.5rem 0 0 0;
+	padding: 0 0 0.2rem 0;
 	margin: 3rem 0 0 0;
 
 	.footerBox {
 		width: 100%;
-		height: 1.5rem;
-		padding: 0;
+		border-top: 1px solid rgb(88, 31, 88);
 		p {
 			font-family: variables.$fonts;
 			color: #8b8b8b;
 			text-align: center;
 			font-size: 0.7rem;
-			line-height: 1rem;
+			margin: 0;
+			padding: 0;
 		}
 	}
 }

@@ -49,7 +49,7 @@ const Dashboard = (props) => {
 									alt="headset icon"
 								/>
 							</div>
-							<Link to="/stage/90000631">Prologue</Link>
+							<Link to="/stage/90063">Prologue</Link>
 						</div>
 
 						<h3>PART I - The Construct</h3>
@@ -60,12 +60,10 @@ const Dashboard = (props) => {
 									alt="headset icon"
 								/>
 							</div>
-							{userAuth.lastStage < 90101746 ? (
+							{userAuth.lastStage < 90146 ? (
 								<h4>Matter of Thought</h4>
 							) : (
-								<Link to="/stage/90101746">
-									Matter of Thought
-								</Link>
+								<Link to="/stage/90146">Matter of Thought</Link>
 							)}
 						</div>
 						<div className={styles.chapter}>

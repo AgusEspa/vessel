@@ -113,7 +113,7 @@ const FreshLanding = (props) => {
 						<h4>
 							<Link to="/help">What am I even doing here?</Link>
 						</h4>
-						<p>(Read or procede at your own peril.)</p>
+						<p>(read or procede at your own peril)</p>
 					</div>
 				</div>
 			</main>
