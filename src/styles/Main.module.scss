@@ -344,6 +344,21 @@ p {
 			text-align: left;
 			font-family: variables.$fonts;
 			line-height: 2rem;
+			font-size: 1rem;
+		}
+
+		.sectionButton {
+			align-self: flex-end;
+			color: white;
+			text-align: right;
+			font-family: variables.$fonts;
+			font-size: 1rem;
+			line-height: 2rem;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+			padding: 0;
+			margin: 2rem 0.5rem 2rem 0;
 		}
 	}
 
