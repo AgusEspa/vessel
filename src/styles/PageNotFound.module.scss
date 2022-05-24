@@ -1,0 +1,55 @@
+@use "./variables";
+
+.pageNotFoundContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+
+	.pageNotFoundBox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		max-width: 40rem;
+		padding: 2rem;
+		margin: 0;
+		background-color: transparent;
+
+		h1 {
+			font-family: variables.$fonts;
+			font-size: 6rem;
+			color: black;
+			text-align: center;
+			text-shadow: 0 0 10px rgb(255, 0, 247);
+			margin: 3rem
+		}
+
+		h4 {
+			font-family: variables.$fonts;
+			font-size: 1.15rem;
+			color: variables.$lightGray;
+			margin: 0 0 2rem 0;
+			text-align: center;
+		}
+
+		p {
+			font-family: variables.$fonts;
+			font-size: 1.05rem;
+			font-weight: 500;
+			margin: 0;
+			color: variables.$lightGray;
+			text-align: center;
+		}
+
+		a {
+			cursor: pointer;
+			color: rgb(80, 80, 255);
+			font-family: variables.$fonts;
+			text-align: center;
+			font-size: 1rem;
+			padding: 0;
+			margin: 0.5rem;
+		}
+	}
+}

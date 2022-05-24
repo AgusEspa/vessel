@@ -1,12 +1,13 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import FreshLanding from "./components/FreshLanding";
-import Dashboard from "./components/Dashboard";
-import Stages from "./components/Stages";
+import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
 import ProtectedStageRoute from "./components/ProtectedStageRoute";
-import { AuthProvider } from "./context/AuthContext";
+import FreshLanding from "./components/FreshLanding";
+import Dashboard from "./components/Dashboard";
+import Stages from "./components/Stages";
 import Help from "./components/Help";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 						}
 					/>
 					<Route path="/help" element={<Help />} />
+					<Route path="*" element={<PageNotFound />} />
 
 					<Route
 						path="/"

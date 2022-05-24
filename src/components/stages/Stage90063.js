@@ -4,7 +4,6 @@ import styles from "../../styles/Main.module.scss";
 
 const Stage90063 = () => {
 	const { userAuth, setUserAuth } = useContext(AuthContext);
-	const [sections, setSections] = useState();
 
 	const stageId = 90063;
 	const currentStage = userAuth.lastStage;
@@ -41,12 +40,18 @@ const Stage90063 = () => {
 					are lost and I’m the only one that knows it’s not going to
 					change. Everything is independent at the beginning.
 				</p>
-				<button
-					onClick={(e) => handleSectionUpdate(2, e)}
-					className={styles.sectionButton}
-				>
-					Where am I?
-				</button>
+				{currentStage > stageId || currentSection >= 2 ? (
+					<button className={styles.sectionButtonDisabled} disabled>
+						Where am I?
+					</button>
+				) : (
+					<button
+						onClick={(e) => handleSectionUpdate(2, e)}
+						className={styles.sectionButton}
+					>
+						Where am I?
+					</button>
+				)}
 			</div>
 			{/* Section 2 */}
 			{(currentStage > stageId || currentSection >= 2) && (
