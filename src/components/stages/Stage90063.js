@@ -1,13 +1,15 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import useUpdateSection from "../../utils/useUpdateSection";
+import useUpdateStage from "../../utils/useUpdateStage";
 import styles from "../../styles/Main.module.scss";
 
 const Stage90063 = () => {
 	const { userAuth, setUserAuth } = useContext(AuthContext);
+	const [updateSection] = useUpdateSection();
+	const [updateStage] = useUpdateStage();
 
 	const stageId = 90063;
-	const currentStage = userAuth.lastStage;
-	let currentSection = userAuth.lastSection;
 
 	useEffect(() => {
 		setUserAuth((prevState) => ({
@@ -16,13 +18,8 @@ const Stage90063 = () => {
 		}));
 	}, []);
 
-	const handleSectionUpdate = (newSection) => {
-		setUserAuth((prevState) => ({
-			...prevState,
-			lastSection: newSection,
-		}));
-		currentSection = newSection;
-		window.localStorage.setItem("last_section", newSection);
+	const handleSectionUpdate = (newSection, e) => {
+		updateSection(newSection);
 	};
 
 	return (
@@ -40,7 +37,7 @@ const Stage90063 = () => {
 					are lost and I’m the only one that knows it’s not going to
 					change. Everything is independent at the beginning.
 				</p>
-				{currentStage > stageId || currentSection >= 2 ? (
+				{userAuth.lastStage > stageId || userAuth.lastSection >= 2 ? (
 					<button className={styles.sectionButtonDisabled} disabled>
 						Where am I?
 					</button>
@@ -54,7 +51,7 @@ const Stage90063 = () => {
 				)}
 			</div>
 			{/* Section 2 */}
-			{(currentStage > stageId || currentSection >= 2) && (
+			{(userAuth.lastStage > stageId || userAuth.lastSection >= 2) && (
 				<div className={styles.sectionBox}>
 					<p>
 						There’s hardly any significance in that, if it can even

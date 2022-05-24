@@ -272,8 +272,8 @@ p {
 						color: rgb(80, 80, 255);
 					}
 				}
-
 			}
+
 			p {
 				font-size: 0.9rem;
 				color: variables.$lightGray;
@@ -349,7 +349,7 @@ p {
 
 		.sectionButton {
 			align-self: flex-end;
-			color: white;
+			color: variables.$darkerGray;
 			text-align: right;
 			font-family: variables.$fonts;
 			font-size: 1rem;
@@ -366,7 +366,7 @@ p {
 					background-color: #000000;
 				}
 				50% {
-					background-color: #262626;
+					background-color: #1e1e1e;
 				}
 				100% {
 					background-color: #000000;

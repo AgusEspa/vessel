@@ -31,7 +31,7 @@ const FreshLanding = (props) => {
 			lastSection: 1,
 		});
 		setLoadingEnv(true);
-		await new Promise((resolve) => setTimeout(resolve, 3500));
+		await new Promise((resolve) => setTimeout(resolve, 3000));
 		navigate("/stage/90063");
 	};
 
