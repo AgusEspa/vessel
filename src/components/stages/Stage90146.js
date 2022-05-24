@@ -13,7 +13,7 @@ const Stage90146 = () => {
 		<main className={styles.stageContainer}>
 			{(currentStage > stageId || currentSection >= 1) && (
 				<div className={styles.sectionBox}>
-					<h1>PART I - The Construct</h1>
+					<h1>PART I - The Paradox of Subjective Experience</h1>
 					<div className={styles.headIconBox}>
 						<img src="headset.png" alt="headset icon" />
 					</div>

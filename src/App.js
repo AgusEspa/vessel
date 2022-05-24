@@ -42,7 +42,7 @@ function App() {
 						}
 					/>
 
-					{/* Part I - Chapter 1 */}
+					{/* Chapter 1 */}
 					<Route
 						path="/stage/90146"
 						element={
