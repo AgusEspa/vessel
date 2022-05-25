@@ -12,6 +12,36 @@
 	}
 }
 
+@mixin loadingDots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	span {
+		width: 2px;
+		height: 2px;
+		margin: 0rem 0.3rem 0rem 0.3rem;
+		color: black;
+		animation: blinking 1s linear infinite;
+	}
+	@keyframes blinking {
+		0% {
+			background-color: black;
+		}
+		100% {
+			background-color: rgb(222, 12, 176);
+		}
+	}
+	span:nth-child(1) {
+		animation-delay: 0.1s;
+	}
+	span:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+	span:nth-child(3) {
+		animation-delay: 0.3s;
+	}
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -198,63 +228,24 @@ p {
 				&:hover {
 					background-color: rgb(222, 12, 176);
 				}
-			}
 
-			.loadingEnv {
-				display: flex;
-				justify-content: center;
-				align-items: baseline;
-				align-self: center;
-				bottom: -1.5rem;
-			
-				p {
-					font-size: 0.9rem;
-					margin: 0 0.1rem 0 0;
-					color: black;
-				}
-				
-				.loadingDots {
+				.loadingEnv {
 					display: flex;
-					flex-direction: row;
 					justify-content: center;
-					align-items: center;
-
-					span {
-						width: 2px;
-						height: 2px;
-						margin: 0rem 0.3rem 0rem 0.3rem;
-						// transform: rotate(27deg);
-						background-color: black;
-						animation: blinking 1s infinite;
-					}		
-					@keyframes blinking {
-						0% {
-							background-color: black;
-						}
-						50% {
-							background-color: rgb(222, 12, 176);
-						}
-						100% {
-							background-color: black;
-						}
+					align-items: baseline;
+					align-self: center;
+					bottom: -1.5rem;
+				
+					p {
+						font-size: 0.9rem;
+						margin: 0 0.1rem 0 0;
+						color: black;
 					}
-					span:nth-child(1) {
-						animation-delay: 0.1s;
+				
+					.loadingDots {
+						@include loadingDots();
 					}
-					span:nth-child(2) {
-						animation-delay: 0.2s;
-					}
-					span:nth-child(3) {
-						animation-delay: 0.3s;
-					}
-					
-					// span:nth-child(4) {
-					// 	animation-delay: 0.4s;
-					// }
-					// span:nth-child(5) {
-					// 	animation-delay: 0.5s;
-					// }
-				}	
+				}
 			}
 		}
 		
@@ -361,16 +352,16 @@ p {
 			cursor: pointer;
 			padding: 0.3rem 1rem 0.3rem 1rem;
 			margin: 2rem 0 2rem 2rem;
-			animation: blinking 2s infinite;
-			@keyframes blinking {
+			animation: flashing 2s infinite;
+			@keyframes flashing {
 				0% {
-					background-color: #000000;
-				}
-				50% {
 					background-color: #1e1e1e;
 				}
-				100% {
+				50% {
 					background-color: #000000;
+				}
+				100% {
+					background-color: #1e1e1e;
 				}
 			}
 		}
