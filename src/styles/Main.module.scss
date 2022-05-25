@@ -27,8 +27,11 @@
 		0% {
 			background-color: black;
 		}
+		40% {
+			background-color: black;
+		}
 		100% {
-			background-color: rgb(222, 12, 176);
+			background-color: transparent;
 		}
 	}
 	span:nth-child(1) {
@@ -286,6 +289,7 @@ p {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		position: relative;
 		max-width: 40rem;
 		border-radius: 0.7rem;
 		padding: 0.5rem;
@@ -380,6 +384,22 @@ p {
 			margin: 2rem 0 2rem 2rem;
 		}
 
+		.saveNotice {
+			position: absolute;
+			bottom: 0.6rem;
+			right: 0;
+			margin: 0 1rem 0 0;
+			padding: 0;
+
+			p {
+				font-size: 0.9rem;
+				font-family: variables.$fonts;
+				color: variables.$lightGray;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
 		.end {
 			font-size: 1rem;
 			color: variables.$darkGray;
@@ -401,7 +421,7 @@ p {
 				border-radius: 1.2rem;
 				text-align: center;
 				padding: 0 1rem 0 1rem;
-				background-color: variables.$darkerPink;
+				background-color: violet;
 				font-family: variables.$fonts;
 				color: black;
 				font-size: 0.9rem;
@@ -409,17 +429,44 @@ p {
 				outline: 0;
 				transition: all 0.1s ease-out;
 				cursor: pointer;
-			
 				&:hover {
-					background-color: variables.$pink;
+					background-color: rgb(255, 158, 255);
 				}
 			}
-			
 			.saveDisabled {
 				cursor: default;
 				&:hover {
-					background-color: variables.$darkerPink;
+					background-color: violet;
 				}
+
+				.loading {
+					display: flex;
+					justify-content: center;
+					align-items: baseline;
+					align-self: center;
+					bottom: -1.5rem;
+
+					p {
+						font-size: 0.9rem;
+						margin: 0 0.1rem 0 0;
+						color: black;
+					}
+
+					.loadingDots {
+						@include loadingDots();
+					}
+				}
+			}
+		}
+
+		.endChapterIconBox {
+			display: flex;
+			align-items: center;
+			margin: 2rem 0 0 0;
+			padding: 0;
+
+			img {
+				width: 3rem;
 			}
 		}
 	}

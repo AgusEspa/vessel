@@ -11,6 +11,7 @@ const Stage90063 = () => {
 	const [updateStage] = useUpdateStage();
 	const navigate = useNavigate();
 	const [loadingSave, setLoadingSave] = useState(false);
+	const [saveNotice, setSaveNotice] = useState(false);
 
 	const stageId = 90063;
 
@@ -23,8 +24,11 @@ const Stage90063 = () => {
 		console.log(userAuth.lastStage, stageId);
 	}, []);
 
-	const handleSectionUpdate = (newSection, e) => {
+	const handleSectionUpdate = async (newSection, e) => {
 		updateSection(newSection);
+		setSaveNotice(true);
+		await new Promise((resolve) => setTimeout(resolve, 2500));
+		setSaveNotice(false);
 	};
 
 	const handleSave = async () => {
@@ -71,6 +75,11 @@ const Stage90063 = () => {
 						Where am I?
 					</button>
 				)}
+				{saveNotice && (
+					<div className={styles.saveNotice}>
+						<p>progress saved</p>
+					</div>
+				)}
 			</div>
 			{/* Section 2 */}
 			{(userAuth.lastStage > stageId || userAuth.lastSection >= 2) && (
@@ -88,8 +97,8 @@ const Stage90063 = () => {
 					<div className={styles.saveButtonsBox}>
 						{loadingSave ? (
 							<button className={styles.saveDisabled} disabled>
-								<div className={styles.loadingEnv}>
-									<p>loading</p>
+								<div className={styles.loading}>
+									<p>saving</p>
 									<div className={styles.loadingDots}>
 										<span></span>
 										<span></span>
@@ -101,21 +110,20 @@ const Stage90063 = () => {
 							<button onClick={handleSave}>Save</button>
 						)}
 						{loadingSave ? (
-							<button className={styles.disabled} disabled>
-								<div className={styles.loadingEnv}>
-									<p>loading</p>
-									<div className={styles.loadingDots}>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</button>
+							<div></div>
 						) : (
 							<button onClick={handleSaveAndCont}>
 								Save & continue
 							</button>
 						)}
+					</div>
+				</div>
+			)}
+			{/* End of chapter icon*/}
+			{userAuth.lastStage > stageId && (
+				<div className={styles.sectionBox}>
+					<div className={styles.endChapterIconBox}>
+						<img src="headset-small.png" alt="headset icon" />
 					</div>
 				</div>
 			)}
