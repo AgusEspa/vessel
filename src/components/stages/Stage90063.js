@@ -91,7 +91,7 @@ const Stage90063 = () => {
 				</div>
 			)}
 			{/* Save stage completion*/}
-			{userAuth.lastStage === stageId && userAuth.lastSection >= 2 && (
+			{userAuth.lastStage === stageId && userAuth.lastSection >= 3 && (
 				<div className={styles.sectionBox}>
 					<p className={styles.end}>End of the chapter</p>
 					<div className={styles.saveButtonsBox}>

@@ -282,7 +282,7 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem 0.7rem 2rem 0.7rem;
+	padding: 2rem 0.7rem 20rem 0.7rem;
 
 	.sectionBox {
 		display: flex;
@@ -355,7 +355,7 @@ p {
 			border-radius: 2rem;
 			cursor: pointer;
 			padding: 0.3rem 1rem 0.3rem 1rem;
-			margin: 2rem 0 2rem 2rem;
+			margin: 2rem 0 0.5rem 2rem;
 			animation: flashing 2s infinite;
 			@keyframes flashing {
 				0% {
@@ -381,7 +381,7 @@ p {
 			border-radius: 2rem 2rem 0 2rem;
 			cursor: default;
 			padding: 0.3rem 1rem 0.3rem 1rem;
-			margin: 2rem 0 2rem 2rem;
+			margin: 2rem 0 0.5rem 2rem;
 		}
 
 		.saveNotice {
@@ -470,8 +470,17 @@ p {
 			}
 		}
 	}
+	
+}
 
-	.helpContainer {
+.dashContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 0.7rem 3rem 0.7rem;
+
+	.helpBox {
 		display: flex;
 		flex-direction: column;
 		max-width: 40rem;
@@ -497,7 +506,7 @@ p {
 		}
 	}
 
-	.dashboardContainer {
+	.dashboardBox {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -511,18 +520,18 @@ p {
 		.iconBox {
 			margin: 2rem 0 1rem 0;
 			padding: 0;
-	
+
 			img {
 				width: 10rem;
 			}
-		
+
 			@media screen and (max-width: 600px) {
 				img {
 					width: 8rem;
 				}
 			}
 		}
-		
+
 		h1 {
 			font-family: variables.$fonts;
 			font-size: 1.2rem;
@@ -556,6 +565,7 @@ p {
 			outline: 0;
 			transition: all 0.1s ease-out;
 			cursor: pointer;
+
 			&:hover {
 				background-color: rgb(236, 153, 236);
 			}
@@ -628,6 +638,7 @@ p {
 					align-items: center;
 					margin: 0 1rem 0 0.5rem;
 					padding: 0;
+
 					img {
 						width: 2.1rem;
 					}
@@ -663,6 +674,7 @@ p {
 				outline: 0;
 				transition: all 0.1s ease-out;
 				cursor: pointer;
+
 				&:hover {
 					background-color: rgb(210, 0, 0);
 				}
@@ -673,7 +685,7 @@ p {
 				border-radius: 0.5rem;
 				padding: 1rem;
 				margin: 0;
-			
+
 				p {
 					font-family: variables.$fonts;
 					font-size: 1.2rem;
@@ -682,12 +694,12 @@ p {
 					color: variables.$lightGray;
 					text-align: center;
 				}
-			
+
 				.buttonsContainer {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-		
+
 					.cancelButton {
 						margin: 1.5rem 1rem 1rem 1rem;
 						width: 7rem;
@@ -703,11 +715,12 @@ p {
 						outline: 0;
 						cursor: pointer;
 						transition: all 0.1s ease-out;
+
 						&:hover {
 							background-color: rgb(0, 0, 255);
 						}
 					}
-			
+
 					.confirmDeleteButton {
 						margin: 1.5rem 1rem 1rem 1rem;
 						width: 7rem;
@@ -723,6 +736,7 @@ p {
 						outline: 0;
 						cursor: pointer;
 						transition: all 0.1s ease-out;
+
 						&:hover {
 							background-color: rgb(210, 0, 0);
 						}
@@ -730,7 +744,7 @@ p {
 				}
 			}
 		}
-	}	
+	}
 }
 
 footer {

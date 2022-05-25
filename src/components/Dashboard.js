@@ -27,8 +27,8 @@ const Dashboard = (props) => {
 		<>
 			<Navbar userExists={true} song={"mystique-16608.mp3"} />
 
-			<main className={styles.stageContainer}>
-				<div className={styles.dashboardContainer}>
+			<main className={styles.dashContainer}>
+				<div className={styles.dashboardBox}>
 					<div className={styles.iconBox}>
 						<img src="headset.png" alt="headset icon" />
 					</div>
