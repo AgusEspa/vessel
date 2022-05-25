@@ -9,8 +9,8 @@ export const AuthProvider = ({ children }) => {
 	const [userAuth, setUserAuth] = useState({
 		userAlias: window.localStorage.getItem("alias"),
 		userIsConfirmed: window.localStorage.getItem("confirmed"),
-		lastStage: window.localStorage.getItem("last_stage"),
-		lastSection: window.localStorage.getItem("last_section"),
+		lastStage: parseInt(window.localStorage.getItem("last_stage")),
+		lastSection: parseInt(window.localStorage.getItem("last_section")),
 	});
 
 	const logout = () => {

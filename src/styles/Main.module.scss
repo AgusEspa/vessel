@@ -2,15 +2,14 @@
 
 @mixin fadeInAnimation {
 	animation: fadeIn 1s ease-in;
-		@keyframes fadeIn {
-			0% {
-				opacity: 0%;
-			}
-	
-			100% {
-				opacity: 100%;
-			}
+	@keyframes fadeIn {
+		0% {
+			opacity: 0%;
 		}
+		100% {
+			opacity: 100%;
+		}
+	}
 }
 
 * {
@@ -23,6 +22,9 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: variables.$background;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 }
 
 p {
@@ -159,11 +161,11 @@ p {
 				text-align: center;
 				padding: 0.5rem;
 				background-color: transparent;
-				border: 1px solid pink;
+				border: 1px solid rgb(222, 12, 176);
 				border-radius: 0.5rem;
 				&:focus {
 					outline: none;
-					box-shadow: 0 0 15px  rgb(255, 192, 231);
+					box-shadow: 0 0 15px  rgb(255, 137, 210);
 				}
 				&::placeholder {
 					color: rgb(255, 205, 214);
@@ -179,7 +181,7 @@ p {
 				border-radius: 1.2rem;
 				text-align: center;
 				padding: 0rem;
-				background-color: variables.$darkerPink;
+				background-color: rgb(222, 12, 176);
 				font-family: variables.$fonts;
 				color: black;
 				font-size: 1.2rem;
@@ -188,13 +190,13 @@ p {
 				transition: all 0.1s ease-out;
 				cursor: pointer;
 				&:hover {
-					background-color: variables.$pink;
+					background-color: rgb(242, 37, 198);
 				}
 			}
 			.disabled {
 				cursor: default;
 				&:hover {
-					background-color: variables.$darkerPink;
+					background-color: rgb(222, 12, 176);
 				}
 			}
 
@@ -216,22 +218,21 @@ p {
 					flex-direction: row;
 					justify-content: center;
 					align-items: center;
-			
+
 					span {
 						width: 2px;
 						height: 2px;
 						margin: 0rem 0.3rem 0rem 0.3rem;
 						// transform: rotate(27deg);
-						background-color: variables.$darkerPink;
+						background-color: black;
 						animation: blinking 1s infinite;
-					}
-
+					}		
 					@keyframes blinking {
 						0% {
 							background-color: black;
 						}
 						50% {
-							background-color: variables.$darkerPink;
+							background-color: rgb(222, 12, 176);
 						}
 						100% {
 							background-color: black;
@@ -246,14 +247,14 @@ p {
 					span:nth-child(3) {
 						animation-delay: 0.3s;
 					}
+					
 					// span:nth-child(4) {
 					// 	animation-delay: 0.4s;
 					// }
 					// span:nth-child(5) {
 					// 	animation-delay: 0.5s;
 					// }
-				}
-				
+				}	
 			}
 		}
 		
@@ -359,7 +360,7 @@ p {
 			border-radius: 2rem;
 			cursor: pointer;
 			padding: 0.3rem 1rem 0.3rem 1rem;
-			margin: 2rem;
+			margin: 2rem 0 2rem 2rem;
 			animation: blinking 2s infinite;
 			@keyframes blinking {
 				0% {
@@ -385,7 +386,50 @@ p {
 			border-radius: 2rem 2rem 0 2rem;
 			cursor: default;
 			padding: 0.3rem 1rem 0.3rem 1rem;
-			margin: 2rem;
+			margin: 2rem 0 2rem 2rem;
+		}
+
+		.end {
+			font-size: 1rem;
+			color: variables.$darkGray;
+			margin: 2rem 0 0 0;
+			padding: 0;
+		}
+		.saveButtonsBox {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			align-items: center;
+			padding: 0;
+			margin: 0 0 2rem 0;
+
+			button {
+				height: 2rem;
+				min-width: 7rem;
+				margin: 0.5rem;
+				border-radius: 1.2rem;
+				text-align: center;
+				padding: 0 1rem 0 1rem;
+				background-color: variables.$darkerPink;
+				font-family: variables.$fonts;
+				color: black;
+				font-size: 0.9rem;
+				border: none;
+				outline: 0;
+				transition: all 0.1s ease-out;
+				cursor: pointer;
+			
+				&:hover {
+					background-color: variables.$pink;
+				}
+			}
+			
+			.saveDisabled {
+				cursor: default;
+				&:hover {
+					background-color: variables.$darkerPink;
+				}
+			}
 		}
 	}
 

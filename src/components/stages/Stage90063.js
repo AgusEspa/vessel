@@ -1,5 +1,6 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import useUpdateSection from "../../utils/useUpdateSection";
 import useUpdateStage from "../../utils/useUpdateStage";
 import styles from "../../styles/Main.module.scss";
@@ -8,6 +9,8 @@ const Stage90063 = () => {
 	const { userAuth, setUserAuth } = useContext(AuthContext);
 	const [updateSection] = useUpdateSection();
 	const [updateStage] = useUpdateStage();
+	const navigate = useNavigate();
+	const [loadingSave, setLoadingSave] = useState(false);
 
 	const stageId = 90063;
 
@@ -16,10 +19,29 @@ const Stage90063 = () => {
 			...prevState,
 			userIsConfirmed: true,
 		}));
+		window.localStorage.setItem("confirmed", true);
+		console.log(userAuth.lastStage, stageId);
 	}, []);
 
 	const handleSectionUpdate = (newSection, e) => {
 		updateSection(newSection);
+	};
+
+	const handleSave = async () => {
+		setLoadingSave(true);
+		await new Promise((resolve) => setTimeout(resolve, 3000));
+		updateStage(90146);
+		updateSection(1);
+		navigate("/");
+	};
+
+	const handleSaveAndCont = async () => {
+		setLoadingSave(true);
+		await new Promise((resolve) => setTimeout(resolve, 3000));
+		updateStage(90146);
+		updateSection(1);
+		const lastLink = `/stage/${userAuth.lastStage}`;
+		navigate(lastLink);
 	};
 
 	return (
@@ -57,6 +79,44 @@ const Stage90063 = () => {
 						There’s hardly any significance in that, if it can even
 						be determined.
 					</p>
+				</div>
+			)}
+			{/* Save stage completion*/}
+			{userAuth.lastStage === stageId && userAuth.lastSection >= 2 && (
+				<div className={styles.sectionBox}>
+					<p className={styles.end}>End of the chapter</p>
+					<div className={styles.saveButtonsBox}>
+						{loadingSave ? (
+							<button className={styles.saveDisabled} disabled>
+								<div className={styles.loadingEnv}>
+									<p>loading</p>
+									<div className={styles.loadingDots}>
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+								</div>
+							</button>
+						) : (
+							<button onClick={handleSave}>Save</button>
+						)}
+						{loadingSave ? (
+							<button className={styles.disabled} disabled>
+								<div className={styles.loadingEnv}>
+									<p>loading</p>
+									<div className={styles.loadingDots}>
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+								</div>
+							</button>
+						) : (
+							<button onClick={handleSaveAndCont}>
+								Save & continue
+							</button>
+						)}
+					</div>
 				</div>
 			)}
 		</main>
