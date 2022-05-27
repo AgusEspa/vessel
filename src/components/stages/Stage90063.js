@@ -52,27 +52,22 @@ const Stage90063 = () => {
 		<main className={styles.stageContainer}>
 			{/* Section 1 */}
 			<div className={styles.sectionBox}>
+				<h1>PROLOGUE</h1>
 				<div className={styles.headIconBox}>
 					<img src="headset.png" alt="headset icon" />
 				</div>
-				<h2>Prologue</h2>
-				<p>
-					You have been woken up before, you have been lost before.
-					You would even expect a correlation between those states.
-					I’m afraid you won’t find any. {<br />}You are awake and you
-					are lost and I’m the only one that knows it’s not going to
-					change. Everything is independent at the beginning.
-				</p>
+				<h2>The Paradox of Subjective Experience</h2>
+				<p>?</p>
 				{userAuth.lastStage > stageId || userAuth.lastSection >= 2 ? (
 					<button className={styles.sectionButtonDisabled} disabled>
-						Where am I?
+						?
 					</button>
 				) : (
 					<button
 						onClick={(e) => handleSectionUpdate(2, e)}
 						className={styles.sectionButton}
 					>
-						Where am I?
+						?
 					</button>
 				)}
 				{saveNotice && (
@@ -84,10 +79,7 @@ const Stage90063 = () => {
 			{/* Section 2 */}
 			{(userAuth.lastStage > stageId || userAuth.lastSection >= 2) && (
 				<div className={styles.sectionBox}>
-					<p>
-						There’s hardly any significance in that, if it can even
-						be determined.
-					</p>
+					<p>_</p>
 				</div>
 			)}
 			{/* Save stage completion*/}
