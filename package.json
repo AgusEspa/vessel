@@ -31,7 +31,9 @@
     ]
   },
   "prettier": {
-    "tabWidth": 4
+    "tabWidth": 4,
+    "useTabs": true,
+    "bracketSameLine": true
   },
   "browserslist": {
     "production": [

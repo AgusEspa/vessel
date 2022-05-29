@@ -65,8 +65,7 @@ const Stage90063 = () => {
 				) : (
 					<button
 						onClick={(e) => handleSectionUpdate(2, e)}
-						className={styles.sectionButton}
-					>
+						className={styles.sectionButton}>
 						?
 					</button>
 				)}
