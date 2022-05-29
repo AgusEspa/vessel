@@ -71,7 +71,7 @@ p {
 .landingContainer {
 	background-image: url("../../public/landing.jpg");
 	background-repeat: no-repeat;
-	background-position: center top;	
+	background-position: center top;
 	background-size: cover;
 	background-position-y: 2rem;
 	display: flex;
@@ -85,10 +85,10 @@ p {
 		background-position-y: 5rem;
 	}
 
-	.logoBox{
+	.logoBox {
 		margin-left: 0;
 		padding: 0;
-	
+
 		.bigLogo {
 			width: 15rem;
 		}
@@ -121,7 +121,7 @@ p {
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-		
+
 			span {
 				width: 0.6rem;
 				height: 0.6rem;
@@ -148,11 +148,11 @@ p {
 			padding: 0;
 			display: flex;
 			justify-content: center;
-		
+
 			img {
 				width: 14rem;
 			}
-		
+
 			@media screen and (max-width: 600px) {
 				img {
 					width: 12rem;
@@ -182,7 +182,7 @@ p {
 				color: variables.$pink;
 				margin: 2rem 1rem 0.5rem 1rem;
 			}
-			
+
 			input {
 				width: 14rem;
 				height: 2.3rem;
@@ -198,14 +198,14 @@ p {
 				border-radius: 0.5rem;
 				&:focus {
 					outline: none;
-					box-shadow: 0 0 15px  rgb(255, 137, 210);
+					box-shadow: 0 0 15px rgb(255, 137, 210);
 				}
 				&::placeholder {
 					color: rgb(255, 205, 214);
 					text-align: center;
 				}
 			}
-			
+
 			button {
 				align-self: center;
 				width: 10rem;
@@ -238,20 +238,20 @@ p {
 					align-items: baseline;
 					align-self: center;
 					bottom: -1.5rem;
-				
+
 					p {
 						font-size: 0.9rem;
 						margin: 0 0.1rem 0 0;
 						color: black;
 					}
-				
+
 					.loadingDots {
 						@include loadingDots();
 					}
 				}
 			}
 		}
-		
+
 		.readMe {
 			h4 {
 				font-size: 1rem;
@@ -298,11 +298,11 @@ p {
 		.headIconBox {
 			margin: 2rem 0 1rem 0;
 			padding: 0;
-		
+
 			img {
 				width: 10rem;
 			}
-		
+
 			@media screen and (max-width: 600px) {
 				img {
 					width: 8rem;
@@ -325,7 +325,7 @@ p {
 			font-size: 1.4rem;
 			margin: 1rem 1rem 1.5rem 1rem;
 		}
-		
+
 		@media screen and (max-width: 600px) {
 			h1 {
 				font-size: 1.4rem;
@@ -471,7 +471,6 @@ p {
 			}
 		}
 	}
-	
 }
 
 .dashContainer {
