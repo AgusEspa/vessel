@@ -5,19 +5,19 @@ import Navbar from "./Navbar";
 import DeleteModal from "./DeleteModal";
 import styles from "../styles/Main.module.scss";
 
-const Dashboard = (props) => {
+const Dashboard = props => {
 	const { userAuth } = useContext(AuthContext);
 
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 
 	const navigate = useNavigate();
 
-	const handleDelete = (event) => {
+	const handleDelete = event => {
 		event.preventDefault();
 		setModalIsOpen(true);
 	};
 
-	const handleContinue = (event) => {
+	const handleContinue = event => {
 		event.preventDefault();
 		const lastLink = `/stage/${userAuth.lastStage}`;
 		navigate(lastLink);
@@ -36,8 +36,7 @@ const Dashboard = (props) => {
 					<h1>you are still here...</h1>
 					<button
 						className={styles.contButton}
-						onClick={handleContinue}
-					>
+						onClick={handleContinue}>
 						Continue the quest
 					</button>
 					<p>or choose a chapter</p>
@@ -84,8 +83,7 @@ const Dashboard = (props) => {
 						<button
 							type="button"
 							className={styles.deleteButton}
-							onClick={handleDelete}
-						>
+							onClick={handleDelete}>
 							Abandon the quest
 						</button>
 						<p>and all your progress will be lost forever...</p>

@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import useUpdateSection from "../../utils/useUpdateSection";
 import useUpdateStage from "../../utils/useUpdateStage";
 import styles from "../../styles/Main.module.scss";
-
 const Stage90063 = () => {
 	const { userAuth, setUserAuth } = useContext(AuthContext);
 	const [updateSection] = useUpdateSection();
@@ -12,7 +11,7 @@ const Stage90063 = () => {
 	const navigate = useNavigate();
 	const [loadingSave, setLoadingSave] = useState(false);
 	const [saveNotice, setSaveNotice] = useState(false);
-
+const ijss = 0
 	const stageId = 90063;
 
 	useEffect(() => {
