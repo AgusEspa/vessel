@@ -11,7 +11,7 @@ const Stage90063 = () => {
 	const navigate = useNavigate();
 	const [loadingSave, setLoadingSave] = useState(false);
 	const [saveNotice, setSaveNotice] = useState(false);
-const ijss = 0
+	
 	const stageId = 90063;
 
 	useEffect(() => {
