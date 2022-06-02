@@ -52,8 +52,8 @@ const FreshLanding = (props) => {
 				<div className={styles.welcomeContainer}>
 					<div>
 						<p className={styles.quotePhrase}>
-							“the eternal mystery of the world
-							<br /> is its comprehensibility”
+							“the eternal mystery of the world is its
+							comprehensibility”
 						</p>
 						<p className={styles.quoteAuthor}>
 							Albert Einstein, <span>Physics and Reality</span>
@@ -76,8 +76,8 @@ const FreshLanding = (props) => {
 						<p>Isn't everything? This is also the opposite.</p>
 						<p>
 							There are multiple implementations for the idea
-							conveyed by ‘vessel’, some imply the act of
-							creation, others the act of destruction. However,
+							conveyed by <span>vessel</span>, some imply the act
+							of creation, others the act of destruction. However,
 							what seems opposing might as well be symbiotic.
 						</p>
 						<p>

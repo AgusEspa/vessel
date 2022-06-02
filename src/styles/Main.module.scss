@@ -83,7 +83,7 @@ p {
 
 	@media screen and (max-width: 600px) {
 		background-image: url("../../public/landing-small.jpg");
-		background-position-y: 10rem;
+		background-position-y: 11rem;
 	}
 
 	.logoBox {
@@ -110,18 +110,19 @@ p {
 		border: none;
 		border-radius: 0.5rem;
 		background-color: rgba(0, 0, 0, 0.4);
-		padding: 2rem 0.5rem 2rem 0.5rem;
-		margin: 11rem 0 0 0;
+		padding: 1rem 1rem 2rem 1rem;
+		margin: 11rem 0 6rem 0;
 
 		@media screen and (max-width: 600px) {
-			margin: 11rem 0 0 0;
+			margin: 10rem 0 5rem 0;
+			padding: 1rem 0.5rem 2rem 0.5rem;
 		}
 
 		.quotePhrase {
 			color: white;
 			text-align: center;
 			font-family: variables.$fonts;
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 			margin: 0.6rem 0 0.4rem 0;
 
 			span {
@@ -161,6 +162,8 @@ p {
 			text-align: center;
 			font-family: variables.$fonts;
 			line-height: 2rem;
+			span {
+				font-style: italic;}
 		}
 
 		form {
@@ -197,7 +200,7 @@ p {
 					box-shadow: 0 0 15px rgb(255, 137, 210);
 				}
 				&::placeholder {
-					color: rgb(255, 205, 214);
+					color: rgb(218, 218, 218);
 					text-align: center;
 				}
 			}
@@ -746,7 +749,7 @@ p {
 footer {
 	min-height: 100%;
 	padding: 0 0 0.2rem 0;
-	margin: 3rem 0 0 0;
+	margin: 0rem 0 0 0;
 
 	.footerBox {
 		width: 100%;
