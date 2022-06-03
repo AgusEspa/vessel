@@ -32,7 +32,7 @@
         "trailingComma": "es5",
         "tabWidth": 4,
         "arrowParens": "always",
-        "bracketSameLine":true
+        "bracketSameLine": true
     },
     "browserslist": {
         "production": [
