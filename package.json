@@ -31,7 +31,8 @@
     "prettier": {
         "trailingComma": "es5",
         "tabWidth": 4,
-        "arrowParens": "always"
+        "arrowParens": "always",
+        "bracketSameLine":true
     },
     "browserslist": {
         "production": [
