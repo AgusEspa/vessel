@@ -1,766 +1,770 @@
 @use "./variables";
 
 @mixin fadeInAnimation {
-	animation: fadeIn 1s ease-in;
-	@keyframes fadeIn {
-		0% {
-			opacity: 0%;
-		}
-		100% {
-			opacity: 100%;
-		}
-	}
+    animation: fadeIn 1s ease-in;
+    @keyframes fadeIn {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
 }
 
 @mixin loadingDots {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	span {
-		width: 2px;
-		height: 2px;
-		margin: 0rem 0.3rem 0rem 0.3rem;
-		color: black;
-		animation: blinking 1s linear infinite;
-	}
-	@keyframes blinking {
-		0% {
-			background-color: black;
-		}
-		40% {
-			background-color: black;
-		}
-		100% {
-			background-color: transparent;
-		}
-	}
-	span:nth-child(1) {
-		animation-delay: 0.1s;
-	}
-	span:nth-child(2) {
-		animation-delay: 0.2s;
-	}
-	span:nth-child(3) {
-		animation-delay: 0.3s;
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        width: 2px;
+        height: 2px;
+        margin: 0rem 0.3rem 0rem 0.3rem;
+        color: black;
+        animation: blinking 1s linear infinite;
+    }
+    @keyframes blinking {
+        0% {
+            background-color: black;
+        }
+        40% {
+            background-color: black;
+        }
+        100% {
+            background-color: transparent;
+        }
+    }
+    span:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+    span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    span:nth-child(3) {
+        animation-delay: 0.3s;
+    }
 }
 
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	background-color: variables.$background;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
+    margin: 0;
+    padding: 0;
+    background-color: variables.$background;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 p {
-	margin: 0.4rem 0 0 0;
-	padding: 0;
-	font-family: variables.$fonts;
-	font-size: 1rem;
-	line-height: 1.5rem;
+    margin: 0.4rem 0 0 0;
+    padding: 0;
+    font-family: variables.$fonts;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .landingContainer {
-	background-image: url("../../public/landing.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center top;
-	background-size: cover;
-	background-position-y: 6rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 3rem 0.5rem 2rem 0.5rem;
-	@include fadeInAnimation();
+    background-image: url("../../public/landing.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+    background-position-y: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0.5rem 2rem 0.5rem;
+    @include fadeInAnimation();
 
-	@media screen and (max-width: 600px) {
-		background-image: url("../../public/landing-small.jpg");
-		background-position-y: 11rem;
-	}
+    @media screen and (max-width: 600px) {
+        background-image: url("../../public/landing-small.jpg");
+        background-position-y: 11rem;
+    }
 
-	.logoBox {
-		margin-left: 0;
-		padding: 0;
+    .logoBox {
+        margin-left: 0;
+        padding: 0;
 
-		.bigLogo {
-			width: 15rem;
-		}
+        .bigLogo {
+            width: 15rem;
+        }
 
-		@media screen and (max-width: 600px) {
-			.bigLogo {
-				width: 12rem;
-			}
-		}
-	}
+        @media screen and (max-width: 600px) {
+            .bigLogo {
+                width: 12rem;
+            }
+        }
+    }
 
-	.welcomeContainer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		max-width: 40rem;
-		border: none;
-		border-radius: 0.5rem;
-		background-color: rgba(0, 0, 0, 0.4);
-		padding: 1rem 1rem 2rem 1rem;
-		margin: 11rem 0 6rem 0;
+    .welcomeContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 40rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 1rem 1rem 2rem 1rem;
+        margin: 11rem 0 6rem 0;
 
-		@media screen and (max-width: 600px) {
-			margin: 10rem 0 5rem 0;
-			padding: 1rem 0.5rem 2rem 0.5rem;
-		}
+        @media screen and (max-width: 600px) {
+            margin: 10rem 0 5rem 0;
+            padding: 1rem 0.5rem 2rem 0.5rem;
+        }
 
-		.quotePhrase {
-			color: white;
-			text-align: center;
-			font-family: variables.$fonts;
-			font-size: 1.1rem;
-			margin: 0.6rem 0 0.4rem 0;
+        .quotePhrase {
+            color: white;
+            text-align: center;
+            font-family: variables.$fonts;
+            font-size: 1.1rem;
+            margin: 0.6rem 0 0.4rem 0;
 
-			span {
-				color: rgb(222, 12, 176);
-			}
-		}
-		.quoteAuthor {
-			color: white;
-			text-align: center;
-			font-family: variables.$fonts;
-			font-size: 1rem;
+            span {
+                color: rgb(222, 12, 176);
+            }
+        }
+        .quoteAuthor {
+            color: white;
+            text-align: center;
+            font-family: variables.$fonts;
+            font-size: 1rem;
 
-			span {
-				font-style: italic;
-			}
-		}
-		.separator {
-			margin: 3rem 0 2rem 0;
-			padding: 0;
-			display: flex;
-			justify-content: center;
+            span {
+                font-style: italic;
+            }
+        }
+        .separator {
+            margin: 3rem 0 2rem 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
 
-			svg {
-				font-size: 3rem;
-				stroke: rgb(167, 0, 131);
-			}
+            svg {
+                font-size: 3rem;
+                stroke: rgb(167, 0, 131);
+            }
 
-			@media screen and (max-width: 600px) {
-				img {
-					width: 12rem;
-				}
-			}
-		}
+            @media screen and (max-width: 600px) {
+                img {
+                    width: 12rem;
+                }
+            }
+        }
 
-		p {
-			color: white;
-			text-align: center;
-			font-family: variables.$fonts;
-			line-height: 2rem;
-			span {
-				font-style: italic;}
-		}
+        p {
+            color: white;
+            text-align: center;
+            font-family: variables.$fonts;
+            line-height: 2rem;
+            span {
+                font-style: italic;
+            }
+        }
 
-		form {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			margin-bottom: 3rem;
-			position: relative;
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 3rem;
+            position: relative;
 
-			label {
-				display: block;
-				font-family: variables.$fonts;
-				font-size: 1.1rem;
-				text-align: center;
-				color: variables.$pink;
-				margin: 2rem 1rem 0.5rem 1rem;
-			}
+            label {
+                display: block;
+                font-family: variables.$fonts;
+                font-size: 1.1rem;
+                text-align: center;
+                color: variables.$pink;
+                margin: 2rem 1rem 0.5rem 1rem;
+            }
 
-			input {
-				width: 14rem;
-				height: 2.3rem;
-				border: 0;
-				margin: 1.5rem 1rem 1rem 1rem;
-				font-size: 1rem;
-				color: white;
-				font-family: variables.$fonts;
-				text-align: center;
-				padding: 0.5rem;
-				background-color: transparent;
-				border: 1px solid rgb(222, 12, 176);
-				border-radius: 0.5rem;
-				&:focus {
-					outline: none;
-					box-shadow: 0 0 15px rgb(255, 137, 210);
-				}
-				&::placeholder {
-					color: rgb(218, 218, 218);
-					text-align: center;
-				}
-			}
+            input {
+                width: 14rem;
+                height: 2.3rem;
+                border: 0;
+                margin: 1.5rem 1rem 1rem 1rem;
+                font-size: 1rem;
+                color: white;
+                font-family: variables.$fonts;
+                text-align: center;
+                padding: 0.5rem;
+                background-color: transparent;
+                border: 1px solid rgb(222, 12, 176);
+                border-radius: 0.5rem;
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 15px rgb(255, 137, 210);
+                }
+                &::placeholder {
+                    color: rgb(218, 218, 218);
+                    text-align: center;
+                }
+            }
 
-			button {
-				align-self: center;
-				width: 10rem;
-				height: 2rem;
-				margin: 0.5rem 1rem 0.5rem 1rem;
-				border-radius: 1.2rem;
-				text-align: center;
-				padding: 0rem;
-				background-color: rgb(222, 12, 176);
-				font-family: variables.$fonts;
-				color: black;
-				font-size: 1.2rem;
-				border: none;
-				outline: 0;
-				transition: all 0.1s ease-out;
-				cursor: pointer;
-				&:hover {
-					background-color: rgb(242, 37, 198);
-				}
-			}
-			.disabled {
-				cursor: default;
-				&:hover {
-					background-color: rgb(222, 12, 176);
-				}
+            button {
+                align-self: center;
+                width: 10rem;
+                height: 2rem;
+                margin: 0.5rem 1rem 0.5rem 1rem;
+                border-radius: 1.2rem;
+                text-align: center;
+                padding: 0rem;
+                background-color: rgb(222, 12, 176);
+                font-family: variables.$fonts;
+                color: black;
+                font-size: 1.2rem;
+                border: none;
+                outline: 0;
+                transition: all 0.1s ease-out;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgb(242, 37, 198);
+                }
+            }
+            .disabled {
+                cursor: default;
+                &:hover {
+                    background-color: rgb(222, 12, 176);
+                }
 
-				.loadingEnv {
-					display: flex;
-					justify-content: center;
-					align-items: baseline;
-					align-self: center;
-					bottom: -1.5rem;
+                .loadingEnv {
+                    display: flex;
+                    justify-content: center;
+                    align-items: baseline;
+                    align-self: center;
+                    bottom: -1.5rem;
 
-					p {
-						font-size: 0.9rem;
-						margin: 0 0.1rem 0 0;
-						color: black;
-					}
+                    p {
+                        font-size: 0.9rem;
+                        margin: 0 0.1rem 0 0;
+                        color: black;
+                    }
 
-					.loadingDots {
-						@include loadingDots();
-					}
-				}
-			}
-		}
+                    .loadingDots {
+                        @include loadingDots();
+                    }
+                }
+            }
+        }
 
-		.readMe {
-			h4 {
-				font-size: 1rem;
-				font-family: variables.$fonts;
-				text-align: center;
-				color: rgb(80, 80, 255);
-				margin: 0;
-				padding: 0;
+        .readMe {
+            h4 {
+                font-size: 1rem;
+                font-family: variables.$fonts;
+                text-align: center;
+                color: rgb(80, 80, 255);
+                margin: 0;
+                padding: 0;
 
-				a {
-					text-decoration: underline;
-					&:visited {
-						color: rgb(80, 80, 255);
-					}
-				}
-			}
+                a {
+                    text-decoration: underline;
+                    &:visited {
+                        color: rgb(80, 80, 255);
+                    }
+                }
+            }
 
-			p {
-				font-size: 0.9rem;
-				color: variables.$lightGray;
-			}
-		}
-	}
+            p {
+                font-size: 0.9rem;
+                color: variables.$lightGray;
+            }
+        }
+    }
 }
 
 .stageContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem 0.7rem 20rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0.7rem 20rem 0.7rem;
 
-	.sectionBox {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		max-width: 40rem;
-		border-radius: 0.7rem;
-		padding: 0.5rem;
-		@include fadeInAnimation();
+    .sectionBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        max-width: 40rem;
+        border-radius: 0.7rem;
+        padding: 0.5rem;
+        @include fadeInAnimation();
 
-		.headIconBox {
-			margin: 2rem 0 1rem 0;
-			padding: 0;
+        .headIconBox {
+            margin: 2rem 0 1rem 0;
+            padding: 0;
 
-			img {
-				width: 10rem;
-			}
+            img {
+                width: 10rem;
+            }
 
-			@media screen and (max-width: 600px) {
-				img {
-					width: 8rem;
-				}
-			}
-		}
+            @media screen and (max-width: 600px) {
+                img {
+                    width: 8rem;
+                }
+            }
+        }
 
-		h1 {
-			color: rgb(162, 0, 162);
-			text-align: center;
-			font-family: variables.$fonts;
-			font-size: 1.5rem;
-			margin: 1rem;
-		}
+        h1 {
+            color: rgb(162, 0, 162);
+            text-align: center;
+            font-family: variables.$fonts;
+            font-size: 1.5rem;
+            margin: 1rem;
+        }
 
-		h2 {
-			color: rgba(255, 0, 255, 0.797);
-			text-align: center;
-			font-family: variables.$fonts;
-			font-size: 1.4rem;
-			margin: 1rem 1rem 1.5rem 1rem;
-		}
+        h2 {
+            color: rgba(255, 0, 255, 0.797);
+            text-align: center;
+            font-family: variables.$fonts;
+            font-size: 1.4rem;
+            margin: 1rem 1rem 3rem 1rem;
+        }
 
-		@media screen and (max-width: 600px) {
-			h1 {
-				font-size: 1.4rem;
-			}
-			h2 {
-				font-size: 1.3rem;
-			}
-		}
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
 
-		p {
-			color: white;
-			text-align: left;
-			font-family: variables.$fonts;
-			line-height: 2rem;
-			font-size: 1rem;
-		}
+        p {
+            align-self: flex-start;
+            color: white;
+            text-align: left;
+            font-family: variables.$fonts;
+            line-height: 2rem;
+            font-size: 1rem;
+            text-indent: 1rem;
+        }
 
-		.sectionButton {
-			align-self: flex-end;
-			color: variables.$darkerGray;
-			text-align: right;
-			font-family: variables.$fonts;
-			font-size: 1rem;
-			line-height: 2rem;
-			border: none;
-			background-color: transparent;
-			border-radius: 2rem;
-			cursor: pointer;
-			padding: 0.3rem 1rem 0.3rem 1rem;
-			margin: 2rem 0 0.5rem 2rem;
-			animation: flashing 2s infinite;
-			@keyframes flashing {
-				0% {
-					background-color: #1e1e1e;
-				}
-				50% {
-					background-color: #000000;
-				}
-				100% {
-					background-color: #1e1e1e;
-				}
-			}
-		}
-		.sectionButtonDisabled {
-			align-self: flex-end;
-			color: white;
-			text-align: right;
-			font-family: variables.$fonts;
-			font-size: 1rem;
-			line-height: 2rem;
-			border: none;
-			background-color: #262626;
-			border-radius: 2rem 2rem 0 2rem;
-			cursor: default;
-			padding: 0.3rem 1rem 0.3rem 1rem;
-			margin: 2rem 0 0.5rem 2rem;
-		}
+        .sectionButton {
+            align-self: flex-end;
+            color: variables.$darkerGray;
+            text-align: right;
+            font-family: variables.$fonts;
+            font-size: 1rem;
+            line-height: 2rem;
+            border: none;
+            background-color: transparent;
+            border-radius: 2rem;
+            cursor: pointer;
+            padding: 0.3rem 1rem 0.3rem 1rem;
+            margin: 2rem 0 0.5rem 2rem;
+            animation: flashing 2s infinite;
+            @keyframes flashing {
+                0% {
+                    background-color: #1e1e1e;
+                }
+                50% {
+                    background-color: #000000;
+                }
+                100% {
+                    background-color: #1e1e1e;
+                }
+            }
+        }
+        .sectionButtonDisabled {
+            align-self: flex-end;
+            color: white;
+            text-align: right;
+            font-family: variables.$fonts;
+            font-size: 1rem;
+            line-height: 2rem;
+            border: none;
+            background-color: #262626;
+            border-radius: 2rem 2rem 0 2rem;
+            cursor: default;
+            padding: 0.3rem 1rem 0.3rem 1rem;
+            margin: 2rem 0 0.5rem 2rem;
+        }
 
-		.saveNotice {
-			position: absolute;
-			bottom: 0.6rem;
-			right: 0;
-			margin: 0 1rem 0 0;
-			padding: 0;
+        .saveNotice {
+            position: absolute;
+            bottom: 0.6rem;
+            right: 0;
+            margin: 0 1rem 0 0;
+            padding: 0;
 
-			p {
-				font-size: 0.9rem;
-				font-family: variables.$fonts;
-				color: variables.$lightGray;
-				margin: 0;
-				padding: 0;
-			}
-		}
+            p {
+                font-size: 0.9rem;
+                font-family: variables.$fonts;
+                color: variables.$lightGray;
+                margin: 0;
+                padding: 0;
+            }
+        }
 
-		.end {
-			font-size: 1rem;
-			color: variables.$darkGray;
-			margin: 2rem 0 0 0;
-			padding: 0;
-		}
-		.saveButtonsBox {
-			display: flex;
-			justify-content: space-between;
-			flex-direction: row;
-			align-items: center;
-			padding: 0;
-			margin: 0.5rem 0 2rem 0;
-			gap: 1.5rem;
+        .end {
+            align-self: center;
+            font-size: 1rem;
+            color: variables.$darkGray;
+            margin: 2rem 0 0 0;
+            padding: 0;
+        }
+        .saveButtonsBox {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            margin: 0.5rem 0 2rem 0;
+            gap: 1.5rem;
 
-			button {
-				height: 2rem;
-				min-width: 7rem;
-				margin: 0;
-				border-radius: 1.2rem;
-				text-align: center;
-				padding: 0 1rem 0 1rem;
-				background-color: violet;
-				font-family: variables.$fonts;
-				color: black;
-				font-size: 0.9rem;
-				border: none;
-				outline: 0;
-				transition: all 0.1s ease-out;
-				cursor: pointer;
-				&:hover {
-					background-color: rgb(255, 158, 255);
-				}
-			}
-			.saveDisabled {
-				cursor: default;
-				&:hover {
-					background-color: violet;
-				}
+            button {
+                height: 2rem;
+                min-width: 7rem;
+                margin: 0;
+                border-radius: 1.2rem;
+                text-align: center;
+                padding: 0 1rem 0 1rem;
+                background-color: violet;
+                font-family: variables.$fonts;
+                color: black;
+                font-size: 0.9rem;
+                border: none;
+                outline: 0;
+                transition: all 0.1s ease-out;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgb(255, 158, 255);
+                }
+            }
+            .saveDisabled {
+                cursor: default;
+                &:hover {
+                    background-color: violet;
+                }
 
-				.loading {
-					display: flex;
-					justify-content: center;
-					align-items: baseline;
-					align-self: center;
-					bottom: -1.5rem;
+                .loading {
+                    display: flex;
+                    justify-content: center;
+                    align-items: baseline;
+                    align-self: center;
+                    bottom: -1.5rem;
 
-					p {
-						font-size: 0.9rem;
-						margin: 0 0.1rem 0 0;
-						color: black;
-					}
+                    p {
+                        font-size: 0.9rem;
+                        margin: 0 0.1rem 0 0;
+                        color: black;
+                    }
 
-					.loadingDots {
-						@include loadingDots();
-					}
-				}
-			}
-		}
+                    .loadingDots {
+                        @include loadingDots();
+                    }
+                }
+            }
+        }
 
-		.endChapterIconBox {
-			display: flex;
-			align-items: center;
-			margin: 2rem 0 0 0;
-			padding: 0;
+        .endChapterIconBox {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0 0 0;
+            padding: 0;
 
-			img {
-				width: 3rem;
-			}
-		}
-	}
+            img {
+                width: 3rem;
+            }
+        }
+    }
 }
 
 .dashContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 3rem 0.7rem 3rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0.7rem 3rem 0.7rem;
 
-	.helpBox {
-		display: flex;
-		flex-direction: column;
-		max-width: 40rem;
-		border: none;
-		border-radius: 0.7rem;
-		background-color: rgb(27, 27, 27);
-		padding: 1rem;
+    .helpBox {
+        display: flex;
+        flex-direction: column;
+        max-width: 40rem;
+        border: none;
+        border-radius: 0.7rem;
+        background-color: rgb(27, 27, 27);
+        padding: 1rem;
 
-		h1 {
-			font-family: variables.$fonts;
-			font-size: 1.15rem;
-			font-weight: 300;
-			text-align: left;
-			color: variables.$lightGray;
-			margin: 1rem 0 1rem 0;
-		}
+        h1 {
+            font-family: variables.$fonts;
+            font-size: 1.15rem;
+            font-weight: 300;
+            text-align: left;
+            color: variables.$lightGray;
+            margin: 1rem 0 1rem 0;
+        }
 
-		p {
-			font-size: 1rem;
-			color: variables.$lightGray;
-			margin: 0;
-			text-align: left;
-		}
-	}
+        p {
+            font-size: 1rem;
+            color: variables.$lightGray;
+            margin: 0;
+            text-align: left;
+        }
+    }
 
-	.dashboardBox {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		max-width: 40rem;
-		border: 1px solid violet;
-		border-radius: 0.7rem;
-		padding: 1rem;
-		box-shadow: 0 0 15px rgb(255, 192, 231);
+    .dashboardBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 40rem;
+        border: 1px solid violet;
+        border-radius: 0.7rem;
+        padding: 1rem;
+        box-shadow: 0 0 15px rgb(255, 192, 231);
 
-		.iconBox {
-			margin: 2rem 0 1rem 0;
-			padding: 0;
+        .iconBox {
+            margin: 2rem 0 1rem 0;
+            padding: 0;
 
-			img {
-				width: 10rem;
-			}
+            img {
+                width: 10rem;
+            }
 
-			@media screen and (max-width: 600px) {
-				img {
-					width: 8rem;
-				}
-			}
-		}
+            @media screen and (max-width: 600px) {
+                img {
+                    width: 8rem;
+                }
+            }
+        }
 
-		h1 {
-			font-family: variables.$fonts;
-			font-size: 1.2rem;
-			font-weight: 300;
-			text-align: center;
-			color: variables.$lightGray;
-			margin: 1rem 0 1.5rem 0;
-		}
+        h1 {
+            font-family: variables.$fonts;
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-align: center;
+            color: variables.$lightGray;
+            margin: 1rem 0 1.5rem 0;
+        }
 
-		.alias {
-			font-weight: 500;
-			font-style: italic;
-			margin: 0rem 0 0rem 0;
-			color: rgb(192, 0, 192);
-			font-size: 1.4rem;
-		}
+        .alias {
+            font-weight: 500;
+            font-style: italic;
+            margin: 0rem 0 0rem 0;
+            color: rgb(192, 0, 192);
+            font-size: 1.4rem;
+        }
 
-		.contButton {
-			align-self: center;
-			width: 9rem;
-			margin: 0.5rem 1rem 0.5rem 1rem;
-			border-radius: 1.2rem;
-			text-align: center;
-			padding: 0.5rem 1rem 0.5rem 1rem;
-			background-color: violet;
-			font-family: variables.$fonts;
-			color: black;
-			font-size: 1.1rem;
-			line-height: 1.1rem;
-			border: none;
-			outline: 0;
-			transition: all 0.1s ease-out;
-			cursor: pointer;
+        .contButton {
+            align-self: center;
+            width: 9rem;
+            margin: 0.5rem 1rem 0.5rem 1rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            background-color: violet;
+            font-family: variables.$fonts;
+            color: black;
+            font-size: 1.1rem;
+            line-height: 1.1rem;
+            border: none;
+            outline: 0;
+            transition: all 0.1s ease-out;
+            cursor: pointer;
 
-			&:hover {
-				background-color: rgb(236, 153, 236);
-			}
-		}
+            &:hover {
+                background-color: rgb(236, 153, 236);
+            }
+        }
 
-		p {
-			font-size: 0.9rem;
-			color: variables.$lightGray;
-			margin: 0;
-		}
+        p {
+            font-size: 0.9rem;
+            color: variables.$lightGray;
+            margin: 0;
+        }
 
-		.indexContainer {
-			padding: 1rem;
-			margin: 1rem 0 0.5rem 0;
-			max-width: 39rem;
-			border-radius: 0.5rem;
+        .indexContainer {
+            padding: 1rem;
+            margin: 1rem 0 0.5rem 0;
+            max-width: 39rem;
+            border-radius: 0.5rem;
 
-			h2 {
-				font-family: variables.$fonts;
-				font-size: 1.2rem;
-				font-weight: 300;
-				text-align: left;
-				color: variables.$lightGray;
-				margin: 0.5rem 0 0 0;
-			}
+            h2 {
+                font-family: variables.$fonts;
+                font-size: 1.2rem;
+                font-weight: 300;
+                text-align: left;
+                color: variables.$lightGray;
+                margin: 0.5rem 0 0 0;
+            }
 
-			h3 {
-				font-family: variables.$fonts;
-				font-size: 1.1rem;
-				font-weight: 300;
-				text-align: center;
-				color: variables.$lightGray;
-				margin: 1.3rem 0 0.5rem 0;
-			}
+            h3 {
+                font-family: variables.$fonts;
+                font-size: 1.1rem;
+                font-weight: 300;
+                text-align: center;
+                color: variables.$lightGray;
+                margin: 1.3rem 0 0.5rem 0;
+            }
 
-			.chapter {
-				display: flex;
-				flex-direction: row;
-				justify-content: left;
-				align-items: center;
-				max-width: 30rem;
-				min-width: 17rem;
-				height: 3rem;
-				border: 1px solid variables.$darkGray;
-				border-radius: 0.5rem;
-				padding: 0.2rem;
-				margin: 0.4rem;
+            .chapter {
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+                max-width: 30rem;
+                min-width: 17rem;
+                height: 3rem;
+                border: 1px solid variables.$darkGray;
+                border-radius: 0.5rem;
+                padding: 0.2rem;
+                margin: 0.4rem;
 
-				h4 {
-					font-family: variables.$fonts;
-					color: variables.$darkGray;
-					font-size: 1.05rem;
-					font-weight: 300;
-					text-align: left;
-					margin: 0;
-				}
+                h4 {
+                    font-family: variables.$fonts;
+                    color: variables.$darkGray;
+                    font-size: 1.05rem;
+                    font-weight: 300;
+                    text-align: left;
+                    margin: 0;
+                }
 
-				a {
-					text-decoration: none;
-					font-family: variables.$fonts;
-					color: variables.$lightGray;
-					font-size: 1.05rem;
-					font-weight: 300;
-					text-align: left;
-					margin: 0;
-				}
+                a {
+                    text-decoration: none;
+                    font-family: variables.$fonts;
+                    color: variables.$lightGray;
+                    font-size: 1.05rem;
+                    font-weight: 300;
+                    text-align: left;
+                    margin: 0;
+                }
 
-				.chapterIconBox {
-					display: flex;
-					align-items: center;
-					margin: 0 1rem 0 0.5rem;
-					padding: 0;
+                .chapterIconBox {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 1rem 0 0.5rem;
+                    padding: 0;
 
-					img {
-						width: 2.1rem;
-					}
-				}
-			}
-		}
+                    img {
+                        width: 2.1rem;
+                    }
+                }
+            }
+        }
 
-		.abandonBox {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			background-color: black;
-			padding: 1rem;
-			border-radius: 0.5rem;
-			border: 1px dotted red;
-			margin: 2rem 0rem 0rem 0rem;
-			max-width: 39rem;
-			text-align: center;
+        .abandonBox {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px dotted red;
+            margin: 2rem 0rem 0rem 0rem;
+            max-width: 39rem;
+            text-align: center;
 
-			.deleteButton {
-				align-self: center;
-				width: 9rem;
-				margin: 0.5rem 1rem 0.5rem 1rem;
-				border-radius: 1.2rem;
-				text-align: center;
-				padding: 0.5rem 1rem 0.5rem 1rem;
-				background-color: rgb(185, 3, 3);
-				font-family: variables.$fonts;
-				color: white;
-				font-size: 1.1rem;
-				line-height: 1.1rem;
-				border: none;
-				outline: 0;
-				transition: all 0.1s ease-out;
-				cursor: pointer;
+            .deleteButton {
+                align-self: center;
+                width: 9rem;
+                margin: 0.5rem 1rem 0.5rem 1rem;
+                border-radius: 1.2rem;
+                text-align: center;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                background-color: rgb(185, 3, 3);
+                font-family: variables.$fonts;
+                color: white;
+                font-size: 1.1rem;
+                line-height: 1.1rem;
+                border: none;
+                outline: 0;
+                transition: all 0.1s ease-out;
+                cursor: pointer;
 
-				&:hover {
-					background-color: rgb(210, 0, 0);
-				}
-			}
+                &:hover {
+                    background-color: rgb(210, 0, 0);
+                }
+            }
 
-			.deleteModalBox {
-				background-color: black;
-				border-radius: 0.5rem;
-				padding: 1rem;
-				margin: 0;
+            .deleteModalBox {
+                background-color: black;
+                border-radius: 0.5rem;
+                padding: 1rem;
+                margin: 0;
 
-				p {
-					font-family: variables.$fonts;
-					font-size: 1.2rem;
-					margin: 0;
-					padding: 0.5rem;
-					color: variables.$lightGray;
-					text-align: center;
-				}
+                p {
+                    font-family: variables.$fonts;
+                    font-size: 1.2rem;
+                    margin: 0;
+                    padding: 0.5rem;
+                    color: variables.$lightGray;
+                    text-align: center;
+                }
 
-				.buttonsContainer {
-					display: flex;
-					justify-content: center;
-					align-items: center;
+                .buttonsContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-					.cancelButton {
-						margin: 1.5rem 1rem 1rem 1rem;
-						width: 7rem;
-						border-radius: 1.2rem;
-						text-align: center;
-						padding: 0.6rem 1rem;
-						background-color: rgb(0, 0, 213);
-						color: white;
-						font-family: variables.$fonts;
-						font-size: 1.1rem;
-						line-height: 1.1rem;
-						border: none;
-						outline: 0;
-						cursor: pointer;
-						transition: all 0.1s ease-out;
+                    .cancelButton {
+                        margin: 1.5rem 1rem 1rem 1rem;
+                        width: 7rem;
+                        border-radius: 1.2rem;
+                        text-align: center;
+                        padding: 0.6rem 1rem;
+                        background-color: rgb(0, 0, 213);
+                        color: white;
+                        font-family: variables.$fonts;
+                        font-size: 1.1rem;
+                        line-height: 1.1rem;
+                        border: none;
+                        outline: 0;
+                        cursor: pointer;
+                        transition: all 0.1s ease-out;
 
-						&:hover {
-							background-color: rgb(0, 0, 255);
-						}
-					}
+                        &:hover {
+                            background-color: rgb(0, 0, 255);
+                        }
+                    }
 
-					.confirmDeleteButton {
-						margin: 1.5rem 1rem 1rem 1rem;
-						width: 7rem;
-						border-radius: 1.2rem;
-						text-align: center;
-						padding: 0.6rem 1rem;
-						background-color: rgb(185, 3, 3);
-						color: white;
-						font-family: variables.$fonts;
-						font-size: 1.1rem;
-						line-height: 1.1rem;
-						border: none;
-						outline: 0;
-						cursor: pointer;
-						transition: all 0.1s ease-out;
+                    .confirmDeleteButton {
+                        margin: 1.5rem 1rem 1rem 1rem;
+                        width: 7rem;
+                        border-radius: 1.2rem;
+                        text-align: center;
+                        padding: 0.6rem 1rem;
+                        background-color: rgb(185, 3, 3);
+                        color: white;
+                        font-family: variables.$fonts;
+                        font-size: 1.1rem;
+                        line-height: 1.1rem;
+                        border: none;
+                        outline: 0;
+                        cursor: pointer;
+                        transition: all 0.1s ease-out;
 
-						&:hover {
-							background-color: rgb(210, 0, 0);
-						}
-					}
-				}
-			}
-		}
-	}
+                        &:hover {
+                            background-color: rgb(210, 0, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer {
-	min-height: 100%;
-	padding: 0 0 0.2rem 0;
-	margin: 0rem 0 0 0;
+    min-height: 100%;
+    padding: 0 0 0.2rem 0;
+    margin: 0rem 0 0 0;
 
-	.footerBox {
-		width: 100%;
-		border-top: 1px solid rgb(88, 31, 88);
-		p {
-			font-family: variables.$fonts;
-			color: #8b8b8b;
-			text-align: center;
-			font-size: 0.7rem;
-			margin: 0;
-			padding: 0;
-		}
-	}
+    .footerBox {
+        width: 100%;
+        border-top: 1px solid rgb(88, 31, 88);
+        p {
+            font-family: variables.$fonts;
+            color: #8b8b8b;
+            text-align: center;
+            font-size: 0.7rem;
+            margin: 0;
+            padding: 0;
+        }
+    }
 }
