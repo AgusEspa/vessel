@@ -14,7 +14,7 @@ const Stage90063 = () => {
     const [saveNotice, setSaveNotice] = useState(false);
 
     // Section 1 Hooks
-    const [puzzle1, setPuzzle1] = useState(0);
+    const [puzzle1, setPuzzle1] = useState(userAuth.lastSection > 1 ? 1 : 0);
 
     const stageId = 90063;
 
@@ -132,6 +132,7 @@ const Stage90063 = () => {
                     set={puzzle1set}
                     state={puzzle1}
                     setState={setPuzzle1}
+                    section={userAuth.lastSection}
                     sectionUpdate={handleSectionUpdate}
                 />
 
@@ -145,11 +146,33 @@ const Stage90063 = () => {
 
             {/* Section 2 */}
             {(userAuth.lastStage > stageId || userAuth.lastSection >= 2) && (
-                <div className={styles.sectionBox}></div>
+                <div className={styles.sectionBox}>
+                    <p>Good.</p>
+                    <p>
+                        Then, bring your awareness towards the front. To think
+                        of this as an artificial superset of existence takes you
+                        no further, since all existences are in essence
+                        synthetic when viewed from within. Furthermore, all
+                        human experiences have inevitably become preconceived
+                        and inauthentic. An influx of curated information
+                        permeates your subjectivity in unprecedented quantities
+                        and almost permanent exposures. Not even the utmost
+                        mind-altering forces seem to bring you any solace.
+                    </p>
+                    <p>
+                        In all your conscious behaviors there seems to exist an
+                        implicit law that guarantees non-fungibility; it could
+                        be summed up as the pervasiveness of individuality. But
+                        then what seems unique is really a common path, one even
+                        conceived collectively. This paradox is far from the
+                        only condition that bring us here, but it is the most
+                        illustrious as of this moment.
+                    </p>
+                </div>
             )}
 
             {/* Save stage completion*/}
-            {userAuth.lastStage === stageId && userAuth.lastSection >= 2 && (
+            {userAuth.lastStage === stageId && userAuth.lastSection >= 3 && (
                 <div className={styles.sectionBox}>
                     <p className={styles.end}>End of the chapter</p>
                     <div className={styles.saveButtonsBox}>

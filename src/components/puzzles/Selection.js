@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../../styles/Selection.module.scss";
+import styles from "../../styles/Main.module.scss";
 
 const Selection = (props) => {
     const [computing, setComputing] = useState(false);
@@ -9,7 +9,7 @@ const Selection = (props) => {
         await new Promise((resolve) => setTimeout(resolve, 2000));
         setComputing(false);
         props.setState(id);
-        if (id === 1) props.sectionUpdate(2);
+        if (id === 1 && props.section > 2) props.sectionUpdate(2);
     }
 
     const mappedQuotes = props.set.map((s) => (
@@ -18,7 +18,7 @@ const Selection = (props) => {
             className={
                 s.id === props.state ? styles.selected : styles.unselected
             }
-            onClick={(e) => handleSetId(e, s.id)}>
+            onClick={props.state === 1 ? null : (e) => handleSetId(e, s.id)}>
             {s.quote}
         </button>
     ));
