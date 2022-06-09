@@ -24,15 +24,26 @@ const Stage90063 = () => {
             userIsConfirmed: true,
         }));
         window.localStorage.setItem("confirmed", true);
-        console.log(userAuth.lastStage, stageId);
     }, []);
 
     // Section 1 content
     const puzzle1set = [
-        "I cannot",
-        "I think I can handle uncertainty",
-        "I’m ready to expand my senses",
-        "I’m always going to be unique",
+        {
+            id: 1,
+            quote: "I cannot",
+        },
+        {
+            id: 2,
+            quote: "I can handle some uncertainty",
+        },
+        {
+            id: 3,
+            quote: "I’m ready to expand my senses",
+        },
+        {
+            id: 4,
+            quote: "I’m always going to be unique",
+        },
     ];
 
     const handleSectionUpdate = async (newSection, e) => {
@@ -117,7 +128,19 @@ const Stage90063 = () => {
                     aware of its limits, and ostensively unique as well.
                 </p>
                 <p>Are you prepared to accept your current state?</p>
-                <Selection set={puzzle1set} state={setPuzzle1} />
+                <Selection
+                    set={puzzle1set}
+                    state={puzzle1}
+                    setState={setPuzzle1}
+                    sectionUpdate={handleSectionUpdate}
+                />
+
+                {puzzle1 > 1 && (
+                    <p>
+                        You don’t seem to be. Complacence is a downward spiral.
+                        Maybe try again.
+                    </p>
+                )}
             </div>
 
             {/* Section 2 */}
