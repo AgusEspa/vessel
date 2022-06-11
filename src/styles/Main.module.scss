@@ -392,6 +392,7 @@ p {
             margin: 2rem 0 1rem 0;
             padding: 0;
             hyphens: none;
+            text-indent: 0;
 
             .unselected {
                 font-family: variables.$fonts;
@@ -424,6 +425,30 @@ p {
                 color: variables.$darkGray;
                 margin: 0.5rem 0 0 0;
                 padding: 0;
+            }
+        }
+
+        .orderingContainer {
+            display: flex;
+            flex-direction: column;
+            margin: 2rem 0 1rem 0;
+            padding: 0;
+            hyphens: none;
+
+            .draggableCard {
+                margin: 0.3rem 0 0 0;
+                padding: 0.3rem 1rem;
+                background-color: variables.$darkGray;
+                border-radius: 0.3rem;
+                border: none;
+                p {
+                    font-family: variables.$fonts;
+                    font-size: 1rem;
+                    color: black;
+                    text-indent: 0;
+                    line-height: 1.3rem;
+                    margin: 0;
+                }
             }
         }
 

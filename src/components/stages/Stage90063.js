@@ -5,6 +5,7 @@ import useUpdateSection from "../../utils/useUpdateSection";
 import useUpdateStage from "../../utils/useUpdateStage";
 import styles from "../../styles/Main.module.scss";
 import Selection from "../puzzles/Selection";
+import Ordering from "../puzzles/Ordering";
 const Stage90063 = () => {
     const { userAuth, setUserAuth } = useContext(AuthContext);
     const [updateSection] = useUpdateSection();
@@ -14,7 +15,7 @@ const Stage90063 = () => {
     const [saveNotice, setSaveNotice] = useState(false);
 
     // Section 1 Hooks
-    const [puzzle1, setPuzzle1] = useState(userAuth.lastSection > 1 ? 1 : 0);
+    const [puzzle1, setPuzzle1] = useState(userAuth.lastSection > 1 ? 4 : 0);
 
     const stageId = 90063;
 
@@ -30,19 +31,41 @@ const Stage90063 = () => {
     const puzzle1set = [
         {
             id: 1,
-            quote: "I cannot",
+            quote: "I can handle uncertainty and change",
         },
         {
             id: 2,
-            quote: "I can handle some uncertainty",
+            quote: "I’m ready to expand awareness",
         },
         {
             id: 3,
-            quote: "I’m ready to expand my senses",
+            quote: "Uniqueness is a constituent of us all",
         },
         {
             id: 4,
-            quote: "I’m always going to be unique",
+            quote: "I cannot",
+        },
+    ];
+    const puzzle2set = [
+        {
+            id: "q1",
+            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
+            index: 1,
+        },
+        {
+            id: "q2",
+            quote: "One’s interpretation seems the remains of perception when devoid of any reality ",
+            index: 2,
+        },
+        {
+            id: "q3",
+            quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
+            index: 3,
+        },
+        {
+            id: "q4",
+            quote: "Perception is the quasi-autonomic interpretation of one’s reality",
+            index: 4,
         },
     ];
 
@@ -87,14 +110,14 @@ const Stage90063 = () => {
                     human condition, only in recent history your imagination was
                     not only able to conjure forecasts that go beyond the
                     biologically possible, but also fear its closeness. If
-                    humans are to embody their technological achievements, you
+                    humanity are to embody its technological achievements, you
                     must first face a deeper challenge, one that endangers human
-                    condition, and ultimately, all of biological nature.
+                    condition, and ultimately, all biologically sustained life.
                 </p>
                 <p>
                     The prevalence between the organic and the synthetic will be
-                    decided at the frontier of consciousness. If an individual's
-                    body predates its consciousness, and there's not much
+                    decided at the frontier of consciousness. If an individual’s
+                    body predates its consciousness, and there’s not much
                     evidence to be doubtful of that fact, then you have to at
                     least entertain the idea that consciousness could be
                     absolutely dependent upon the organic body. Should you
@@ -104,28 +127,29 @@ const Stage90063 = () => {
                     abstraction without fearing coming back something else?
                 </p>
                 <p>
-                    That's the last boundary that humanity might ever need to
-                    push: the dependency of the body. Luckily, there already
-                    exists an analogous state: the sleep state. Even during the
-                    most intense and bizarre dreams, humans can still find a
-                    sense of consciousness and recognize themselves in that
-                    immaterial realm.
+                    The dependency on the body could be the last boundary that
+                    humanity might ever need to push. Luckily, there already
+                    exists an analogous state: sleep. Even during the most
+                    intense and bizarre dreams, humans can still find a sense of
+                    consciousness and recognize themselves in that fantastic
+                    realm.
                 </p>
                 <p>
-                    The severance of awareness is never an obstacle, as a
-                    constant perception of the same physicality doesn't appear
-                    to be essential for that recognition. After all, they change
-                    and decay and sometimes become unrecognizable to others but
-                    not to themselves thanks to a sense of continuity to being.
+                    In such unconscious states, the severance of awareness is
+                    never an obstacle. Likewise, a constant perception of one
+                    same physicality doesn’t appear to be essential for that
+                    recognition. After all, you change and decay and sometimes
+                    become unrecognizable to others but not to yourselves thanks
+                    to that elusive sense of continuity to being.
                 </p>
                 <p>
                     The next logical question must be how you can experience
                     that continuity when the dissection processes are
-                    detrimental to your natural processes. And while all that
-                    may be the ultimate goal, there is still a much more
-                    pressing problem for identity which arises since for a
-                    consciousness to desire permanence there must be an agent
-                    aware of its limits, and ostensively unique as well.
+                    detrimental to your natural processes. However, while all
+                    that may be the ultimate goal, there is still a much more
+                    pressing problem regarding identity: for a consciousness to
+                    desire permanence there must be an agent aware of its
+                    limits, and ostensively unique as well.
                 </p>
                 <p>Are you prepared to accept your current state?</p>
                 <Selection
@@ -136,7 +160,7 @@ const Stage90063 = () => {
                     sectionUpdate={handleSectionUpdate}
                 />
 
-                {puzzle1 > 1 && (
+                {puzzle1 < 4 && (
                     <p>
                         You don’t seem to be. Complacence is a downward spiral.
                         Maybe try again.
@@ -149,15 +173,15 @@ const Stage90063 = () => {
                 <div className={styles.sectionBox}>
                     <p>Good.</p>
                     <p>
-                        Then, bring your awareness towards the front. To think
-                        of this as an artificial superset of existence takes you
-                        no further, since all existences are in essence
-                        synthetic when viewed from within. Furthermore, all
-                        human experiences have inevitably become preconceived
-                        and inauthentic. An influx of curated information
-                        permeates your subjectivity in unprecedented quantities
-                        and almost permanent exposures. Not even the utmost
-                        mind-altering forces seem to bring you any solace.
+                        To think of this as an artificial superset of existence
+                        takes you no further, since all existences are in
+                        essence synthetic when viewed from within. Furthermore,
+                        all human experiences have inevitably become
+                        preconceived and inauthentic. An influx of curated
+                        information permeates your subjectivity in unprecedented
+                        quantities and almost permanent exposures. Not even the
+                        utmost mind-altering forces seem to bring you any
+                        solace.
                     </p>
                     <p>
                         In all your conscious behaviors there seems to exist an
@@ -168,6 +192,7 @@ const Stage90063 = () => {
                         only condition that bring us here, but it is the most
                         illustrious as of this moment.
                     </p>
+                    <Ordering set={puzzle2set} />
                 </div>
             )}
 
