@@ -17,6 +17,12 @@ const Stage90063 = () => {
     // Section 1 Hooks
     const [puzzle1, setPuzzle1] = useState(userAuth.lastSection > 1 ? 4 : 0);
 
+    // Section 2 Hooks
+    const [puzzle2, setPuzzle2] = useState(
+        userAuth.lastSection > 2 ? true : false
+    );
+    const [puzzle2tried, setPuzzle2Tried] = useState(false);
+
     const stageId = 90063;
 
     useEffect(() => {
@@ -43,29 +49,49 @@ const Stage90063 = () => {
         },
         {
             id: 4,
-            quote: "I cannot",
+            quote: "I can't be",
         },
     ];
-    const puzzle2set = [
+
+    // Section 2 content
+    const puzzle2setScrambled = [
         {
             id: "q1",
             quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
-            index: 1,
+            correctIndex: 1,
         },
         {
             id: "q2",
             quote: "One’s interpretation seems the remains of perception when devoid of any reality ",
-            index: 2,
+            correctIndex: 2,
         },
         {
             id: "q3",
             quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
-            index: 3,
+            correctIndex: 3,
         },
         {
             id: "q4",
             quote: "Perception is the quasi-autonomic interpretation of one’s reality",
-            index: 4,
+            correctIndex: 4,
+        },
+    ];
+    const puzzle2setOrdered = [
+        {
+            id: "q1",
+            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
+        },
+        {
+            id: "q2",
+            quote: "One’s interpretation seems the remains of perception when devoid of any reality ",
+        },
+        {
+            id: "q3",
+            quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
+        },
+        {
+            id: "q4",
+            quote: "Perception is the quasi-autonomic interpretation of one’s reality",
         },
     ];
 
@@ -155,13 +181,14 @@ const Stage90063 = () => {
                 <Selection
                     set={puzzle1set}
                     state={puzzle1}
+                    correctAnswer={4}
                     setState={setPuzzle1}
                     section={userAuth.lastSection}
                     sectionUpdate={handleSectionUpdate}
                 />
 
-                {puzzle1 < 4 && (
-                    <p>
+                {puzzle1 < 4 && puzzle1 > 0 && (
+                    <p className={styles.mistake}>
                         You don’t seem to be. Complacence is a downward spiral.
                         Maybe try again.
                     </p>
@@ -192,12 +219,33 @@ const Stage90063 = () => {
                         only condition that bring us here, but it is the most
                         illustrious as of this moment.
                     </p>
-                    <Ordering set={puzzle2set} />
+                    <Ordering
+                        setOrdered={puzzle2setOrdered}
+                        set={puzzle2setScrambled}
+                        setState={setPuzzle2}
+                        state={puzzle2}
+                        section={userAuth.lastSection}
+                        sectionUpdate={handleSectionUpdate}
+                        setTried={setPuzzle2Tried}
+                    />
+                    {puzzle2tried && puzzle2 === false && (
+                        <p className={styles.mistake}>
+                            You don’t seem to be. Complacence is a downward
+                            spiral. Maybe try again.
+                        </p>
+                    )}
+                </div>
+            )}
+
+            {/* Section 3 */}
+            {(userAuth.lastStage > stageId || userAuth.lastSection >= 3) && (
+                <div className={styles.sectionBox}>
+                    <p>The most striking nature of our subjective reality...</p>
                 </div>
             )}
 
             {/* Save stage completion*/}
-            {userAuth.lastStage === stageId && userAuth.lastSection >= 3 && (
+            {userAuth.lastStage === stageId && userAuth.lastSection >= 4 && (
                 <div className={styles.sectionBox}>
                     <p className={styles.end}>End of the chapter</p>
                     <div className={styles.saveButtonsBox}>

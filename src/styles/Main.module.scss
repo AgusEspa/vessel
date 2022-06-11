@@ -345,6 +345,10 @@ p {
             text-indent: 1rem;
         }
 
+        .mistake {
+            color: #ff1a1a;
+        }
+
         .sectionButton {
             align-self: flex-end;
             color: variables.$darkerGray;
@@ -390,15 +394,19 @@ p {
             display: flex;
             flex-direction: column;
             margin: 2rem 0 1rem 0;
-            padding: 0;
+            padding: 0.3rem;
+            background-color: #1a1a1a;
+            border-radius: 0.3rem;
+            border: none;
             hyphens: none;
             text-indent: 0;
+            gap: 0.4rem;
 
             .unselected {
                 font-family: variables.$fonts;
                 font-size: 1rem;
                 color: black;
-                margin: 0.3rem 0 0 0;
+                margin: 0;
                 padding: 0.3rem 1rem;
                 background-color: variables.$darkGray;
                 cursor: pointer;
@@ -409,7 +417,7 @@ p {
                 font-family: variables.$fonts;
                 font-size: 1rem;
                 color: white;
-                margin: 0.3rem 0 0 0;
+                margin: 0;
                 padding: 0.3rem 1rem;
                 background-color: black;
                 cursor: pointer;
@@ -432,8 +440,12 @@ p {
             display: flex;
             flex-direction: column;
             margin: 2rem 0 1rem 0;
-            padding: 0;
+            padding: 0 0.3rem 0.3rem 0.3rem;
+            background-color: #1a1a1a;
+            border-radius: 0.3rem;
+            border: none;
             hyphens: none;
+            text-indent: 0;
 
             .draggableCard {
                 margin: 0.3rem 0 0 0;
@@ -448,6 +460,47 @@ p {
                     text-indent: 0;
                     line-height: 1.3rem;
                     margin: 0;
+                }
+            }
+            .staticCard {
+                margin: 0;
+                padding: 0.3rem 1rem;
+                background-color: black;
+                border-radius: 0.3rem;
+                border: 1px solid violet;
+                p {
+                    font-family: variables.$fonts;
+                    font-size: 1rem;
+                    color: white;
+                    text-indent: 0;
+                    line-height: 1.3rem;
+                    margin: 0;
+                }
+            }
+            .helper {
+                align-self: center;
+                font-family: variables.$fonts;
+                font-size: 0.9rem;
+                text-align: center;
+                color: variables.$darkGray;
+                margin: 0.5rem 0 0 0;
+                padding: 0;
+            }
+            button {
+                margin: 0;
+                padding: 0.3rem 1rem;
+                background-color: variables.$darkerGray;
+                border-radius: 0.3rem;
+                border: none;
+                font-family: variables.$fonts;
+                font-size: 1rem;
+                color: variables.$lightGray;
+                text-indent: 0;
+                line-height: 1.3rem;
+                margin: 0;
+                cursor: pointer;
+                &:hover {
+                    background-color: variables.$darkerGrayHover;
                 }
             }
         }

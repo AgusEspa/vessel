@@ -9,7 +9,7 @@ const Selection = (props) => {
         await new Promise((resolve) => setTimeout(resolve, 2000));
         setComputing(false);
         props.setState(id);
-        if (id === 4 && props.section < 2) props.sectionUpdate(2);
+        if (id === props.correctAnswer) props.sectionUpdate(props.section + 1);
     }
 
     const mappedQuotes = props.set.map((s) => (
@@ -18,7 +18,11 @@ const Selection = (props) => {
             className={
                 s.id === props.state ? styles.selected : styles.unselected
             }
-            onClick={props.state === 4 ? null : (e) => handleSetId(e, s.id)}>
+            onClick={
+                props.state === props.correctAnswer
+                    ? null
+                    : (e) => handleSetId(e, s.id)
+            }>
             {s.quote}
         </button>
     ));
@@ -26,7 +30,7 @@ const Selection = (props) => {
     return (
         <div className={styles.selectionContainer}>
             {mappedQuotes}
-            {computing === false && props.state !== 4 && (
+            {computing === false && props.state !== props.correctAnswer && (
                 <p className={styles.helper}>Make a choice</p>
             )}
             {computing && <p className={styles.helper}>computing choice...</p>}
