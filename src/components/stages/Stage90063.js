@@ -16,6 +16,7 @@ const Stage90063 = () => {
 
     // Section 1 Hooks
     const [puzzle1, setPuzzle1] = useState(userAuth.lastSection > 1 ? 4 : 0);
+    const [puzzle1tried, setPuzzle1Tried] = useState(false);
 
     // Section 2 Hooks
     const [puzzle2, setPuzzle2] = useState(
@@ -56,30 +57,30 @@ const Stage90063 = () => {
     // Section 2 content
     const puzzle2setScrambled = [
         {
-            id: "q1",
-            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
-            correctIndex: 1,
-        },
-        {
             id: "q2",
             quote: "One’s interpretation seems the remains of perception when devoid of any reality ",
             correctIndex: 2,
         },
         {
             id: "q3",
-            quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
+            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
             correctIndex: 3,
         },
         {
             id: "q4",
-            quote: "Perception is the quasi-autonomic interpretation of one’s reality",
+            quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
             correctIndex: 4,
+        },
+        {
+            id: "q1",
+            quote: "Perception is the quasi-autonomic interpretation of one’s reality",
+            correctIndex: 1,
         },
     ];
     const puzzle2setOrdered = [
         {
             id: "q1",
-            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
+            quote: "Perception is the quasi-autonomic interpretation of one’s reality",
         },
         {
             id: "q2",
@@ -87,11 +88,11 @@ const Stage90063 = () => {
         },
         {
             id: "q3",
-            quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
+            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
         },
         {
             id: "q4",
-            quote: "Perception is the quasi-autonomic interpretation of one’s reality",
+            quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
         },
     ];
 
@@ -133,7 +134,7 @@ const Stage90063 = () => {
             <div className={styles.sectionBox}>
                 <p>
                     However intrinsic the trend to push boundaries may be to the
-                    human condition, only in recent history your imagination was
+                    human condition, just in recent history your imagination was
                     not only able to conjure forecasts that go beyond the
                     biologically possible, but also fear its closeness. If
                     humanity are to embody its technological achievements, you
@@ -185,9 +186,10 @@ const Stage90063 = () => {
                     setState={setPuzzle1}
                     section={userAuth.lastSection}
                     sectionUpdate={handleSectionUpdate}
+                    setTried={setPuzzle1Tried}
                 />
 
-                {puzzle1 < 4 && puzzle1 > 0 && (
+                {puzzle1tried === true && puzzle1 < 4 && puzzle1 > 0 && (
                     <p className={styles.mistake}>
                         You don’t seem to be. Complacence is a downward spiral.
                         Maybe try again.
@@ -217,7 +219,7 @@ const Stage90063 = () => {
                         then what seems unique is really a common path, one even
                         conceived collectively. This paradox is far from the
                         only condition that bring us here, but it is the most
-                        illustrious as of this moment.
+                        exemplifying as of this moment.
                     </p>
                     <Ordering
                         setOrdered={puzzle2setOrdered}
@@ -230,8 +232,9 @@ const Stage90063 = () => {
                     />
                     {puzzle2tried && puzzle2 === false && (
                         <p className={styles.mistake}>
-                            You don’t seem to be. Complacence is a downward
-                            spiral. Maybe try again.
+                            That’s not the most appropriate order. Remember,
+                            establishing correlations doesn’t always equate with
+                            the most sensible phrasing. Maybe try again.
                         </p>
                     )}
                 </div>

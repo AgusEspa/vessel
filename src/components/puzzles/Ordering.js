@@ -41,6 +41,7 @@ const Ordering = (props) => {
 
     const handleSubmit = async () => {
         setComputing(true);
+        props.setTried(false);
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
         console.log(itemList);
@@ -72,7 +73,7 @@ const Ordering = (props) => {
                                 {mappedQuotes}
                                 {provided.placeholder}
                                 <p className={styles.helper}>
-                                    Order the argument
+                                    {"> "}Set the argument in order{" <"}
                                 </p>
                                 {computing ? (
                                     <button disabled>computing order...</button>

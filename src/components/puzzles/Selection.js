@@ -6,10 +6,12 @@ const Selection = (props) => {
 
     async function handleSetId(e, id) {
         setComputing(true);
+        props.setTried(false);
         await new Promise((resolve) => setTimeout(resolve, 2000));
         setComputing(false);
         props.setState(id);
         if (id === props.correctAnswer) props.sectionUpdate(props.section + 1);
+        else props.setTried(true);
     }
 
     const mappedQuotes = props.set.map((s) => (
@@ -31,7 +33,9 @@ const Selection = (props) => {
         <div className={styles.selectionContainer}>
             {mappedQuotes}
             {computing === false && props.state !== props.correctAnswer && (
-                <p className={styles.helper}>Make a choice</p>
+                <p className={styles.helper}>
+                    {"> "}Make a choice{" <"}
+                </p>
             )}
             {computing && <p className={styles.helper}>computing choice...</p>}
         </div>
