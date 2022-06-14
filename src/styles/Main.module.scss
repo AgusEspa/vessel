@@ -284,6 +284,36 @@ p {
     align-items: center;
     padding: 2rem 0.7rem 20rem 0.7rem;
 
+    .separator {
+        margin: 2rem 0 2rem 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        svg {
+            font-size: 3rem;
+            stroke: rgb(167, 0, 131);
+            animation: pulsing 4s infinite;
+            @keyframes pulsing {
+                0% {
+                    stroke: black;
+                }
+                50% {
+                    stroke: rgb(167, 0, 131);
+                }
+                100% {
+                    stroke: black;
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            img {
+                width: 12rem;
+            }
+        }
+    }
+
     .sectionBox {
         display: flex;
         flex-direction: column;
@@ -315,7 +345,7 @@ p {
             text-align: center;
             font-family: variables.$fonts;
             font-size: 1.5rem;
-            margin: 1rem;
+            margin: 3rem 1rem 1rem 1rem;
         }
 
         h2 {
@@ -344,6 +374,13 @@ p {
             font-size: 1rem;
             text-indent: 1rem;
         }
+        .introPhrase {
+            text-indent: 0;
+            hyphens: none;
+            align-self: center;
+            text-align: center;
+            @include fadeInAnimation();
+        }
 
         .mistake {
             color: #ff3333;
@@ -351,18 +388,20 @@ p {
 
         .sectionButton {
             align-self: flex-end;
-            color: variables.$darkerGray;
+            color: variables.$darkGray;
             text-align: right;
             font-family: variables.$fonts;
             font-size: 1rem;
             line-height: 2rem;
+            text-indent: 0;
+            hyphens: none;
             border: none;
             background-color: transparent;
-            border-radius: 2rem;
+            border-radius: 1.5rem;
             cursor: pointer;
             padding: 0.3rem 1rem 0.3rem 1rem;
             margin: 2rem 0 0.5rem 2rem;
-            animation: flashing 2s infinite;
+            animation: flashing 2.5s infinite;
             @keyframes flashing {
                 0% {
                     background-color: #1e1e1e;
@@ -382,9 +421,11 @@ p {
             font-family: variables.$fonts;
             font-size: 1rem;
             line-height: 2rem;
+            text-indent: 0;
+            hyphens: none;
             border: none;
             background-color: #262626;
-            border-radius: 2rem 2rem 0 2rem;
+            border-radius: 1.5rem 1.5rem 0 1.5rem;
             cursor: default;
             padding: 0.3rem 1rem 0.3rem 1rem;
             margin: 2rem 0 0.5rem 2rem;
@@ -523,6 +564,7 @@ p {
         .end {
             align-self: center;
             font-size: 1rem;
+            text-indent: 0;
             color: variables.$darkGray;
             margin: 2rem 0 0 0;
             padding: 0;
