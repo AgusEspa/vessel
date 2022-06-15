@@ -7,24 +7,26 @@ import useUpdateStage from "../../utils/useUpdateStage";
 import styles from "../../styles/Main.module.scss";
 import Selection from "../puzzles/Selection";
 import Ordering from "../puzzles/Ordering";
+import Sequence from "../puzzles/Sequence";
+
 const Stage90063 = () => {
     const { userAuth, setUserAuth } = useContext(AuthContext);
     const [updateSection] = useUpdateSection();
     const [updateStage] = useUpdateStage();
     const navigate = useNavigate();
     const [loadingSave, setLoadingSave] = useState(false);
-    const [saveNotice, setSaveNotice] = useState(false);
+    const [saveNotice, setSaveNotice] = useState(true);
 
     // Section 1 Hooks
     const [intoPhrases, setIntroPhrases] = useState(0);
 
     // Section 4 Hooks
-    const [puzzle1, setPuzzle1] = useState(userAuth.lastSection > 4 ? 4 : 0);
+    const [puzzle1, setPuzzle1] = useState(userAuth.lastSection > 5 ? 4 : 0);
     const [puzzle1tried, setPuzzle1Tried] = useState(false);
 
     // Section 5 Hooks
     const [puzzle2, setPuzzle2] = useState(
-        userAuth.lastSection > 5 ? true : false
+        userAuth.lastSection > 6 ? true : false
     );
     const [puzzle2tried, setPuzzle2Tried] = useState(false);
 
@@ -44,16 +46,16 @@ const Stage90063 = () => {
         }
     }, []);
     const programIntroPhrases = async () => {
-        await new Promise((resolve) => setTimeout(resolve, 8100));
+        await new Promise((resolve) => setTimeout(resolve, 8200));
         setIntroPhrases(1);
         console.log(1);
-        await new Promise((resolve) => setTimeout(resolve, 4500));
+        await new Promise((resolve) => setTimeout(resolve, 8200));
         setIntroPhrases(2);
         console.log(2);
-        await new Promise((resolve) => setTimeout(resolve, 4500));
+        await new Promise((resolve) => setTimeout(resolve, 8200));
         setIntroPhrases(3);
         console.log(3);
-        await new Promise((resolve) => setTimeout(resolve, 6000));
+        await new Promise((resolve) => setTimeout(resolve, 8200));
         updateSection(2);
     };
 
@@ -121,8 +123,9 @@ const Stage90063 = () => {
 
     const handleSectionUpdate = async (newSection, e) => {
         updateSection(newSection);
+        await new Promise((resolve) => setTimeout(resolve, 200));
         setSaveNotice(true);
-        await new Promise((resolve) => setTimeout(resolve, 2500));
+        await new Promise((resolve) => setTimeout(resolve, 3500));
         setSaveNotice(false);
     };
 
@@ -162,7 +165,7 @@ const Stage90063 = () => {
                     userAuth.lastStage > stageId ||
                     userAuth.lastSection > 1) && (
                     <p className={styles.introPhrase}>
-                        It is pointless going further,{<br />}which is also down
+                        It is pointless going further,{<br />}as inevitably down
                         and under.
                     </p>
                 )}
@@ -170,8 +173,8 @@ const Stage90063 = () => {
                     userAuth.lastStage > stageId ||
                     userAuth.lastSection > 1) && (
                     <p className={styles.introPhrase}>
-                        Expectations will only make you{<br />}loose more of
-                        your transient self.
+                        Expectations will only make you{<br />}loose your
+                        transient self.
                     </p>
                 )}
             </div>
@@ -271,13 +274,33 @@ const Stage90063 = () => {
                         can you venture into the realm of abstraction without
                         fearing coming back something else?
                     </p>
+                    {userAuth.lastStage > stageId ||
+                    userAuth.lastSection >= 5 ? (
+                        <button
+                            className={styles.sectionButtonDisabled}
+                            disabled>
+                            Isn’t that akin to what we are?
+                        </button>
+                    ) : (
+                        <button
+                            onClick={(e) => handleSectionUpdate(5, e)}
+                            className={styles.sectionButton}>
+                            Isn’t that akin to what we are?
+                        </button>
+                    )}
+                </div>
+            )}
+
+            {/* Section 5 */}
+            {(userAuth.lastStage > stageId || userAuth.lastSection >= 5) && (
+                <div className={styles.sectionBox}>
                     <p>
-                        The dependency on the body could be the last boundary
-                        that humanity might ever need to push. Luckily, there
-                        already exists an analogous state: sleep. Even during
-                        the most intense and bizarre dreams, humans can still
-                        find a sense of consciousness and recognize themselves
-                        in that fantastic realm.
+                        Don’t take this lightly. The dependency on the body
+                        could be the last boundary that humanity might ever need
+                        to push. Luckily, there already exists an analogous
+                        state: sleep. Even during the most intense and bizarre
+                        dreams, humans can still find a sense of consciousness
+                        and recognize themselves in that fantastic realm.
                     </p>
                     <p>
                         In such unconscious states, the severance of awareness
@@ -315,11 +338,16 @@ const Stage90063 = () => {
                             a downward spiral. Maybe try again.
                         </p>
                     )}
+                    {saveNotice && (
+                        <div className={styles.saveNotice}>
+                            <p>progress saved</p>
+                        </div>
+                    )}
                 </div>
             )}
 
-            {/* Section 5 */}
-            {(userAuth.lastStage > stageId || userAuth.lastSection >= 5) && (
+            {/* Section 6 */}
+            {(userAuth.lastStage > stageId || userAuth.lastSection >= 6) && (
                 <div className={styles.sectionBox}>
                     <p>
                         Good, that’s why you have not lost yourself just yet.
@@ -360,11 +388,16 @@ const Stage90063 = () => {
                             Maybe try again.
                         </p>
                     )}
+                    {saveNotice && (
+                        <div className={styles.saveNotice}>
+                            <p>progress saved</p>
+                        </div>
+                    )}
                 </div>
             )}
 
-            {/* Section 6 */}
-            {(userAuth.lastStage > stageId || userAuth.lastSection >= 6) && (
+            {/* Section 7 */}
+            {(userAuth.lastStage > stageId || userAuth.lastSection >= 7) && (
                 <div className={styles.sectionBox}>
                     <p>
                         The most striking nature of your subjective reality up
@@ -401,11 +434,17 @@ const Stage90063 = () => {
                         utterer? Let me give you a hint: circularity is always a
                         three dimensional spiral.
                     </p>
+                    <Sequence />
+                    {saveNotice && (
+                        <div className={styles.saveNotice}>
+                            <p>progress saved</p>
+                        </div>
+                    )}
                 </div>
             )}
 
-            {/* Section 7 */}
-            {userAuth.lastStage === stageId && userAuth.lastSection >= 7 && (
+            {/* Section 8 */}
+            {userAuth.lastStage === stageId && userAuth.lastSection >= 8 && (
                 <div className={styles.sectionBox}>
                     <p>
                         Don’t be fooled by its simplicity. This is not happening
@@ -421,7 +460,7 @@ const Stage90063 = () => {
             )}
 
             {/* Save stage completion*/}
-            {userAuth.lastStage === stageId && userAuth.lastSection >= 7 && (
+            {userAuth.lastStage === stageId && userAuth.lastSection >= 8 && (
                 <div className={styles.sectionBox}>
                     <p className={styles.end}>End of the chapter</p>
                     <div className={styles.saveButtonsBox}>
