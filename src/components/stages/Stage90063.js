@@ -15,20 +15,26 @@ const Stage90063 = () => {
     const [updateStage] = useUpdateStage();
     const navigate = useNavigate();
     const [loadingSave, setLoadingSave] = useState(false);
-    const [saveNotice, setSaveNotice] = useState(true);
+    const [saveNotice, setSaveNotice] = useState(false);
 
     // Section 1 Hooks
     const [intoPhrases, setIntroPhrases] = useState(0);
 
-    // Section 4 Hooks
+    // Section 5 Hooks
     const [puzzle1, setPuzzle1] = useState(userAuth.lastSection > 5 ? 4 : 0);
     const [puzzle1tried, setPuzzle1Tried] = useState(false);
 
-    // Section 5 Hooks
+    // Section 6 Hooks
     const [puzzle2, setPuzzle2] = useState(
         userAuth.lastSection > 6 ? true : false
     );
     const [puzzle2tried, setPuzzle2Tried] = useState(false);
+
+    // Section 7 Hooks
+    const [puzzle3, setPuzzle3] = useState(
+        userAuth.lastSection > 7 ? "00" : "?"
+    );
+    const [puzzle3tried, setPuzzle3Tried] = useState(false);
 
     const stageId = 90063;
 
@@ -59,7 +65,7 @@ const Stage90063 = () => {
         updateSection(2);
     };
 
-    // Section 4 content
+    // Section 5 content
     const puzzle1set = [
         {
             id: 1,
@@ -79,7 +85,7 @@ const Stage90063 = () => {
         },
     ];
 
-    // Section 5 content
+    // Section 6 content
     const puzzle2setScrambled = [
         {
             id: "q2",
@@ -119,6 +125,13 @@ const Stage90063 = () => {
             id: "q4",
             quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
         },
+    ];
+
+    // Section 7 content
+    const puzzle3set = [
+        { id: 1, value: "01" },
+        { id: 2, value: "10" },
+        { id: 3, value: "00" },
     ];
 
     const handleSectionUpdate = async (newSection, e) => {
@@ -434,7 +447,15 @@ const Stage90063 = () => {
                         utterer? Let me give you a hint: circularity is always a
                         three dimensional spiral.
                     </p>
-                    <Sequence />
+                    <Sequence
+                        set={puzzle3set}
+                        state={puzzle3}
+                        correctAnswer={"00"}
+                        setState={setPuzzle3}
+                        section={userAuth.lastSection}
+                        sectionUpdate={handleSectionUpdate}
+                        setTried={setPuzzle3Tried}
+                    />
                     {saveNotice && (
                         <div className={styles.saveNotice}>
                             <p>progress saved</p>
