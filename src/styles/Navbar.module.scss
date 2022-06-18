@@ -14,9 +14,11 @@ audio {
 .navbarContainer {
 	display: flex;
 	position: relative;
+	top: 0;
+	left: 0;
 	justify-content: space-between;
 	align-items: center;
-	background-color: transparent;
+	background-color: black;
 	width: 100%;
 	padding: 1rem 2rem 1rem 2rem;
 
@@ -104,7 +106,7 @@ audio {
 	height: 100%;
 	padding: 0.6rem 2.2rem 1rem 0;
 	text-align: right;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.8);
 	.menuLinks {
 		margin: 0;
 		padding: 0;
