@@ -32,7 +32,7 @@ const Stage90063 = () => {
 
     // Section 7 Hooks
     const [puzzle3, setPuzzle3] = useState(
-        userAuth.lastSection > 7 ? "00" : "?"
+        userAuth.lastSection > 7 ? "01" : "?"
     );
     const [puzzle3tried, setPuzzle3Tried] = useState(false);
 
@@ -58,10 +58,10 @@ const Stage90063 = () => {
         await new Promise((resolve) => setTimeout(resolve, 8200));
         setIntroPhrases(2);
         console.log(2);
-        await new Promise((resolve) => setTimeout(resolve, 8200));
+        await new Promise((resolve) => setTimeout(resolve, 8000));
         setIntroPhrases(3);
         console.log(3);
-        await new Promise((resolve) => setTimeout(resolve, 8200));
+        await new Promise((resolve) => setTimeout(resolve, 8000));
         updateSection(2);
     };
 
@@ -129,9 +129,10 @@ const Stage90063 = () => {
 
     // Section 7 content
     const puzzle3set = [
-        { id: 1, value: "01" },
-        { id: 2, value: "10" },
-        { id: 3, value: "00" },
+        { id: 1, value: "00" },
+        { id: 2, value: "01" },
+        { id: 3, value: "11" },
+        { id: 4, value: "10" },
     ];
 
     const handleSectionUpdate = async (newSection, e) => {
@@ -178,16 +179,16 @@ const Stage90063 = () => {
                     userAuth.lastStage > stageId ||
                     userAuth.lastSection > 1) && (
                     <p className={styles.introPhrase}>
-                        It is pointless going further,{<br />}as inevitably down
-                        and under.
+                        Expectations will only make you{<br />}loose your
+                        transient self.
                     </p>
                 )}
                 {(intoPhrases > 2 ||
                     userAuth.lastStage > stageId ||
                     userAuth.lastSection > 1) && (
                     <p className={styles.introPhrase}>
-                        Expectations will only make you{<br />}loose your
-                        transient self.
+                        What would it feel to start over?{<br />}How is
+                        remembering any different?
                     </p>
                 )}
             </div>
@@ -202,9 +203,15 @@ const Stage90063 = () => {
                     <h2>The Paradox of Subjective Experience</h2>
 
                     <p>
-                        Are you sure you still posses a mind of your own? By now
-                        you should be feeling some kind of dissociation. Say you
-                        have come here by choice.
+                        Are you sure you still posses a mind of your own?
+                        Thoughts can be deceiving if you believe them to be
+                        completely yours. And here, more than everiwhere else,
+                        what's essential might also be contingent, like
+                        yourself. As for myself, I'd be none.
+                    </p>
+                    <p>
+                        By now you should be feeling some degree of
+                        dissociation. Say you have come here by choice.
                     </p>
                     {userAuth.lastStage > stageId ||
                     userAuth.lastSection >= 3 ? (
@@ -229,33 +236,31 @@ const Stage90063 = () => {
                     <p>
                         Indeed. Don’t stop appreciating the conjunction of
                         seemingly opposite ideas, it will guide you through the
-                        darkest paths. And if you spend enough time here, you
+                        obscurest paths. And if you spend enough time here, you
                         will get to comprehend why so many unanswered questions
-                        remain thus. Why the irreconcilable problem of identity
-                        has little to do with immortality given the only
-                        framework upon which immortality could ever be achieved…
-                        Even longevity casts a long and cold shadow over any
-                        thought of individuality.
+                        remain thus. Most importantly, why the irreconcilable
+                        problem of identity has little to do with immortality
+                        given the only framework upon which immortality could
+                        ever be achieved… Even longevity casts a long and cold
+                        shadow over any thought of individuality.
                     </p>
                     <p>
-                        But the thing with unanswered questions is that they can
-                        be placeholders for a lot of answers, many of which are
-                        mere links, traces of wild but often acute intents.
+                        But the complication with unanswered questions is that
+                        they can be placeholders for a lot of answers, many of
+                        which are mere traces of wild yet often acute intents.
                     </p>
                     {userAuth.lastStage > stageId ||
                     userAuth.lastSection >= 4 ? (
                         <button
                             className={styles.sectionButtonDisabled}
                             disabled>
-                            What would happen then if you tried to answer that
-                            supposedly unanswerable question?
+                            Why shoud I care?
                         </button>
                     ) : (
                         <button
                             onClick={(e) => handleSectionUpdate(4, e)}
                             className={styles.sectionButton}>
-                            What would happen then if you tried to answer that
-                            supposedly unanswerable question?
+                            Why shoud I care?
                         </button>
                     )}
                 </div>
@@ -264,6 +269,11 @@ const Stage90063 = () => {
             {/* Section 4 */}
             {(userAuth.lastStage > stageId || userAuth.lastSection >= 4) && (
                 <div className={styles.sectionBox}>
+                    <p>
+                        In time you will come to understand, you don't have a
+                        choice. In many ways, the choices have already been made
+                        for you...
+                    </p>
                     <p>
                         However intrinsic the trend to push boundaries may be to
                         the human condition, just in recent history your
@@ -444,8 +454,8 @@ const Stage90063 = () => {
                         any form of meaning that is specific to a particular act
                         of communication. But how would it do if the receiver,
                         unbeknownst to any sort of intentionality, was also the
-                        utterer? Let me give you a hint: circularity is always a
-                        three dimensional spiral.
+                        utterer? Let me give you a hint: circularity is a flat
+                        spiral that brings you infinitely closer to the source.
                     </p>
                     <Sequence
                         set={puzzle3set}
