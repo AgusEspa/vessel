@@ -8,12 +8,12 @@ const Sequence = (props) => {
     const mappedSet = props.set.map((item) => (
         <div
             className={
-                props.state === "00"
+                props.state === props.correctAnswer
                     ? styles.sequenceBoxCorrect
                     : styles.sequenceBox
             }
             key={item.id}>
-            <p>{item.value}</p>
+            {item.value}
         </div>
     ));
 
@@ -35,19 +35,19 @@ const Sequence = (props) => {
     };
 
     return (
-        <div className={styles.selectionContainer}>
-            <div className={styles.sequenceContainer}>
+        <div className={styles.sequenceContainer}>
+            <div className={styles.sequenceBoxContainer}>
                 {mappedSet}
                 <div
                     className={
-                        props.state === "00"
+                        props.state === props.correctAnswer
                             ? styles.sequenceBoxCorrect
                             : styles.sequenceBox
                     }>
-                    <p>{props.state}</p>
+                    {props.state}
                 </div>
             </div>
-            {props.state !== "00" && (
+            {props.state !== props.correctAnswer && (
                 <>
                     <form>
                         <input
@@ -67,7 +67,9 @@ const Sequence = (props) => {
                     ) : (
                         <button
                             onClick={
-                                props.state === "00" ? null : handleSubmit
+                                props.state === props.correctAnswer
+                                    ? null
+                                    : handleSubmit
                             }>
                             Submit
                         </button>

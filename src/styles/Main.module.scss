@@ -497,6 +497,49 @@ p {
             }
         }
 
+        .sequenceContainer {
+            display: flex;
+            flex-direction: column;
+            margin: 2rem 0 1rem 0;
+            padding: 0.3rem;
+            background-color: #1a1a1a;
+            border-radius: 0.3rem;
+            border: none;
+            hyphens: none;
+            text-indent: 0;
+
+            .sequenceBoxContainer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 0.3rem;
+
+                .sequenceBox {
+                    margin: 0;
+                    padding: 1rem;
+                    background-color: variables.$darkGray;
+                    border-radius: 0.3rem;
+                    border: none;
+                    text-align: center;
+                    font-family: variables.$fonts;
+                    font-size: 1.3rem;
+                    color: white;
+                }
+                .sequenceBoxCorrect {
+                    margin: 0;
+                    padding: 1rem;
+                    background-color: black;
+                    border-radius: 0.3rem;
+                    border: 1px solid #871287;
+                    text-align: center;
+                    font-family: variables.$fonts;
+                    font-size: 1.3rem;
+                    color: white;
+                }
+            }
+        }
+
         .orderingContainer {
             display: flex;
             flex-direction: column;

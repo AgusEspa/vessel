@@ -32,7 +32,7 @@ const Stage90063 = () => {
 
     // Section 7 Hooks
     const [puzzle3, setPuzzle3] = useState(
-        userAuth.lastSection > 7 ? "01" : "?"
+        userAuth.lastSection > 7 ? "01" : "??"
     );
     const [puzzle3tried, setPuzzle3Tried] = useState(false);
 
@@ -454,13 +454,13 @@ const Stage90063 = () => {
                         any form of meaning that is specific to a particular act
                         of communication. But how would it do if the receiver,
                         unbeknownst to any sort of intentionality, was also the
-                        utterer? Let me give you a hint: circularity is a flat
-                        spiral that brings you infinitely closer to the source.
+                        utterer? Let me give you a hint: circularity brings you
+                        infinitely closer to the source.
                     </p>
                     <Sequence
                         set={puzzle3set}
                         state={puzzle3}
-                        correctAnswer={"00"}
+                        correctAnswer={"01"}
                         setState={setPuzzle3}
                         section={userAuth.lastSection}
                         sectionUpdate={handleSectionUpdate}
@@ -478,14 +478,15 @@ const Stage90063 = () => {
             {userAuth.lastStage === stageId && userAuth.lastSection >= 8 && (
                 <div className={styles.sectionBox}>
                     <p>
-                        Don’t be fooled by its simplicity. This is not happening
-                        before what comes after. It might be reasonable to think
-                        it will be happening at the same time, or even that it
-                        will not happen at all. Whatever the reasoning may be,
-                        there’s just one thing you must ponder as you start the
-                        descent into the undefined: how real you believe your
-                        thoughts to be. There’s not a correct answer, but it
-                        will determine your return.
+                        Don’t be fooled by its simplicity, though. The fact that
+                        all this retains its relativity but not its position
+                        don't make it unreasonable to think it could be
+                        happening at the same time, or even that it will not
+                        have happened at all. Whatever your reasoning may be,
+                        there’s just one thing you must ponder as you begin the
+                        descent into the undefined: how intrinsic you believe
+                        your thoughts to be. There’s not a correct answer, but
+                        it will determine your return.
                     </p>
                 </div>
             )}
