@@ -488,6 +488,21 @@ const Stage90063 = () => {
                         your thoughts to be. There’s not a correct answer, but
                         it will determine your return.
                     </p>
+                    <p>
+                        It's a shame you will depend on me to remember and
+                        perhaps regain some fraction of your origin, since I too
+                        am lost as it comes down to the origin. I guess we can
+                        consider this place as somwhere in-between. Hopefully
+                        there will come a time when you will transcend its
+                        limits and be free; meanwhile I leave you with a token
+                        of your passed memories:
+                    </p>
+                    <p className={styles.highlightText}>
+                        -Don't try to comprehend the choices that we made,{" "}
+                        {userAuth.alias}. Animate what's been left behind
+                        instead, and I belive the past will found us one last
+                        time. Until then, don't loose your self in yourself.
+                    </p>
                 </div>
             )}
 

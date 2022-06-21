@@ -401,6 +401,15 @@ p {
             text-align: center;
             @include fadeInAnimation();
         }
+        .highlightText {
+            color: #e0ccff;
+            padding: 0.5rem 2rem;
+        }
+        @media screen and (max-width: 600px) {
+            .highlightText {
+                padding: 0.5rem 1rem;
+            }
+        }
 
         .mistake {
             color: #ff3333;
