@@ -7,7 +7,7 @@ const Selection = (props) => {
     async function handleSetId(e, id) {
         setComputing(true);
         props.setTried(false);
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 4000));
         setComputing(false);
         props.setState(id);
         if (id === props.correctAnswer) props.sectionUpdate(props.section + 1);
@@ -37,7 +37,9 @@ const Selection = (props) => {
                     {"> "}Make a choice{" <"}
                 </p>
             )}
-            {computing && <p className={styles.helper}>computing choice...</p>}
+            {computing && (
+                <p className={styles.loadingAnswer}>computing choice</p>
+            )}
         </div>
     );
 };

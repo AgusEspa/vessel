@@ -500,6 +500,29 @@ p {
                 color: variables.$darkGray;
                 margin: 0;
                 padding: 0;
+                text-indent: 0;
+            }
+            .loadingAnswer {
+                align-self: center;
+                font-family: variables.$fonts;
+                font-size: 0.9rem;
+                text-align: center;
+                color: variables.$darkGray;
+                margin: 0;
+                padding: 0;
+                text-indent: 0;
+                animation: pulsing 2s infinite;
+                @keyframes pulsing {
+                    0% {
+                        color: transparent;
+                    }
+                    50% {
+                        color: variables.$darkGray;
+                    }
+                    100% {
+                        color: transparent;
+                    }
+                }
             }
         }
 
@@ -572,6 +595,7 @@ p {
                 color: variables.$darkGray;
                 margin: 0.4rem 0 0 0;
                 padding: 0;
+                text-indent: 0;
             }
             button {
                 margin: 0.7rem 0 0 0;
@@ -587,6 +611,21 @@ p {
                 cursor: pointer;
                 &:hover {
                     background-color: variables.$darkerGrayHover;
+                }
+
+                .loadingAnswer {
+                    animation: pulsing 2s infinite;
+                    @keyframes pulsing {
+                        0% {
+                            color: transparent;
+                        }
+                        50% {
+                            color: variables.$darkGray;
+                        }
+                        100% {
+                            color: transparent;
+                        }
+                    }
                 }
             }
         }
@@ -640,6 +679,7 @@ p {
                 color: variables.$darkGray;
                 margin: 0.4rem 0 0 0;
                 padding: 0;
+                text-indent: 0;
             }
             button {
                 margin: 0.7rem 0 0 0;
@@ -655,6 +695,20 @@ p {
                 cursor: pointer;
                 &:hover {
                     background-color: variables.$darkerGrayHover;
+                }
+                .loadingAnswer {
+                    animation: pulsing 2s infinite;
+                    @keyframes pulsing {
+                        0% {
+                            color: transparent;
+                        }
+                        50% {
+                            color: variables.$darkGray;
+                        }
+                        100% {
+                            color: transparent;
+                        }
+                    }
                 }
             }
         }

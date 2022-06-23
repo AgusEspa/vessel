@@ -20,7 +20,7 @@ const Sequence = (props) => {
     const handleSubmit = async () => {
         setComputing(true);
         props.setTried(false);
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 4000));
         setComputing(false);
         if (formData === props.correctAnswer) {
             props.setState(formData);
@@ -63,7 +63,11 @@ const Sequence = (props) => {
                         {"> "}Complete the sequence{" <"}
                     </p>
                     {computing ? (
-                        <button disabled>computing answer...</button>
+                        <button disabled>
+                            <div className={styles.loadingAnswer}>
+                                computing answer
+                            </div>
+                        </button>
                     ) : (
                         <button
                             onClick={
