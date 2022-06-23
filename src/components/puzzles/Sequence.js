@@ -49,7 +49,7 @@ const Sequence = (props) => {
             </div>
             {props.state !== props.correctAnswer && (
                 <>
-                    <form>
+                    <form className={styles.sequenceForm}>
                         <input
                             type="text"
                             name="formData"

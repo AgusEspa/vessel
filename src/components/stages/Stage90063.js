@@ -54,13 +54,10 @@ const Stage90063 = () => {
     const programIntroPhrases = async () => {
         await new Promise((resolve) => setTimeout(resolve, 8200));
         setIntroPhrases(1);
-        console.log(1);
         await new Promise((resolve) => setTimeout(resolve, 8200));
         setIntroPhrases(2);
-        console.log(2);
         await new Promise((resolve) => setTimeout(resolve, 8000));
         setIntroPhrases(3);
-        console.log(3);
         await new Promise((resolve) => setTimeout(resolve, 8000));
         updateSection(2);
     };
@@ -466,6 +463,12 @@ const Stage90063 = () => {
                         sectionUpdate={handleSectionUpdate}
                         setTried={setPuzzle3Tried}
                     />
+                    {puzzle3tried === true && puzzle3 !== "01" && (
+                        <p className={styles.mistake}>
+                            That doesn't represent accuratly the movement Maybe
+                            try again.
+                        </p>
+                    )}
                     {saveNotice && (
                         <div className={styles.saveNotice}>
                             <p>progress saved</p>
@@ -499,7 +502,7 @@ const Stage90063 = () => {
                     </p>
                     <p className={styles.highlightText}>
                         -Don't try to comprehend the choices that we made,{" "}
-                        {userAuth.alias}. Animate what's been left behind
+                        {userAuth.userAlias}. Animate what's been left behind
                         instead, and I belive the past will found us one last
                         time. Until then, don't loose your self in yourself.
                     </p>

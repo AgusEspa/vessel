@@ -544,6 +544,51 @@ p {
                     color: white;
                 }
             }
+            .sequenceForm {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                input {
+                    width: 10rem;
+                    margin: 1rem 0 0 0;
+                    padding: 0.3rem 1rem;
+                    background-color: variables.$lightGray;
+                    border-radius: 0.3rem;
+                    border: none;
+                    font-family: variables.$fonts;
+                    font-size: 1rem;
+                    color: variables.$darkerGray;
+                    text-align: center;
+                    text-indent: 0;
+                    line-height: 1.3rem;
+                }
+            }
+            .helper {
+                align-self: center;
+                font-family: variables.$fonts;
+                font-size: 0.9rem;
+                text-align: center;
+                color: variables.$darkGray;
+                margin: 0.4rem 0 0 0;
+                padding: 0;
+            }
+            button {
+                margin: 0.7rem 0 0 0;
+                padding: 0.3rem 1rem;
+                background-color: variables.$darkerGray;
+                border-radius: 0.3rem;
+                border: none;
+                font-family: variables.$fonts;
+                font-size: 1rem;
+                color: variables.$darkGray;
+                text-indent: 0;
+                line-height: 1.3rem;
+                cursor: pointer;
+                &:hover {
+                    background-color: variables.$darkerGrayHover;
+                }
+            }
         }
 
         .orderingContainer {
