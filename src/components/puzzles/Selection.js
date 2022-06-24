@@ -7,7 +7,7 @@ const Selection = (props) => {
     async function handleSetId(e, id) {
         setComputing(true);
         props.setTried(false);
-        await new Promise((resolve) => setTimeout(resolve, 4000));
+        await new Promise((resolve) => setTimeout(resolve, 3500));
         setComputing(false);
         props.setState(id);
         if (id === props.correctAnswer) props.sectionUpdate(props.section + 1);

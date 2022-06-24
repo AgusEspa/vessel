@@ -597,7 +597,7 @@ p {
                 padding: 0;
                 text-indent: 0;
             }
-            button {
+            .submitButton {
                 margin: 0.7rem 0 0 0;
                 padding: 0.3rem 1rem;
                 background-color: variables.$darkerGray;
@@ -612,7 +612,18 @@ p {
                 &:hover {
                     background-color: variables.$darkerGrayHover;
                 }
-
+            }
+            .submitButtonDisabled {
+                margin: 0.7rem 0 0 0;
+                padding: 0.3rem 1rem;
+                background-color: variables.$darkerGray;
+                border-radius: 0.3rem;
+                border: none;
+                font-family: variables.$fonts;
+                font-size: 1rem;
+                color: variables.$darkGray;
+                text-indent: 0;
+                line-height: 1.3rem;
                 .loadingAnswer {
                     animation: pulsing 2s infinite;
                     @keyframes pulsing {
@@ -681,7 +692,7 @@ p {
                 padding: 0;
                 text-indent: 0;
             }
-            button {
+            .submitButton {
                 margin: 0.7rem 0 0 0;
                 padding: 0.3rem 1rem;
                 background-color: variables.$darkerGray;
@@ -696,6 +707,18 @@ p {
                 &:hover {
                     background-color: variables.$darkerGrayHover;
                 }
+            }
+            .submitButtonDisabled {
+                margin: 0.7rem 0 0 0;
+                padding: 0.3rem 1rem;
+                background-color: variables.$darkerGray;
+                border-radius: 0.3rem;
+                border: none;
+                font-family: variables.$fonts;
+                font-size: 1rem;
+                color: variables.$darkGray;
+                text-indent: 0;
+                line-height: 1.3rem;
                 .loadingAnswer {
                     animation: pulsing 2s infinite;
                     @keyframes pulsing {
@@ -931,7 +954,7 @@ p {
                 margin: 1.3rem 0 0.5rem 0;
             }
 
-            .chapter {
+            .chapterButton {
                 display: flex;
                 flex-direction: row;
                 justify-content: left;
@@ -943,20 +966,49 @@ p {
                 border-radius: 0.5rem;
                 padding: 0.2rem;
                 margin: 0.4rem;
+                background-color: transparent;
+                cursor: pointer;
+                &:hover {
+                    background-color: variables.$darkHover;
+                }
 
                 h4 {
                     font-family: variables.$fonts;
-                    color: variables.$darkGray;
+                    color: variables.$lightGray;
                     font-size: 1.05rem;
                     font-weight: 300;
                     text-align: left;
                     margin: 0;
                 }
 
-                a {
-                    text-decoration: none;
+                .chapterIconBox {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 1rem 0 0.5rem;
+                    padding: 0;
+
+                    img {
+                        width: 2.1rem;
+                    }
+                }
+            }
+            .chapterButtonDisabled {
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+                max-width: 30rem;
+                min-width: 17rem;
+                height: 3rem;
+                border: 1px solid variables.$darkGray;
+                border-radius: 0.5rem;
+                padding: 0.2rem;
+                margin: 0.4rem;
+                background-color: transparent;
+
+                h4 {
                     font-family: variables.$fonts;
-                    color: variables.$lightGray;
+                    color: variables.$darkGray;
                     font-size: 1.05rem;
                     font-weight: 300;
                     text-align: left;
