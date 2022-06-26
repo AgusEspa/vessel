@@ -62,11 +62,13 @@ const FreshLanding = () => {
                             <IoInfiniteOutline />
                         </div>
                         <p>
-                            Humans have often believed they’ve comprehended more
-                            than they’ve been mystified, and that might end up
-                            undermining what they take for granted. For some it
-                            is already too late, for others, perhaps including
-                            yourself, the world is still within reach.
+                            Humans have believed comprehention to be a state of
+                            mind so absolute that being mystified often seems an
+                            involuntary loss of mind, and that could end up
+                            undermining all they take for granted. For some it
+                            might be already too late, for others, perhaps
+                            including yourself, experience is still within
+                            reach.
                         </p>
                         <p className={styles.quotePhrase}>
                             <span className={styles.colored}>
@@ -75,16 +77,16 @@ const FreshLanding = () => {
                         </p>
                         <p>Isn't everything? This is also the opposite.</p>
                         <p>
-                            There are multiple implementations for the idea
-                            conveyed by <span>vessel</span>, some imply the act
-                            of creation, others the act of destruction. However,
-                            what seems opposing might as well be symbiotic.
+                            <span>vessel</span> convays many different pathways,
+                            some forgive the act of creation, others the act of
+                            destruction. Nonetheless, what seems opposing might
+                            as well be symbiotic.
                         </p>
                         <p>
                             If you feel prepared to handle the mystification of
                             reality, the dismemberment of your perceptions, the
-                            dissolution of your mental patterns, enter the
-                            frame:
+                            dissolution of your stagnant mental frameworks,
+                            enter the phase:
                         </p>
                     </div>
                     <form onSubmit={handleSubmit}>
@@ -116,7 +118,9 @@ const FreshLanding = () => {
 
                     <div className={styles.readMe}>
                         <h4>
-                            <Link to="/help">What am I even doing here?</Link>
+                            <Link to="/help">
+                                What can I expect to find here?
+                            </Link>
                         </h4>
                         <p>(read or procede at your own peril)</p>
                     </div>
