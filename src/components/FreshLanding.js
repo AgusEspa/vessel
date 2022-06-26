@@ -77,16 +77,16 @@ const FreshLanding = () => {
                         </p>
                         <p>Isn't everything? This is also the opposite.</p>
                         <p>
-                            <span>vessel</span> convays many different pathways,
-                            some forgive the act of creation, others the act of
-                            destruction. Nonetheless, what seems opposing might
-                            as well be symbiotic.
+                            <span>Vessel</span> can produce many different
+                            pathways; some forgive the act of creation, others
+                            the act of destruction. Nonetheless, what seems
+                            opposing might as well be symbiotic.
                         </p>
                         <p>
                             If you feel prepared to handle the mystification of
                             reality, the dismemberment of your perceptions, the
                             dissolution of your stagnant mental frameworks,
-                            enter the phase:
+                            enter the next phase:
                         </p>
                     </div>
                     <form onSubmit={handleSubmit}>
