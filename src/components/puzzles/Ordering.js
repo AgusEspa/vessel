@@ -42,7 +42,7 @@ const Ordering = (props) => {
     const handleSubmit = async () => {
         setComputing(true);
         props.setTried(false);
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 3500));
 
         console.log(itemList);
         if (
@@ -76,9 +76,16 @@ const Ordering = (props) => {
                                     {"> "}Set the argument in order{" <"}
                                 </p>
                                 {computing ? (
-                                    <button disabled>computing order...</button>
+                                    <button
+                                        className={styles.submitButtonDisabled}
+                                        disabled>
+                                        <div className={styles.loadingAnswer}>
+                                            computing answer
+                                        </div>
+                                    </button>
                                 ) : (
                                     <button
+                                        className={styles.submitButton}
                                         onClick={
                                             props.state === false
                                                 ? handleSubmit

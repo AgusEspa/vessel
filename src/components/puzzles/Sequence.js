@@ -8,19 +8,19 @@ const Sequence = (props) => {
     const mappedSet = props.set.map((item) => (
         <div
             className={
-                props.state === "00"
+                props.state === props.correctAnswer
                     ? styles.sequenceBoxCorrect
                     : styles.sequenceBox
             }
             key={item.id}>
-            <p>{item.value}</p>
+            {item.value}
         </div>
     ));
 
     const handleSubmit = async () => {
         setComputing(true);
         props.setTried(false);
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 3500));
         setComputing(false);
         if (formData === props.correctAnswer) {
             props.setState(formData);
@@ -35,21 +35,21 @@ const Sequence = (props) => {
     };
 
     return (
-        <div className={styles.selectionContainer}>
-            <div className={styles.sequenceContainer}>
+        <div className={styles.sequenceContainer}>
+            <div className={styles.sequenceBoxContainer}>
                 {mappedSet}
                 <div
                     className={
-                        props.state === "00"
+                        props.state === props.correctAnswer
                             ? styles.sequenceBoxCorrect
                             : styles.sequenceBox
                     }>
-                    <p>{props.state}</p>
+                    {props.state}
                 </div>
             </div>
-            {props.state !== "00" && (
+            {props.state !== props.correctAnswer && (
                 <>
-                    <form>
+                    <form className={styles.sequenceForm}>
                         <input
                             type="text"
                             name="formData"
@@ -63,11 +63,20 @@ const Sequence = (props) => {
                         {"> "}Complete the sequence{" <"}
                     </p>
                     {computing ? (
-                        <button disabled>computing answer...</button>
+                        <button
+                            className={styles.submitButtonDisabled}
+                            disabled>
+                            <div className={styles.loadingAnswer}>
+                                computing answer
+                            </div>
+                        </button>
                     ) : (
                         <button
+                            className={styles.submitButton}
                             onClick={
-                                props.state === "00" ? null : handleSubmit
+                                props.state === props.correctAnswer
+                                    ? null
+                                    : handleSubmit
                             }>
                             Submit
                         </button>
