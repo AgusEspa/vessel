@@ -118,7 +118,7 @@ const FreshLanding = () => {
 
                     <div className={styles.readMe}>
                         <h4>
-                            <Link to="/help">
+                            <Link to="/help" target="_blank">
                                 What can I expect to find here?
                             </Link>
                         </h4>

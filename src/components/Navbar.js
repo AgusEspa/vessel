@@ -7,14 +7,12 @@ const Navbar = (props) => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [toggleAudio, setToggleAudio] = useState(false);
 
-    const handleToggleMenu = (event) => {
-        event.preventDefault();
+    const handleToggleMenu = () => {
         setToggleMenu((prevState) => !prevState);
         setToggleAudio(false);
     };
 
-    const handleToggleAudio = (event) => {
-        event.preventDefault();
+    const handleToggleAudio = () => {
         setToggleAudio((prevState) => !prevState);
         setToggleMenu(false);
     };
@@ -67,7 +65,7 @@ const Navbar = (props) => {
                             ? styles.audioContainer
                             : styles.audioContainerActive
                     }>
-                    <audio src={props.song} autoPlay controls />
+                    <audio src={props.song} controls autoPlay />
                 </div>
             )}
 
@@ -79,7 +77,9 @@ const Navbar = (props) => {
                 }>
                 <ul className={styles.menuLinks}>
                     <li>
-                        <Link to="/help">Help</Link>
+                        <Link to="/help" target="_blank">
+                            Help
+                        </Link>
                     </li>
                     {props.userExists && (
                         <li>
