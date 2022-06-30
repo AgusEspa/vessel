@@ -1,7 +1,8 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
-import { IoInfiniteOutline } from "react-icons/io5";
+import { IoInfiniteOutline, IoWarningOutline } from "react-icons/io5";
+import { FiTriangle } from "react-icons/fi";
 import Navbar from "./Navbar";
 import styles from "../styles/Main.module.scss";
 
@@ -82,6 +83,9 @@ const FreshLanding = () => {
                             the act of destruction. Nonetheless, what seems
                             opposing might as well be symbiotic.
                         </p>
+                        <div className={styles.separatorSmall}>
+                            <FiTriangle />
+                        </div>
                         <p>
                             If you feel prepared to handle the mystification of
                             reality, the dismemberment of your perceptions, the

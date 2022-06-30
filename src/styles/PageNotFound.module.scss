@@ -1,55 +1,79 @@
 @use "./variables";
 
 .pageNotFoundContainer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 
-	.pageNotFoundBox {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		max-width: 40rem;
-		padding: 2rem;
-		margin: 0;
-		background-color: transparent;
+    .pageNotFoundBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 40rem;
+        padding: 2rem;
+        margin: 0;
+        background-color: transparent;
 
-		h1 {
-			font-family: variables.$fonts;
-			font-size: 6rem;
-			color: black;
-			text-align: center;
-			text-shadow: 0 0 10px rgb(255, 0, 247);
-			margin: 3rem
-		}
+        h1 {
+            font-family: variables.$fonts;
+            font-size: 5rem;
+            font-weight: 100;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff,
+                0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff,
+                0 0 150px #0ff;
+            margin: 3rem;
+            animation: flicker 6s linear infinite;
+            @keyframes flicker {
+                0%,
+                19.999%,
+                22%,
+                62.999%,
+                64%,
+                64.999%,
+                70%,
+                100% {
+                    opacity: 0.99;
+                }
+                20%,
+                21.999%,
+                63%,
+                63.999%,
+                65%,
+                69.999% {
+                    opacity: 0.4;
+                }
+            }
+        }
 
-		h4 {
-			font-family: variables.$fonts;
-			font-size: 1.15rem;
-			color: variables.$lightGray;
-			margin: 0 0 2rem 0;
-			text-align: center;
-		}
+        h4 {
+            font-family: variables.$fonts;
+            font-size: 1.15rem;
+            color: variables.$lightGray;
+            margin: 2rem 0 2rem 0;
+            text-align: center;
+        }
 
-		p {
-			font-family: variables.$fonts;
-			font-size: 1.05rem;
-			font-weight: 500;
-			margin: 0;
-			color: variables.$lightGray;
-			text-align: center;
-		}
+        p {
+            font-family: variables.$fonts;
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 0;
+            color: variables.$lightGray;
+            text-align: center;
+        }
 
-		a {
-			cursor: pointer;
-			color: rgb(80, 80, 255);
-			font-family: variables.$fonts;
-			text-align: center;
-			font-size: 1rem;
-			padding: 0;
-			margin: 0.5rem;
-		}
-	}
+        a {
+            cursor: pointer;
+            color: rgb(80, 80, 255);
+            font-family: variables.$fonts;
+            text-align: center;
+            font-size: 1rem;
+            padding: 0;
+            margin: 0.5rem;
+        }
+    }
 }

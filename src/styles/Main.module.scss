@@ -111,11 +111,11 @@ p {
         border-radius: 0.5rem;
         background-color: rgba(0, 0, 0, 0.4);
         padding: 1rem 1rem 2rem 1rem;
-        margin: 11rem 0 6rem 0;
+        margin: 13rem 0 6rem 0;
         perspective: 400px;
 
         @media screen and (max-width: 600px) {
-            margin: 13rem 0 5rem 0;
+            margin: 17rem 0 5rem 0;
             padding: 1rem 0.5rem 2rem 0.5rem;
         }
 
@@ -124,7 +124,7 @@ p {
             text-align: center;
             font-family: variables.$fonts;
             font-size: 1.1rem;
-            margin: 0.6rem 0 0.4rem 0;
+            margin: 2rem 0 0.5rem 0;
             text-indent: 0;
             hyphens: none;
 
@@ -152,25 +152,39 @@ p {
 
             svg {
                 font-size: 3rem;
-                stroke: rgb(167, 0, 131);
-                animation: pulsing 4s infinite;
-                @keyframes pulsing {
+                stroke: #a70083;
+                animation: gradientL 10s ease-in infinite;
+                @keyframes gradientL {
                     0% {
-                        stroke: black;
+                        stroke: #a70083;
                     }
-                    50% {
-                        stroke: rgb(167, 0, 131);
+                    33% {
+                        stroke: #ad33ff;
+                    }
+                    66% {
+                        stroke: #1a1aff;
                     }
                     100% {
-                        stroke: black;
+                        stroke: #a70083;
                     }
                 }
             }
+        }
+        .separatorSmall {
+            margin: 3rem 0 1rem 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
 
-            @media screen and (max-width: 600px) {
-                img {
-                    width: 12rem;
-                }
+            svg {
+                font-size: 2rem;
+                stroke: #a70083;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            img {
+                width: 12rem;
             }
         }
 
@@ -309,14 +323,14 @@ p {
 
         svg {
             font-size: 3rem;
-            stroke: rgb(167, 0, 131);
+            stroke: #a70083;
             animation: pulsing 4s infinite;
             @keyframes pulsing {
                 0% {
                     stroke: black;
                 }
                 50% {
-                    stroke: rgb(167, 0, 131);
+                    stroke: #a70083;
                 }
                 100% {
                     stroke: black;

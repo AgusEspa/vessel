@@ -1,4 +1,5 @@
 @use "./variables";
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -26,11 +27,32 @@ body {
 
         img {
             width: 10rem;
-        }
+            animation: flicker 6s linear infinite;
+            @keyframes flicker {
+                0%,
+                19.999%,
+                22%,
+                62.999%,
+                64%,
+                64.999%,
+                70%,
+                100% {
+                    opacity: 0.99;
+                }
+                20%,
+                21.999%,
+                63%,
+                63.999%,
+                65%,
+                69.999% {
+                    opacity: 0.4;
+                }
+            }
 
-        @media screen and (max-width: 600px) {
-            img {
-                width: 8rem;
+            @media screen and (max-width: 600px) {
+                img {
+                    width: 8rem;
+                }
             }
         }
     }
@@ -41,12 +63,31 @@ body {
         border-bottom: 0.1rem solid violet;
         max-width: 40rem;
         padding: 1rem;
+        animation: gradientR 10s ease-in infinite;
+        @keyframes gradientR {
+            0% {
+                border-right: 0.1rem solid violet;
+                border-bottom: 0.1rem solid violet;
+            }
+            33% {
+                border-right: 0.1rem solid #ad33ff;
+                border-bottom: 0.1rem solid #ad33ff;
+            }
+            66% {
+                border-right: 0.1rem solid #1a1aff;
+                border-bottom: 0.1rem solid #1a1aff;
+            }
+            100% {
+                border-right: 0.1rem solid violet;
+                border-bottom: 0.1rem solid violet;
+            }
+        }
         h2 {
             color: rgba(255, 0, 255, 0.797);
             text-align: right;
             font-family: variables.$fonts;
             font-size: 1.3rem;
-            margin: 2rem 1rem 1rem 1rem;
+            margin: 2rem 0 1rem 0;
         }
 
         @media screen and (max-width: 600px) {
@@ -73,12 +114,32 @@ body {
         border-bottom: 0.1rem solid violet;
         max-width: 40rem;
         padding: 1rem;
+        animation: gradientL 10s ease-in infinite;
+        @keyframes gradientL {
+            0% {
+                border-left: 0.1rem solid violet;
+                border-bottom: 0.1rem solid violet;
+            }
+            33% {
+                border-left: 0.1rem solid #ad33ff;
+                border-bottom: 0.1rem solid #ad33ff;
+            }
+            66% {
+                border-left: 0.1rem solid #1a1aff;
+                border-bottom: 0.1rem solid #1a1aff;
+            }
+            100% {
+                border-left: 0.1rem solid violet;
+                border-bottom: 0.1rem solid violet;
+            }
+        }
+
         h2 {
             color: rgba(255, 0, 255, 0.797);
             text-align: left;
             font-family: variables.$fonts;
             font-size: 1.3rem;
-            margin: 2rem 1rem 1rem 1rem;
+            margin: 2rem 0 1rem 0;
         }
 
         @media screen and (max-width: 600px) {
@@ -110,6 +171,21 @@ body {
         max-width: 40rem;
         min-height: 20rem;
         padding: 2rem 1rem;
+        animation: gradientE 10s ease-in infinite;
+        @keyframes gradientE {
+            0% {
+                border-left: 0.1rem solid violet;
+            }
+            33% {
+                border-left: 0.1rem solid #ad33ff;
+            }
+            66% {
+                border-left: 0.1rem solid #1a1aff;
+            }
+            100% {
+                border-left: 0.1rem solid violet;
+            }
+        }
         p {
             align-self: flex-start;
             color: white;
