@@ -4,11 +4,13 @@ import { useNavigate, Link } from "react-router-dom";
 import { IoInfiniteOutline, IoWarningOutline } from "react-icons/io5";
 import { FiTriangle } from "react-icons/fi";
 import Navbar from "./Navbar";
+import WelcomeModal from "./WelcomeModal";
 import styles from "../styles/Main.module.scss";
 
 const FreshLanding = () => {
     const [formData, setFormData] = useState("");
     const [loadingEnv, setLoadingEnv] = useState(false);
+    const [welcomeModal, setWelcomeModal] = useState(true);
 
     const { setUserAuth } = useContext(AuthContext);
 
@@ -39,6 +41,8 @@ const FreshLanding = () => {
 
     return (
         <>
+            {welcomeModal && <WelcomeModal setState={setWelcomeModal} />}
+
             <Navbar userExists={false} song={"mystique-16608.mp3"} />
 
             <main className={styles.landingContainer}>
