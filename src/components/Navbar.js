@@ -58,16 +58,14 @@ const Navbar = (props) => {
                 </div>
             </nav>
 
-            {props.song !== "" && (
-                <div
-                    className={
-                        !toggleAudio
-                            ? styles.audioContainer
-                            : styles.audioContainerActive
-                    }>
-                    <audio src={props.song} controls autoPlay />
-                </div>
-            )}
+            <div
+                className={
+                    !toggleAudio
+                        ? styles.audioContainer
+                        : styles.audioContainerActive
+                }>
+                <audio id="audio" src={props.song} controls autoPlay />
+            </div>
 
             <div
                 className={

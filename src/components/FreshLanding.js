@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import { IoInfiniteOutline, IoWarningOutline } from "react-icons/io5";
@@ -10,9 +10,15 @@ import styles from "../styles/Main.module.scss";
 const FreshLanding = () => {
     const [formData, setFormData] = useState("");
     const [loadingEnv, setLoadingEnv] = useState(false);
-    const [welcomeModal, setWelcomeModal] = useState(true);
+    const [autoplay, setAutoplay] = useState(true);
 
     const { setUserAuth } = useContext(AuthContext);
+
+    useEffect(() => {
+        const autoplayPref = window.localStorage.getItem("audio_acceptance");
+        if (autoplayPref) setAutoplay(true);
+        else setAutoplay(false);
+    }, []);
 
     const navigate = useNavigate();
 
@@ -41,7 +47,7 @@ const FreshLanding = () => {
 
     return (
         <>
-            {welcomeModal && <WelcomeModal setState={setWelcomeModal} />}
+            {!autoplay && <WelcomeModal setAutoplay={setAutoplay} />}
 
             <Navbar userExists={false} song={"mystique-16608.mp3"} />
 

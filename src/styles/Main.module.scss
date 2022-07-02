@@ -68,85 +68,76 @@ p {
     line-height: 1.5rem;
 }
 
-.welcomeModalContainer {
-    width: 100%;
-
-    .welcomeModalBox {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        justify-self: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: black;
-        border-radius: 0.5rem;
-        padding: 1rem;
-        margin: 0.5rem;
-        max-width: 32rem;
-        border: 0.1rem solid violet;
-        animation: gradientR 10s ease-in infinite;
-        @keyframes gradientR {
-            0% {
-                border: 0.1rem solid violet;
-            }
-            33% {
-                border: 0.1rem solid #ad33ff;
-            }
-            66% {
-                border: 0.1rem solid #1a1aff;
-            }
-            100% {
-                border: 0.1rem solid violet;
-            }
+.welcomeModalBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    max-width: 32rem;
+    border: 0.1rem solid violet;
+    animation: gradientR 7s ease-in infinite;
+    @keyframes gradientR {
+        0% {
+            border: 0.1rem solid violet;
         }
-
-        h1 {
-            font-family: variables.$fonts;
-            font-size: 1.2rem;
-            margin: 0.7rem 0;
-            color: variables.$lightGray;
-            text-align: center;
-            text-indent: 0;
-            hyphens: none;
+        33% {
+            border: 0.1rem solid #ad33ff;
         }
-        svg {
-            margin: 1rem 0 0.5rem 0;
-            fill: white;
-            font-size: 1.4rem;
+        66% {
+            border: 0.1rem solid #1a1aff;
         }
-
-        p {
-            font-family: variables.$fonts;
-            font-size: 0.9rem;
-            margin: 0;
-            color: variables.$lightGray;
-            text-align: center;
-            text-indent: 0;
-            hyphens: none;
+        100% {
+            border: 0.1rem solid violet;
         }
+    }
 
-        .confirmButton {
-            margin: 1.5rem 1rem 1rem 1rem;
-            width: 8rem;
-            border-radius: 1.2rem;
-            text-align: center;
-            padding: 0.6rem 1rem;
-            background-color: rgb(0, 0, 213);
-            color: white;
-            font-family: variables.$fonts;
-            font-size: 1rem;
-            line-height: 1.1rem;
-            border: none;
-            outline: 0;
-            cursor: pointer;
-            transition: all 0.1s ease-out;
+    h1 {
+        font-family: variables.$fonts;
+        font-size: 1.2rem;
+        margin: 0.7rem 0;
+        color: variables.$lightGray;
+        text-align: center;
+        text-indent: 0;
+        hyphens: none;
+    }
+    svg {
+        margin: 1rem 0 0.5rem 0;
+        fill: red;
+        font-size: 1.4rem;
+    }
 
-            &:hover {
-                background-color: rgb(0, 0, 255);
-            }
+    p {
+        font-family: variables.$fonts;
+        font-size: 0.9rem;
+        margin: 0;
+        color: variables.$lightGray;
+        text-align: center;
+        text-indent: 0;
+        hyphens: none;
+    }
+
+    .confirmButton {
+        margin: 1.5rem 1rem 1rem 1rem;
+        width: 8rem;
+        border-radius: 1.2rem;
+        text-align: center;
+        padding: 0.6rem 1rem;
+        background-color: rgb(0, 0, 213);
+        color: white;
+        font-family: variables.$fonts;
+        font-size: 1rem;
+        line-height: 1.1rem;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+        transition: all 0.1s ease-out;
+
+        &:hover {
+            background-color: rgb(0, 0, 255);
         }
     }
 }
