@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
-import myGa from "../myGa.js";
+import ReactGA from "react-ga";
 import { IoInfiniteOutline, IoWarningOutline } from "react-icons/io5";
 import { FiTriangle } from "react-icons/fi";
 import Navbar from "./Navbar";
@@ -22,7 +22,8 @@ const FreshLanding = () => {
     }, []);
 
     useEffect(() => {
-        myGa();
+        ReactGA.initialize("G-0MRX6B8JY1");
+        ReactGA.pageview("FreshLanding");
     }, []);
 
     const navigate = useNavigate();
