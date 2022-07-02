@@ -393,22 +393,21 @@ p {
         padding: 0;
         display: flex;
         justify-content: center;
-
+        animation: pulsing 4s infinite;
+        @keyframes pulsing {
+            0% {
+                opacity: 100%;
+            }
+            50% {
+                opacity: 0%;
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
         svg {
             font-size: 3rem;
             stroke: #a70083;
-            animation: pulsing 4s infinite;
-            @keyframes pulsing {
-                0% {
-                    stroke: black;
-                }
-                50% {
-                    stroke: #a70083;
-                }
-                100% {
-                    stroke: black;
-                }
-            }
         }
 
         @media screen and (max-width: 600px) {
