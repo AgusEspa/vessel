@@ -465,7 +465,7 @@ const Stage90063 = () => {
                     />
                     {puzzle3tried === true && puzzle3 !== "01" && (
                         <p className={styles.mistake}>
-                            That doesn't represent accuratly the movement Maybe
+                            That doesn't represent accuratly the movement. Maybe
                             try again.
                         </p>
                     )}
