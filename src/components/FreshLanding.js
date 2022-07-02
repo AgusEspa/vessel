@@ -23,7 +23,7 @@ const FreshLanding = () => {
 
     useEffect(() => {
         ReactGA.initialize("G-0MRX6B8JY1");
-        ReactGA.pageview("FreshLanding");
+        ReactGA.pageview(window.location.pathname + window.location.search);
     }, []);
 
     const navigate = useNavigate();
