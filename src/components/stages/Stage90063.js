@@ -17,26 +17,28 @@ const Stage90063 = () => {
     const [loadingSave, setLoadingSave] = useState(false);
     const [saveNotice, setSaveNotice] = useState(false);
 
+    const stageId = 90063;
+
     // Section 1 Hooks
     const [intoPhrases, setIntroPhrases] = useState(0);
 
     // Section 5 Hooks
-    const [puzzle1, setPuzzle1] = useState(userAuth.lastSection > 5 ? 4 : 0);
+    const [puzzle1, setPuzzle1] = useState(
+        userAuth.lastStage > stageId || userAuth.lastSection > 5 ? 4 : 0
+    );
     const [puzzle1tried, setPuzzle1Tried] = useState(false);
 
     // Section 6 Hooks
     const [puzzle2, setPuzzle2] = useState(
-        userAuth.lastSection > 6 ? true : false
+        userAuth.lastStage > stageId || userAuth.lastSection > 6 ? true : false
     );
     const [puzzle2tried, setPuzzle2Tried] = useState(false);
 
     // Section 7 Hooks
     const [puzzle3, setPuzzle3] = useState(
-        userAuth.lastSection > 7 ? "01" : "??"
+        userAuth.lastStage > stageId || userAuth.lastSection > 7 ? "01" : "??"
     );
     const [puzzle3tried, setPuzzle3Tried] = useState(false);
-
-    const stageId = 90063;
 
     useEffect(() => {
         setUserAuth((prevState) => ({
@@ -478,7 +480,7 @@ const Stage90063 = () => {
             )}
 
             {/* Section 8 */}
-            {userAuth.lastStage === stageId && userAuth.lastSection >= 8 && (
+            {(userAuth.lastStage > stageId || userAuth.lastSection >= 8) && (
                 <div className={styles.sectionBox}>
                     <p>
                         Don’t be fooled by its simplicity, though. The fact that
@@ -518,19 +520,12 @@ const Stage90063 = () => {
                             <button className={styles.saveDisabled} disabled>
                                 <div className={styles.loading}>
                                     <p>saving</p>
-                                    <div className={styles.loadingDots}>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
                                 </div>
                             </button>
                         ) : (
                             <button onClick={handleSave}>Save</button>
                         )}
-                        {loadingSave ? (
-                            <div></div>
-                        ) : (
+                        {!loadingSave && (
                             <button onClick={handleSaveAndCont}>
                                 Save & continue
                             </button>

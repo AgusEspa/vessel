@@ -155,6 +155,8 @@ p {
 
     @media screen and (max-width: 600px) {
         background-image: url("../../public/landing-small.jpg");
+        background-size: auto;
+        background-position: center 5rem;
     }
     .logoBox {
         margin-left: 0;
@@ -188,7 +190,7 @@ p {
         perspective: 400px;
 
         @media screen and (max-width: 600px) {
-            margin: 17rem 0 5rem 0;
+            margin: 10rem 0 5rem 0;
             padding: 1rem 0.5rem 2rem 0.5rem;
         }
 
@@ -393,21 +395,21 @@ p {
         padding: 0;
         display: flex;
         justify-content: center;
-        animation: pulsing 4s infinite;
-        @keyframes pulsing {
-            0% {
-                opacity: 100%;
-            }
-            50% {
-                opacity: 0%;
-            }
-            100% {
-                opacity: 100%;
-            }
-        }
         svg {
             font-size: 3rem;
             stroke: #a70083;
+            animation: pulsing2 4s infinite;
+            @keyframes pulsing2 {
+                0% {
+                    stroke: black;
+                }
+                50% {
+                    stroke: #a70083;
+                }
+                100% {
+                    stroke: black;
+                }
+            }
         }
 
         @media screen and (max-width: 600px) {
@@ -889,11 +891,19 @@ p {
                     p {
                         font-size: 0.9rem;
                         margin: 0 0.1rem 0 0;
-                        color: black;
-                    }
-
-                    .loadingDots {
-                        @include loadingDots();
+                        text-indent: 0;
+                        animation: pulsing3 2s infinite;
+                        @keyframes pulsing3 {
+                            0% {
+                                color: transparent;
+                            }
+                            50% {
+                                color: black;
+                            }
+                            100% {
+                                color: transparent;
+                            }
+                        }
                     }
                 }
             }
