@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
-import myGa from "./myGa.js";
+import myGa from "../myGa.js";
 import { IoInfiniteOutline, IoWarningOutline } from "react-icons/io5";
 import { FiTriangle } from "react-icons/fi";
 import Navbar from "./Navbar";
