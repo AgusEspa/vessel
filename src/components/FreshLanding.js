@@ -1,7 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
-import ReactGA from "react-ga";
 import { IoInfiniteOutline, IoWarningOutline } from "react-icons/io5";
 import { FiTriangle } from "react-icons/fi";
 import Navbar from "./Navbar";
@@ -19,11 +18,6 @@ const FreshLanding = () => {
         const autoplayPref = window.localStorage.getItem("audio_acceptance");
         if (autoplayPref) setAutoplay(true);
         else setAutoplay(false);
-    }, []);
-
-    useEffect(() => {
-        ReactGA.initialize("G-0MRX6B8JY1");
-        ReactGA.pageview(window.location.pathname + window.location.search);
     }, []);
 
     const navigate = useNavigate();
