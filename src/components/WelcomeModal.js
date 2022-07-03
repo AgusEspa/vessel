@@ -3,11 +3,17 @@ import { BsVolumeUp } from "react-icons/bs";
 import modalStyles from "../styles/Modals.module.scss";
 
 const WelcomeModal = (props) => {
-    const handleModal = () => {
+    const handleAccept = () => {
         document.getElementsByTagName("audio")[0].play();
         window.localStorage.setItem("audio_acceptance", true);
         props.setAutoplay(true);
     };
+
+    const handleDeny = () => {
+        window.localStorage.setItem("audio_acceptance", true);
+        props.setAutoplay(true);
+    };
+
     return (
         <>
             <div className={modalStyles.animatedBackdrop} />
@@ -20,11 +26,20 @@ const WelcomeModal = (props) => {
                         this, you allow autoplay. Don't worry, you will be able
                         to control the sound at any time.
                     </p>
-                    <button
-                        className={styles.confirmButton}
-                        onClick={handleModal}>
-                        Understood
-                    </button>
+                    <div className={styles.autoplayButtonsContainer}>
+                        <button
+                            type="button"
+                            className={styles.confirmAutoplayButton}
+                            onClick={handleAccept}>
+                            Yes
+                        </button>
+                        <button
+                            className={styles.denyAutoplayButton}
+                            type="button"
+                            onClick={handleDeny}>
+                            No
+                        </button>
+                    </div>
                 </div>
             </div>
         </>

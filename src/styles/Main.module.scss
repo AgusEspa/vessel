@@ -119,25 +119,50 @@ p {
         text-indent: 0;
         hyphens: none;
     }
+    .autoplayButtonsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    .confirmButton {
-        margin: 1.5rem 1rem 1rem 1rem;
-        width: 8rem;
-        border-radius: 1.2rem;
-        text-align: center;
-        padding: 0.6rem 1rem;
-        background-color: rgb(0, 0, 213);
-        color: white;
-        font-family: variables.$fonts;
-        font-size: 1rem;
-        line-height: 1.1rem;
-        border: none;
-        outline: 0;
-        cursor: pointer;
-        transition: all 0.1s ease-out;
+        .confirmAutoplayButton {
+            margin: 1.5rem 1rem 1rem 1rem;
+            width: 8rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            padding: 0.6rem 1rem;
+            background-color: rgb(0, 0, 213);
+            color: white;
+            font-family: variables.$fonts;
+            font-size: 1rem;
+            line-height: 1.1rem;
+            border: none;
+            outline: 0;
+            cursor: pointer;
+            transition: all 0.1s ease-out;
 
-        &:hover {
-            background-color: rgb(0, 0, 255);
+            &:hover {
+                background-color: rgb(0, 0, 255);
+            }
+        }
+        .denyAutoplayButton {
+            margin: 1.5rem 1rem 1rem 1rem;
+            width: 8rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            padding: 0.6rem 1rem;
+            background-color: rgb(0, 0, 213);
+            color: white;
+            font-family: variables.$fonts;
+            font-size: 1rem;
+            line-height: 1.1rem;
+            border: none;
+            outline: 0;
+            cursor: pointer;
+            transition: all 0.1s ease-out;
+
+            &:hover {
+                background-color: rgb(0, 0, 255);
+            }
         }
     }
 }
