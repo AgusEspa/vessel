@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/vessel/static/css/main.50d5cc67.css",
-    "main.js": "/vessel/static/js/main.fe7acb89.js",
+    "main.css": "/vessel/static/css/main.ef8f15c1.css",
+    "main.js": "/vessel/static/js/main.0215b6de.js",
     "static/media/landing.jpg": "/vessel/static/media/landing.6a105aad8600f677a6ac.jpg",
     "static/media/landing-small.jpg": "/vessel/static/media/landing-small.bf4c2f90d367cc554e60.jpg",
     "index.html": "/vessel/index.html",
-    "main.50d5cc67.css.map": "/vessel/static/css/main.50d5cc67.css.map",
-    "main.fe7acb89.js.map": "/vessel/static/js/main.fe7acb89.js.map"
+    "main.ef8f15c1.css.map": "/vessel/static/css/main.ef8f15c1.css.map",
+    "main.0215b6de.js.map": "/vessel/static/js/main.0215b6de.js.map"
   },
   "entrypoints": [
-    "static/css/main.50d5cc67.css",
-    "static/js/main.fe7acb89.js"
+    "static/css/main.ef8f15c1.css",
+    "static/js/main.0215b6de.js"
   ]
 }
