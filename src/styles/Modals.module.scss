@@ -13,7 +13,6 @@
 }
 
 .animatedBackdrop {
-    background-color: rgba(0, 0, 0, 0.8);
     z-index: 9;
     top: 0;
     left: 0;
@@ -22,16 +21,16 @@
     position: fixed;
     padding: 0;
     margin: 0;
-    animation: pulsing 1.5s infinite;
+    animation: pulsing 2s infinite;
     @keyframes pulsing {
         0% {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.85);
         }
         50% {
-            background-color: rgba(0, 0, 0, 0.65);
+            background-color: rgba(0, 0, 0, 0.7);
         }
         100% {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.85);
         }
     }
 }

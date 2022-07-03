@@ -130,7 +130,7 @@ p {
             border-radius: 1.2rem;
             text-align: center;
             padding: 0.6rem 1rem;
-            background-color: rgb(0, 0, 213);
+            background-color: #248f24;
             color: white;
             font-family: variables.$fonts;
             font-size: 1rem;
@@ -141,7 +141,7 @@ p {
             transition: all 0.1s ease-out;
 
             &:hover {
-                background-color: rgb(0, 0, 255);
+                background-color: #29a329;
             }
         }
         .denyAutoplayButton {
@@ -150,7 +150,7 @@ p {
             border-radius: 1.2rem;
             text-align: center;
             padding: 0.6rem 1rem;
-            background-color: rgb(0, 0, 213);
+            background-color: #cc2900;
             color: white;
             font-family: variables.$fonts;
             font-size: 1rem;
@@ -161,7 +161,7 @@ p {
             transition: all 0.1s ease-out;
 
             &:hover {
-                background-color: rgb(0, 0, 255);
+                background-color: #e62e00;
             }
         }
     }
@@ -211,7 +211,7 @@ p {
         border-radius: 0.5rem;
         background-color: rgba(0, 0, 0, 0.4);
         padding: 1rem 1rem 2rem 1rem;
-        margin: 13rem 0 6rem 0;
+        margin: 15rem 0 6rem 0;
         perspective: 400px;
 
         @media screen and (max-width: 600px) {
@@ -245,7 +245,7 @@ p {
             }
         }
         .separator {
-            margin: 3rem 0 2rem 0;
+            margin: 3rem 0 2.5rem 0;
             padding: 0;
             display: flex;
             justify-content: center;
@@ -277,8 +277,8 @@ p {
             justify-content: center;
 
             svg {
-                font-size: 2rem;
-                stroke: #a70083;
+                font-size: 1.6rem;
+                stroke: rgb(222, 12, 176);
             }
         }
 

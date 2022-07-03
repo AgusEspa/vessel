@@ -19,12 +19,12 @@ const WelcomeModal = (props) => {
             <div className={modalStyles.animatedBackdrop} />
             <div className={modalStyles.modalContainerCenter}>
                 <div className={styles.welcomeModalBox}>
-                    <h1>Welcome traveler</h1>
+                    <h1>Welcome seeker</h1>
                     <BsVolumeUp />
                     <p>
                         This site uses unobtrusive soundscapes. By accepting
-                        this, you allow autoplay. Don't worry, you will be able
-                        to control the sound at any time.
+                        this, you allow autoplay. (Don't worry, you will be able
+                        to control the sound at any time.)
                     </p>
                     <div className={styles.autoplayButtonsContainer}>
                         <button

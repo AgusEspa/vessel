@@ -9,23 +9,27 @@ const Help = () => {
                     <img src="question.jpg" alt="headset icon" />
                 </div>
                 <div className={styles.helpBoxLeft}>
-                    <h2>What is this?</h2>
+                    <h2>What this is</h2>
                     <p>
-                        Vessel is an interactive composition that mixes
-                        Cognitive Science with fiction and problem solving to
-                        create an environment of self discovery and reflection
-                        upon the future of thechnology and humanity.
+                        Vessel aims to be an interactive essay that mixes many
+                        subjects from Cognitive Science with fiction and problem
+                        solving to create an environment of self discovery and
+                        reflection upon the future of humanity.
+                        <br />
+                        You won't find predictions, conspiracy theories, nor any
+                        type of definitive answers, just questions, thought
+                        experiments and a careful dose of science fiction.
                     </p>
                 </div>
                 <div className={styles.helpBoxRight}>
                     <h2>Challenges</h2>
                     <p>
-                        Even though it might look like that sometimes, no
+                        Even though it might sometimes look like that, no
                         special knowledge or skills are required to solve the
                         challenges. They are purely designed to internalize the
                         ideas needed to understand the plot. However, those with
-                        some knowledge about neuroscience, linguistics, computer
-                        science will find many themes familiar.
+                        some knowledge of neuroscience, linguistics and computer
+                        science will probably feel more at home.
                     </p>
                 </div>
                 <div className={styles.helpBoxLeft}>
@@ -34,7 +38,7 @@ const Help = () => {
                         The version that you are going to access is a demo
                         preview. You are free to explore the first two chapters
                         as much as you like. Access to the full version will be
-                        availiable in the folowing months. To get notified,
+                        availiable in the forthcoming months. To get notified,
                         please email <span>vessel.connect@gmail.com</span>
                     </p>
                 </div>
@@ -42,10 +46,10 @@ const Help = () => {
                     <h2>Saving Progress</h2>
                     <p>
                         This demo version doesn’t have support for persistent
-                        data. All your progress will be automatically saved to
-                        your browser local storage. Don’t delete your borwsing
-                        history or storage, otherwise you will lose your
-                        progress.
+                        data yet. All your progress will be automatically saved
+                        to your browser local storage. Don’t delete your
+                        borwsing history or storage, nor open this site while on
+                        incognito mode, otherwise you will lose your progress.
                     </p>
                 </div>
                 <div className={styles.helpBoxEnding}>

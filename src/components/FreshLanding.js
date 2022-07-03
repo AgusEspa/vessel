@@ -74,12 +74,12 @@ const FreshLanding = () => {
                         </div>
                         <p>
                             Humans have believed comprehention to be a state of
-                            mind so absolute that being mystified often seems an
-                            involuntary loss of mind, and that could end up
-                            undermining all they take for granted. For some it
-                            might be already too late, for others, perhaps
-                            including yourself, experience is still within
-                            reach.
+                            mind so absolute that being mystified often can't
+                            but seem an involuntary loss of mind. That, by sheer
+                            force of time, could end up undermining all they
+                            take for granted. For some it might be already too
+                            late, for others, perhaps including yourself, pure
+                            experience of being is still within reach.
                         </p>
                         <p className={styles.quotePhrase}>
                             <span className={styles.colored}>
@@ -100,7 +100,7 @@ const FreshLanding = () => {
                             If you feel prepared to handle the mystification of
                             reality, the dismemberment of your perceptions, the
                             dissolution of your stagnant mental frameworks,
-                            enter the next phase:
+                            enter the stream:
                         </p>
                     </div>
                     <form onSubmit={handleSubmit}>
