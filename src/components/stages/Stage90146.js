@@ -46,7 +46,7 @@ const Stage90146 = () => {
             <div className={styles.sectionBox}>
                 <h1>PART I - The Construct</h1>
                 <div className={styles.headIconBox}>
-                    <img src="headset.png" alt="headset icon" />
+                    <img src="brain.png" alt="brain icon" />
                 </div>
                 <h2>1. Matter of Thought</h2>
                 <p>
@@ -109,7 +109,7 @@ const Stage90146 = () => {
             {userAuth.lastStage > stageId && (
                 <div className={styles.sectionBox}>
                     <div className={styles.endChapterIconBox}>
-                        <img src="headset-small.png" alt="headset icon" />
+                        <img src="brain-small.png" alt="brain icon" />
                     </div>
                 </div>
             )}

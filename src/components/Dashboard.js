@@ -60,8 +60,8 @@ const Dashboard = (props) => {
                                 onClick={() => navigate("/stage/90146")}>
                                 <div className={styles.chapterIconBox}>
                                     <img
-                                        src="headset-small.png"
-                                        alt="headset icon"
+                                        src="brain-small.png"
+                                        alt="brain icon"
                                     />
                                 </div>
                                 <h4>Matter of Thought</h4>
@@ -73,8 +73,8 @@ const Dashboard = (props) => {
                                 disabled>
                                 <div className={styles.chapterIconBox}>
                                     <img
-                                        src="headset-small.png"
-                                        alt="headset icon"
+                                        src="brain-small.png"
+                                        alt="brain icon"
                                     />
                                 </div>
                                 <h4>Matter of Thought</h4>
