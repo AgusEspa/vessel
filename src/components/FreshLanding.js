@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
-import { IoInfiniteOutline, IoWarningOutline } from "react-icons/io5";
+import { IoInfiniteOutline } from "react-icons/io5";
 import { FiTriangle } from "react-icons/fi";
 import Navbar from "./Navbar";
 import WelcomeModal from "./WelcomeModal";
