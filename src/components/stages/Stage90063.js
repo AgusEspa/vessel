@@ -94,14 +94,14 @@ const Stage90063 = () => {
             correctIndex: 2,
         },
         {
-            id: "q3",
-            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
-            correctIndex: 3,
-        },
-        {
             id: "q4",
             quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
             correctIndex: 4,
+        },
+        {
+            id: "q3",
+            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
+            correctIndex: 3,
         },
         {
             id: "q1",
@@ -469,7 +469,7 @@ const Stage90063 = () => {
                     />
                     {puzzle3tried === true && puzzle3 !== "01" && (
                         <p className={styles.mistake}>
-                            That doesn't represent accurately the movement.
+                            That doesn't represent such movement accurately.
                             Maybe try again.
                         </p>
                     )}
