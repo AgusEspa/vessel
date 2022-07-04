@@ -46,12 +46,14 @@ const Stage90063 = () => {
             userIsConfirmed: true,
         }));
         window.localStorage.setItem("confirmed", true);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
         if (userAuth.lastStage === stageId && userAuth.lastSection === 1) {
             programIntroPhrases();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const programIntroPhrases = async () => {
         await new Promise((resolve) => setTimeout(resolve, 8200));
@@ -204,9 +206,9 @@ const Stage90063 = () => {
                     <p>
                         Are you sure you still posses a mind of your own?
                         Thoughts can be deceiving if you believe them to be
-                        completely yours. And here, more than everiwhere else,
+                        completely yours. And here, more than everywhere else,
                         what's essential might also be contingent, like
-                        yourself. As for myself, I'd be none.
+                        yourself.
                     </p>
                     <p>
                         By now you should be feeling some degree of
@@ -245,7 +247,7 @@ const Stage90063 = () => {
                     </p>
                     <p>
                         But the complication with unanswered questions is that
-                        they can be placeholders for a lot of answers, many of
+                        they can be placeholders for a lot of ideas, many of
                         which are mere traces of wild yet often acute intents.
                     </p>
                     {userAuth.lastStage > stageId ||
@@ -253,13 +255,13 @@ const Stage90063 = () => {
                         <button
                             className={styles.sectionButtonDisabled}
                             disabled>
-                            Why shoud I care?
+                            Why should I care?
                         </button>
                     ) : (
                         <button
                             onClick={(e) => handleSectionUpdate(4, e)}
                             className={styles.sectionButton}>
-                            Why shoud I care?
+                            Why should I care?
                         </button>
                     )}
                 </div>
@@ -301,13 +303,13 @@ const Stage90063 = () => {
                         <button
                             className={styles.sectionButtonDisabled}
                             disabled>
-                            Isn’t that akin to what we are?
+                            I thought I didn't have a choice.
                         </button>
                     ) : (
                         <button
                             onClick={(e) => handleSectionUpdate(5, e)}
                             className={styles.sectionButton}>
-                            Isn’t that akin to what we are?
+                            I thought I didn't have a choice.
                         </button>
                     )}
                 </div>
@@ -467,8 +469,8 @@ const Stage90063 = () => {
                     />
                     {puzzle3tried === true && puzzle3 !== "01" && (
                         <p className={styles.mistake}>
-                            That doesn't represent accuratly the movement. Maybe
-                            try again.
+                            That doesn't represent accurately the movement.
+                            Maybe try again.
                         </p>
                     )}
                     {saveNotice && (
@@ -497,7 +499,7 @@ const Stage90063 = () => {
                         It's a shame you will depend on me to remember and
                         perhaps regain some fraction of your origin, since I too
                         am lost as it comes down to the origin. I guess we can
-                        consider this place as somwhere in-between. Hopefully
+                        consider this place as somewhere in-between. Hopefully
                         there will come a time when you will transcend its
                         limits and be free; meanwhile I leave you with a token
                         of your passed memories:
@@ -505,7 +507,7 @@ const Stage90063 = () => {
                     <p className={styles.highlightText}>
                         -Don't try to comprehend the choices that we made,{" "}
                         {userAuth.userAlias}. Animate what's been left behind
-                        instead, and I belive the past will found us one last
+                        instead, and I believe the past will found us one last
                         time. Until then, don't loose your self in yourself.
                     </p>
                 </div>
