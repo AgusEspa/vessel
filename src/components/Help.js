@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import styles from "../styles/Help.module.scss";
 
 const Help = () => {
