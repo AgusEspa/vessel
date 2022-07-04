@@ -996,12 +996,12 @@ p {
             padding: 0;
 
             img {
-                width: 10rem;
+                height: 1.3rem;
             }
 
             @media screen and (max-width: 600px) {
                 img {
-                    width: 8rem;
+                    height: 1.2rem;
                 }
             }
         }
