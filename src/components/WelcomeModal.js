@@ -29,12 +29,12 @@ const WelcomeModal = (props) => {
                     <div className={styles.autoplayButtonsContainer}>
                         <button
                             type="button"
-                            className={styles.confirmAutoplayButton}
+                            className={`${styles.autoplayButton} ${styles.confirm}`}
                             onClick={handleAccept}>
                             Yes
                         </button>
                         <button
-                            className={styles.denyAutoplayButton}
+                            className={`${styles.autoplayButton} ${styles.deny}`}
                             type="button"
                             onClick={handleDeny}>
                             No
