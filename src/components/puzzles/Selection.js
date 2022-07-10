@@ -5,6 +5,7 @@ const Selection = (props) => {
     const [computing, setComputing] = useState(false);
 
     async function handleSetId(e, id) {
+        props.setState(0);
         setComputing(true);
         props.setTried(false);
         await new Promise((resolve) => setTimeout(resolve, 3500));
@@ -25,24 +26,21 @@ const Selection = (props) => {
         </button>
     ));
 
-    const answer = props.set
-        .find((s) => s.id === props.answer)
-        .map((s) => (
-            <button className={styles.selected} disabled>
-                {s.quote}
-            </button>
-        ));
+    const answerQuote = props.set[props.correctAnswer - 1].quote;
 
     return (
         <div className={styles.selectionContainer}>
-            {props.state === props.correctAnswer && { answer }}
-            {computing === false && props.state !== props.correctAnswer && (
-                <>
-                    {mappedQuotes}
-                    <p className={styles.helper}>
-                        {"> "}Make a choice{" <"}
-                    </p>
-                </>
+            {props.state === props.correctAnswer && (
+                <button className={styles.selected} disabled>
+                    {answerQuote}
+                </button>
+            )}
+
+            {props.state !== props.correctAnswer && <>{mappedQuotes}</>}
+            {!computing && props.state !== props.correctAnswer && (
+                <p className={styles.helper}>
+                    {"> "}Make a choice{" <"}
+                </p>
             )}
             {computing && (
                 <p className={styles.loadingAnswer}>computing choice</p>
