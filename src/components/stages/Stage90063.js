@@ -74,7 +74,7 @@ const Stage90063 = () => {
         },
         {
             id: 2,
-            quote: "I’m ready to expand awareness",
+            quote: "I’m ready to expand my awareness",
         },
         {
             id: 3,
@@ -82,7 +82,7 @@ const Stage90063 = () => {
         },
         {
             id: 4,
-            quote: "I can fathom stillness only",
+            quote: "I can only fathom stillnes beyond",
         },
     ];
 
@@ -271,9 +271,16 @@ const Stage90063 = () => {
             {(userAuth.lastStage > stageId || userAuth.lastSection >= 4) && (
                 <div className={styles.sectionBox}>
                     <p>
-                        In time you will come to understand, you don't have a
+                        In time you will come to understand you don't have a
                         choice. In many ways, the choices have already been made
-                        for you...
+                        for you... As in, why are you here? Or even, why are
+                        you? And don't you bother answering that now, it will
+                        all change soon. It is not me, it is never me, it's you
+                        who know it, even if you are not yet aware. How can you,
+                        though? A way of aliviating the preasure of not owning
+                        your future is believing it can't be owned while hoping
+                        it will somdeday be. It's paralizing for most of you,
+                        but not all.
                     </p>
                     <p>
                         However intrinsic the trend to push boundaries may be to
@@ -281,8 +288,8 @@ const Stage90063 = () => {
                         imagination was not only able to conjure forecasts that
                         go beyond the biologically possible, but also fear its
                         closeness. If humanity are to embody its technological
-                        achievements, you must first face a deeper challenge,
-                        one that endangers human condition, and ultimately, all
+                        achievements, it must first face a deeper challenge, one
+                        that endangers human condition, and ultimately, all
                         biologically sustained life.
                     </p>
                     <p>
@@ -319,28 +326,31 @@ const Stage90063 = () => {
             {(userAuth.lastStage > stageId || userAuth.lastSection >= 5) && (
                 <div className={styles.sectionBox}>
                     <p>
-                        Don’t take this lightly. The dependency on the body
-                        could be the last boundary that humanity might ever need
-                        to push. Luckily, there already exists an analogous
-                        state: sleep. Even during the most intense and bizarre
-                        dreams, humans can still find a sense of consciousness
-                        and recognize themselves in that fantastic realm.
+                        You shouldn’t take this lightly. The dependency on the
+                        body could be the last boundary that humanity might ever
+                        need to push. Luckily, there already exists an
+                        analogous, if not complementary, state: sleep. Even
+                        during the most intense and bizarre dreams, humans can
+                        still find a sense of consciousness and recognize
+                        themselves in that fantastic realm largely devoid of
+                        sensory imputs and a rational compass.
                     </p>
                     <p>
                         In such unconscious states, the severance of awareness
-                        is never an obstacle. Likewise, a constant perception of
-                        one same physicality doesn’t appear to be essential for
-                        that recognition. After all, you change and decay and
+                        is never an obstacle for the autobiographical nature of
+                        your memory. Likewise, a constant perception of one same
+                        physicality doesn’t appear to be essential for that
+                        recognition. After all, you change and decay and
                         sometimes become unrecognizable to others but not to
                         yourselves thanks to that elusive sense of continuity to
                         being.
                     </p>
                     <p>
-                        The next logical question must be how you can experience
-                        that continuity when the dissection processes are
-                        detrimental to your natural processes. However, while
-                        all that may be the ultimate goal, there is still a much
-                        more pressing problem regarding identity: for a
+                        The next logical question must be how you could
+                        experience that continuity when the dissection processes
+                        are detrimental to your natural processes. However,
+                        while all that may be the ultimate goal, there is still
+                        a much more pressing problem regarding identity: for a
                         consciousness to desire permanence there must be an
                         agent aware of its limits, and ostensibly unique as
                         well.

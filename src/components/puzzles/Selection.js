@@ -20,22 +20,29 @@ const Selection = (props) => {
             className={
                 s.id === props.state ? styles.selected : styles.unselected
             }
-            onClick={
-                props.state === props.correctAnswer
-                    ? null
-                    : (e) => handleSetId(e, s.id)
-            }>
+            onClick={(e) => handleSetId(e, s.id)}>
             {s.quote}
         </button>
     ));
 
+    const answer = props.set
+        .find((s) => s.id === props.answer)
+        .map((s) => (
+            <button className={styles.selected} disabled>
+                {s.quote}
+            </button>
+        ));
+
     return (
         <div className={styles.selectionContainer}>
-            {mappedQuotes}
+            {props.state === props.correctAnswer && { answer }}
             {computing === false && props.state !== props.correctAnswer && (
-                <p className={styles.helper}>
-                    {"> "}Make a choice{" <"}
-                </p>
+                <>
+                    {mappedQuotes}
+                    <p className={styles.helper}>
+                        {"> "}Make a choice{" <"}
+                    </p>
+                </>
             )}
             {computing && (
                 <p className={styles.loadingAnswer}>computing choice</p>
