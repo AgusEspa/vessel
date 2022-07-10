@@ -89,42 +89,42 @@ const Stage90063 = () => {
     // Section 6 content
     const puzzle2setScrambled = [
         {
+            id: "q3",
+            quote: "Reality presents itself as a cyclic pattern of ocurrences which are never entirely real nor entirely unique",
+            correctIndex: 3,
+        },
+        {
             id: "q2",
-            quote: "One’s interpretation seems the remains of perception when devoid of any reality ",
+            quote: "Interpretation of reality can be tricked by the remains of perception once devoid of any phisical input",
             correctIndex: 2,
         },
         {
             id: "q4",
-            quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
+            quote: "Reality may be distorted by the difference between perception and interpretation, which is a subtractive factor",
             correctIndex: 4,
         },
         {
-            id: "q3",
-            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
-            correctIndex: 3,
-        },
-        {
             id: "q1",
-            quote: "Perception is the quasi-autonomic interpretation of one’s reality",
+            quote: "Perception is a quasi-autonomic interpretative action between what's there and what should be",
             correctIndex: 1,
         },
     ];
     const puzzle2setOrdered = [
         {
             id: "q1",
-            quote: "Perception is the quasi-autonomic interpretation of one’s reality",
+            quote: "Perception is a quasi-autonomic interpretative action between what's there and what should be",
         },
         {
             id: "q2",
-            quote: "One’s interpretation seems the remains of perception when devoid of any reality ",
+            quote: "Interpretation of reality can be tricked by the remains of perception once devoid of any phisical input",
         },
         {
             id: "q3",
-            quote: "Reality has to be influenced by the difference between perception and interpretation, which is a subtractive factor, as is subjectivity",
+            quote: "Reality presents itself as a cyclic pattern of ocurrences which are never entirely real nor entirely unique",
         },
         {
             id: "q4",
-            quote: "Or reality indeed follows a repetitive pattern which is never entirely real nor entirely unique",
+            quote: "Reality may be distorted by the difference between perception and interpretation, which is a subtractive factor",
         },
     ];
 
@@ -389,11 +389,20 @@ const Stage90063 = () => {
                         existence takes you no further, since all existence is
                         in essence synthetic when viewed from within.
                         Furthermore, all human experiences have inevitably
-                        become preconceived and inauthentic. An influx of
-                        curated information permeates your subjectivity in
-                        unprecedented quantities and almost permanent exposure.
-                        Not even the utmost mind-altering forces seem to bring
-                        you any solace.
+                        become preconceived and inauthentic. An influx of biased
+                        information permeates your subjectivity in unprecedented
+                        quantities and almost permanent exposures. Not even the
+                        utmost mind-altering forces seem to bring you any
+                        solace.
+                    </p>
+                    <p>
+                        When was the last time you felt your way of life was not
+                        your own? It is not farfetched to view culture as an
+                        agent of demise, slowly corroding any divergence that
+                        could bring you to understand your own existence. Isn't
+                        that why you have come here, why you search digital
+                        realms and hope for a less opressive reality? But to
+                        know, or to forget?
                     </p>
                     <p>
                         In all your conscious behaviors there seems to exist an
@@ -401,10 +410,13 @@ const Stage90063 = () => {
                         be summed up as the pervasiveness of individuality. But
                         then what seems unique is really a common path, one even
                         conceived collectively. This paradox is far from the
-                        only condition that bring us here, although it is the
+                        only condition that brings us here, although it is the
                         most exemplifying as of this moment.
                     </p>
-                    <p>Try to understand the underpinnings of your world.</p>
+                    <p>
+                        Try to understand the underpinnings of your world before
+                        this.
+                    </p>
                     <Ordering
                         setOrdered={puzzle2setOrdered}
                         set={puzzle2setScrambled}
