@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.3475b2bb.css",
-    "main.js": "/static/js/main.d01d3060.js",
-    "static/media/landing.jpg": "/static/media/landing.6a105aad8600f677a6ac.jpg",
-    "static/media/landing-small.jpg": "/static/media/landing-small.bf4c2f90d367cc554e60.jpg",
-    "index.html": "/index.html",
-    "main.3475b2bb.css.map": "/static/css/main.3475b2bb.css.map",
-    "main.d01d3060.js.map": "/static/js/main.d01d3060.js.map"
+    "main.css": "/vessel/static/css/main.ed138ed8.css",
+    "main.js": "/vessel/static/js/main.d01d3060.js",
+    "static/media/landing.jpg": "/vessel/static/media/landing.6a105aad8600f677a6ac.jpg",
+    "static/media/landing-small.jpg": "/vessel/static/media/landing-small.bf4c2f90d367cc554e60.jpg",
+    "index.html": "/vessel/index.html",
+    "main.ed138ed8.css.map": "/vessel/static/css/main.ed138ed8.css.map",
+    "main.d01d3060.js.map": "/vessel/static/js/main.d01d3060.js.map"
   },
   "entrypoints": [
-    "static/css/main.3475b2bb.css",
+    "static/css/main.ed138ed8.css",
     "static/js/main.d01d3060.js"
   ]
 }
