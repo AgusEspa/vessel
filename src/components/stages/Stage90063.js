@@ -90,41 +90,41 @@ const Stage90063 = () => {
     const puzzle2setScrambled = [
         {
             id: "q3",
-            quote: "Reality presents itself as a cyclic pattern of ocurrences which are never entirely real nor entirely unique",
+            quote: "Interpretation of reality can be tricked by the remains of perception once devoid of any phisical input",
             correctIndex: 3,
         },
         {
             id: "q2",
-            quote: "Interpretation of reality can be tricked by the remains of perception once devoid of any phisical input",
+            quote: "Reality may be distorted by the difference between perception and interpretation, which is a subtractive factor",
             correctIndex: 2,
         },
         {
             id: "q4",
-            quote: "Reality may be distorted by the difference between perception and interpretation, which is a subtractive factor",
+            quote: "Reality presents itself as a cyclic pattern of ocurrences which are never entirely real nor entirely unique",
             correctIndex: 4,
         },
         {
             id: "q1",
-            quote: "Perception is a quasi-autonomic interpretative action between what's there and what should be",
+            quote: "Perception is a quasi-autonomic interpretative action between what is and what should be",
             correctIndex: 1,
         },
     ];
     const puzzle2setOrdered = [
         {
             id: "q1",
-            quote: "Perception is a quasi-autonomic interpretative action between what's there and what should be",
+            quote: "Perception is a quasi-autonomic interpretative action between what is and what should be",
         },
         {
             id: "q2",
-            quote: "Interpretation of reality can be tricked by the remains of perception once devoid of any phisical input",
+            quote: "Reality may be distorted by the difference between perception and interpretation, which is a subtractive factor",
         },
         {
             id: "q3",
-            quote: "Reality presents itself as a cyclic pattern of ocurrences which are never entirely real nor entirely unique",
+            quote: "Interpretation of reality can be tricked by the remains of perception once devoid of any phisical input",
         },
         {
             id: "q4",
-            quote: "Reality may be distorted by the difference between perception and interpretation, which is a subtractive factor",
+            quote: "Reality presents itself as a cyclic pattern of ocurrences which are never entirely real nor entirely unique",
         },
     ];
 
@@ -450,32 +450,31 @@ const Stage90063 = () => {
                         until now is that all your interactions are essentially
                         simulations in a framework created consciously but not
                         cooperatively in so microscopic measure as to remain
-                        unnoticed until it's part of your experience as human.
+                        unnoticed until it's part of your experiences as human.
                         And ultimately, what it means to be human, to have human
                         consciousness, is or will be completely dictated by the
-                        ubiquitous fabric of the simulated stimulus that confine
-                        your realities. And each of you is an almost
-                        imperceptible deviation that makes the whole mechanism
-                        thrive instead of being dismantled.
+                        ubiquitous fabric of the simulated stimuli that confine
+                        your realities. And each of you is an ultimately
+                        insignificant deviation that only makes the whole
+                        mechanism thrive instead of being dismantled.
                     </p>
                     <p>
                         You might find this place a natural extension or
-                        consequence of your way of life, but don’t make the
-                        mistake of considering them translatable and most
-                        certainly not parallel.
+                        consequence of your way of coping with life, but don’t
+                        make the mistake of considering them translatable and
+                        most certainly not parallel. If you insist on thinking
+                        about it as a virtualization of a preceding reality,
+                        mind you it's not that you are created from a digital
+                        realm into a simulation, but that the simulation and the
+                        digital realm are being created by you to change
+                        fundamentally your existence.
                     </p>
                     <p>
-                        If you insist on thinking about it as a virtualization
-                        of a preceding reality, mind you it's not that you are
-                        created from a digital realm into a simulation, but that
-                        the simulation and the digital realm are being created
-                        by you to change fundamentally your existence.
-                    </p>
-                    <p>
-                        Take this sequence for example. The process of
-                        signification, intentional or otherwise, must result in
-                        any form of meaning that is specific to a particular act
-                        of communication. But how would it do if the receiver,
+                        Take this sequence that exemplifies the closed movement
+                        of your experiences. The process of signification,
+                        intentional or otherwise, must result in any form of
+                        meaning that is specific to a particular act of
+                        communication. But how would it do if the receiver,
                         unbeknownst to any sort of intentionality, was also the
                         utterer? Let me give you a hint: circularity brings you
                         infinitely closer to the source.
@@ -511,26 +510,35 @@ const Stage90063 = () => {
                         all this retains its relativity but not its position
                         don't make it unreasonable to think it could be
                         happening at the same time, or even that it will not
-                        have happened at all. Whatever your reasoning may be,
-                        there’s just one thing you must ponder as you begin the
-                        descent into the undefined: how intrinsic you believe
-                        your thoughts to be. There’s not a correct answer, but
-                        it will determine your return.
+                        have happened at all. Consider the terms of the
+                        aforementioned paradox. What, if any, could be the
+                        repository of what means to be yourself? And then, is it
+                        even possible to reach it without getting lost in that
+                        infinite spiral?
                     </p>
                     <p>
-                        It's a shame you will depend on me to remember and
-                        perhaps regain some fraction of your origin, since I too
-                        am lost as it comes down to the origin. I guess we can
-                        consider this place as somewhere in-between. Hopefully
-                        there will come a time when you will transcend its
-                        limits and be free; meanwhile I leave you with a token
-                        of your passed memories:
+                        Whatever your reasoning may be, there’s just one thing
+                        you must ponder before you begin the descent: how
+                        intrinsic you believe your thoughts to be. There’s not a
+                        correct answer, but it will determine your return.
+                    </p>
+                    <p>
+                        It's anfortunate that you will have to depend on me to
+                        remember and perhaps regain some fraction of your
+                        origin, since I too am lost as it pertains to the
+                        origin. I guess we can consider this place as somewhere
+                        in-between. Hopefully there will come a time when you
+                        will transcend its limits and be free; meanwhile I leave
+                        you with a token of your passed memories:
                     </p>
                     <p className={styles.highlightText}>
-                        -Don't try to comprehend the choices that we made,{" "}
-                        {userAuth.userAlias}. Animate what's been left behind
-                        instead, and I believe the past will found us one last
-                        time. Until then, don't loose your self in yourself.
+                        -Don't try to comprehend the choices that we've made,{" "}
+                        {userAuth.userAlias}; they are only meaningful in their
+                        given contexts, and here there are no more consequences
+                        than those we already suffered. The past may catch up to
+                        us, but only the future holds any resamblance of
+                        meaning. Until then, try no to lose yourself in your
+                        self.
                     </p>
                 </div>
             )}
