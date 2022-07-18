@@ -37,7 +37,7 @@ const Help = () => {
                         The version that you are going to access is a demo
                         preview. You are free to explore the first two chapters
                         as much as you like. Access to the full version will be
-                        availiable in the forthcoming months. To get notified,
+                        available in the forthcoming months. To get notified,
                         please email <span>vessel.connect@gmail.com</span>
                     </p>
                 </div>
@@ -47,7 +47,7 @@ const Help = () => {
                         This demo version doesn’t have support for persistent
                         data yet. All your progress will be automatically saved
                         to your browser local storage. Don’t delete your
-                        borwsing history or storage, nor open this site while on
+                        browsing history or storage, nor open this site while on
                         incognito mode, otherwise you will lose your progress.
                     </p>
                 </div>

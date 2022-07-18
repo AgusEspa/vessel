@@ -73,7 +73,7 @@ const FreshLanding = () => {
                             <IoInfiniteOutline />
                         </div>
                         <p>
-                            Humans have believed comprehention to be a state of
+                            Humans have believed comprehension to be a state of
                             mind so absolute that being mystified often can't
                             but seem an involuntary loss of mind. That, by sheer
                             force of time, could end up undermining all they
@@ -136,7 +136,7 @@ const FreshLanding = () => {
                                 What can I expect to find here?
                             </Link>
                         </h4>
-                        <p>(read or procede at your own peril)</p>
+                        <p>(read or proceed at your own peril)</p>
                     </div>
                 </div>
             </main>
