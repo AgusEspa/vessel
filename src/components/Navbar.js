@@ -1,11 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BsVolumeUp, BsVolumeMute, BsQuestionCircle } from "react-icons/bs";
 import styles from "../styles/Navbar.module.scss";
+import { debounce } from "../utils/debounce";
 
 const Navbar = (props) => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [toggleAudio, setToggleAudio] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    const handleScroll = debounce(() => {
+        const currentScrollPos = window.pageYOffset;
+
+        setVisible(prevScrollPos > currentScrollPos);
+
+        setPrevScrollPos(currentScrollPos);
+        console.log(prevScrollPos - currentScrollPos);
+    }, 30);
+
+    // new useEffect:
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [prevScrollPos]);
 
     const handleToggleMenu = () => {
         setToggleMenu((prevState) => !prevState);
@@ -17,9 +35,13 @@ const Navbar = (props) => {
         setToggleMenu(false);
     };
 
+    const navbarStyle = visible
+        ? `${styles.navbarContainer} ${styles.visible}`
+        : `${styles.navbarContainer} ${styles.invisible}`;
+
     return (
         <>
-            <nav className={styles.navbarContainer}>
+            <nav className={navbarStyle}>
                 <div className={styles.helperIcons}>
                     <button onClick={handleToggleAudio}>
                         {props.song !== "" ? <BsVolumeUp /> : <BsVolumeMute />}

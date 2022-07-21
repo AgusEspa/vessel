@@ -1,132 +1,139 @@
 @use "./variables";
 
 p {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 audio {
-	border: none;
-	outline: 0;
-	margin: 0;
+    border: none;
+    outline: 0;
+    margin: 0;
 }
 
 .navbarContainer {
-	display: flex;
-	position: relative;
-	top: 0;
-	left: 0;
-	justify-content: space-between;
-	align-items: center;
-	background-color: black;
-	width: 100%;
-	padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 1rem 2rem 1rem 2rem;
+    transition: all 300ms ease-in-out;
 
-	.helperIcons {
-		display: flex;
-		align-items: center;
-		margin: 0;
-		padding: 0;
+    &.visible {
+        top: 0;
+    }
+    &.invisible {
+        top: -3.6rem;
+    }
 
-		p {
-			font-size: 1.5rem;
-			font-weight: 800;
-			color: white;
-			font-family: variables.$fonts;
-		}
+    .helperIcons {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
 
-		button {
-			cursor: pointer;
-			background-color: transparent;
-			border: none;
-			padding: 0;
-			margin: 0;
-		
-			svg {
-				fill: white;
-				font-size: 1.4rem;
-			}
-		}
+        p {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            font-family: variables.$fonts;
+        }
 
-		.hamburger {
-			display: block;
-			padding: 0;
+        button {
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            margin: 0;
 
-			.bar {
-				display: block;
-				width: 1.2rem;
-				height: 1px;
-				margin: 0.3rem;
-				background-color: #ffffff;
-				border-radius: 1px;
-				transition: all 0.2s ease-out;
-			}
-		}
-	}
+            svg {
+                fill: white;
+                font-size: 1.4rem;
+            }
+        }
 
-	.navLogoBoxOff {
-		display: none;
-	}
-	.navLogoBox {
-		display: flex;
-		align-items: center;
-		margin-left: 0;
-		padding: 0;
-		
-		.navLogo {
-			width: 10rem;
-			@media screen and (max-width: 600px) {
-				width: 7rem;
-			
-			}
-		}
-	}
-	
+        .hamburger {
+            display: block;
+            padding: 0;
+
+            .bar {
+                display: block;
+                width: 1.2rem;
+                height: 1px;
+                margin: 0.3rem;
+                background-color: #ffffff;
+                border-radius: 1px;
+                transition: all 0.2s ease-out;
+            }
+        }
+    }
+
+    .navLogoBoxOff {
+        display: none;
+    }
+    .navLogoBox {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+        padding: 0;
+
+        .navLogo {
+            width: 10rem;
+            @media screen and (max-width: 600px) {
+                width: 7rem;
+            }
+        }
+    }
 }
 
 .audioContainer {
-	display: none;
+    display: none;
 }
 .audioContainerActive {
-	display: block;
-	position: absolute;
-	z-index: 9;
-	margin-left: 1rem;
+    display: block;
+    position: absolute;
+    z-index: 9;
+    margin-left: 1rem;
 }
 
 .menuContainer {
-	display: none;
+    display: none;
 }
 .menuContainerActive {
-	display: block;
-	position: absolute;
-	z-index: 9;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	padding: 0.6rem 2.2rem 1rem 0;
-	text-align: right;
-	background-color: rgba(0, 0, 0, 0.8);
-	.menuLinks {
-		margin: 0;
-		padding: 0;
-		
-		ul {
-			margin: 0;
-			padding: 0;
-			display: block;
-		}
-		
-		li, a {
-			cursor: pointer;
-			list-style-type: none;
-			color: white;
-			font-family: variables.$fonts;
-			text-decoration: none;
-			font-size: 1.1rem;
-			padding: 0;
-			margin: 0 0 1rem 0;
-			border-radius: 0;
-		}
-	}
+    display: block;
+    position: absolute;
+    z-index: 9;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.6rem 2.2rem 1rem 0;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.8);
+    .menuLinks {
+        margin: 0;
+        padding: 0;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        li,
+        a {
+            cursor: pointer;
+            list-style-type: none;
+            color: white;
+            font-family: variables.$fonts;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0;
+            margin: 0 0 1rem 0;
+            border-radius: 0;
+        }
+    }
 }
