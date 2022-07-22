@@ -13,11 +13,11 @@ const Navbar = (props) => {
     const handleScroll = debounce(() => {
         const currentScrollPos = window.pageYOffset;
 
-        setVisible(prevScrollPos > currentScrollPos);
+        setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
 
         setPrevScrollPos(currentScrollPos);
         console.log(prevScrollPos - currentScrollPos);
-    }, 30);
+    }, 10);
 
     // new useEffect:
     useEffect(() => {
